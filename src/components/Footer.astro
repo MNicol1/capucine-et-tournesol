@@ -1,0 +1,15 @@
+---
+import content from '../content/footer.json';
+---
+
+<footer>
+<div>
+    <div><strong>{content.name}</strong></div>
+    <div>{content.address}</div>
+    <div>{content.hours}</div>
+    <div>{content.phone}</div>
+      <div>
+    <a href={`mailto:${content.email}`}>{content.emailLabel}</a>
+  </div>
+</div>
+</footer>

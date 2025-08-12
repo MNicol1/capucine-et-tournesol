@@ -5,4 +5,19 @@ import content from '../content/contact.json';
 
 <BaseLayout title={content.title}>
     <h1>{content.heading}</h1>
+
+      <div>
+    <div>{content.address}</div>
+
+    <div>{content.hoursTitle}</div>
+    {content.hours.map((h) => (
+      <div>{h.label} : {h.hours}</div>
+    ))}
+  </div>
+
+  <div>{content.phone}</div>
+
+  <div>
+    <a href={`mailto:${content.email}`}>{content.emailLabel}</a>
+  </div>
 </BaseLayout>
