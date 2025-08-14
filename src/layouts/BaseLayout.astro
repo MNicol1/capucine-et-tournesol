@@ -1,5 +1,7 @@
 ---
 const { title = "Capucine et Tournesol" } = Astro.props;
+const { pathname } = Astro.props;
+const isHome = pathname === '/';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
@@ -26,7 +28,7 @@ import '../styles/global.css';
   </head>
   <body>
     <Header />
-    <main>
+  <main class={isHome ? 'main--home' : 'main--content'}>
       <slot />
     </main>
     <Footer />

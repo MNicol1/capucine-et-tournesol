@@ -4,9 +4,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import content from '../content/home.json';
 ---
 
-<BaseLayout>
+<BaseLayout pathname={Astro.url.pathname}>
+<!-- Inside the page that gets slotted into BaseLayout -->
+<div class="home-cta-sections">
 
-  <h1>{content.heading}</h1>
+  <!-- Section 1 -->
+  <section class="cta-block">
+    <div class="cta-image">
+      <img src={`/images/${content.image1}`} alt={content.imageAlt1} />
+    </div>
+    <div class="cta-text">
+      <h1>{content.text1}</h1>
+      <p>{content.text2}</p>
+      <a href="/notre-mission" class="cta-button">About Us</a>
+    </div>
+  </section>
 
-  <!-- <img src={`/images/${content.image}`} alt={content.imageAlt} /> -->
+  <!-- Section 2 -->
+  <section class="cta-block reverse">
+    <div class="cta-image">
+      <img src={`/images/${content.image2}`} alt={content.imageAlt2} />
+    </div>
+    <div class="cta-text">
+      <h2>{content.text3}</h2>
+      <h3>{content.text4}</h3>
+      <a href="/produits" class="cta-button">Explore products</a>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="cta-block">
+    <div class="cta-image">
+      <img src={`/images/${content.image3}`} alt={content.imageAlt3} />
+    </div>
+    <div class="cta-text">
+      <h2>{content.text5}</h2>
+
+      <a href="/info" class="cta-button">Learn more</a>
+    </div>
+  </section>
+
+</div>
+
 </BaseLayout>

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import content from '../content/apprendre.json';
 ---
 
-<BaseLayout title={content.title}>
+<BaseLayout pathname={Astro.url.pathname} title={content.title}>
  <nav class="section-nav" aria-label="Navigation de section">
   <ul>
     <li><a href="#pourquoi-moudre">{content.sectionOne}</a></li>
@@ -13,7 +13,7 @@ import content from '../content/apprendre.json';
   </ul>
 </nav>
 
-<main class="content">
+<div class="page-content">
   <section id="pourquoi-moudre">
       <span class="anchor-offset" aria-hidden="true"></span>
     <h2>{content.sectionOne}</h2>
@@ -161,7 +161,7 @@ import content from '../content/apprendre.json';
 </p>
 
   </section>
-</main>
+</div>
 
    <!-- CODE SCRIPT FOR ACTIVE SECTION STATE - JS + Intersection Observer API -->
 
@@ -169,7 +169,8 @@ import content from '../content/apprendre.json';
    
 <script is:inline>
   const navLinks = document.querySelectorAll('.section-nav a');
-  const sections = document.querySelectorAll('main section');
+const sections = document.querySelectorAll('.page-content section');
+
 
   let observerActive = true;
 

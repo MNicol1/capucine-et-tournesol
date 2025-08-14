@@ -1,3 +1,18 @@
 {
-  "heading": "Capucine et Tournesol"
+  "text1": "La seule boulangerie meunerie à Montréal",
+  "text2": "Là où l'on trouve le vrai pain intégral",
+  "text3": "sans gluten ajouté (tous nos pains en contiennent naturellement)",
+  "text4": "et de délicieuses gâteries sucrées seulement avec des fruits",
+  "text5": "Vous trouverez une mine d'informations sur les céréales,les farines, et des conseils pour faire votre pain.",
+
+  
+  "image1": "image1.webp",
+  "imageAlt1": "Grains being milled", 
+    "image2": "image2.webp",
+  "imageAlt2": "Grains being milled", 
+    "image3": "image3.webp",
+  "imageAlt3": "Grains being milled"
+
+
+
 }

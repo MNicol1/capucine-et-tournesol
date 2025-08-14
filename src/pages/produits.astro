@@ -3,6 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import content from '../content/produits.json';
 ---
 
-<BaseLayout title={content.title}>
+<BaseLayout pathname={Astro.url.pathname} title={content.title}>
     <h1>{content.heading}</h1>
 </BaseLayout>
