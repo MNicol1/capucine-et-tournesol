@@ -437,3 +437,116 @@ a:focus-visible,
     padding: 2rem 1rem;
   }
 }
+
+/* ================================
+   PRODUCTS PAGE - UNIFIED STYLES
+   ================================ */
+
+/* ===== Section intros ===== */
+.breads-intro,
+.treats-intro,
+.dishes-intro {
+  margin-bottom: 1.5rem;
+}
+
+.breads-intro p,
+.treats-intro p,
+.dishes-intro p {
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+}
+
+/* ===== Shared column layout ===== */
+.products-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; /* centers columns in the page */
+}
+
+.products-column {
+  flex: 1 1 0;
+  max-width: 500px;
+  padding: 0 0.5rem;
+  box-sizing: border-box; /* keeps padding inside width */
+}
+
+/* ===== Headings hierarchy ===== */
+.section-breads h2,
+.section-treats h2,
+.section-dishes h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-breads h3,
+.section-treats h3,
+.section-dishes h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-breads h4,
+.section-treats h4 {
+  font-size: 1.05rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ===== Notes & descriptors (Breads) ===== */
+.breads-descriptor {
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.breads-note {
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Ingredients text ===== */
+.section-breads p,
+.section-treats p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ===== Lists ===== */
+/* Default lists in Treats (examples only) */
+.section-treats ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+/* Remove bullets for Treats additional + all Dishes lists */
+.section-treats .products-column ul,
+.section-dishes .products-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; /* removes browser's default indent */
+}
+
+.products-column li {
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
+}
+
+/* ===== Special spacing ===== */
+.treats-note {
+  margin-top: 1.5rem; /* space before note after products */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .products-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .products-column {
+    width: 100%;
+    max-width: 500px; /* keep consistent column width */
+    padding: 0; /* maintain side gutter on mobile */
+  }
+}

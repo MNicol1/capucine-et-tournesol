@@ -1,4 +1,142 @@
 {
   "title": "Products | Capucine et Tournesol",
-  "heading": "Produits"
+
+  "breads": {
+    "heading": "Nos pains",
+    "intro": [
+      "Les ingrédients parlent par eux-mêmes",
+      "Nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.",
+      "Nos farines ne subissent aucun blutage (séparation), chaque composante de la céréale est conservée dans son intégralité."
+    ],
+    "sourdough": {
+      "heading": "Pains au levain",
+      "descriptor": "(sans levure, sans huile ni sucre)",
+      "note": "La culture de levain n'est constituée que d'eau et de farine provenant de la même céréale que le pain.",
+      "items": [
+        {
+          "name": "Épeautre",
+          "ingredients": "Épeautre, eau, culture de levain, sel de mer."
+        },
+        {
+          "name": "Kamut",
+          "ingredients": "Kamut, eau, culture de levain, sel de mer."
+        },
+        {
+          "name": "16 Grains (Sans blé)",
+          "ingredients": "Eau, kamut, épeautre, culture de levain, 11 grains moulus (orge, avoine, seigle, riz, lentilles vertes, épeautre, soya, sarrasin, maïs, millet, lin), sel de mer, millet, chanvre, amarante, lin."
+        },
+        {
+          "name": "Blé avec sésame ou avec tournesol",
+          "ingredients": "Blé, eau, culture de levain, sésame ou tournesol, sel de mer."
+        },
+        {
+          "name": "Seigle (vendredi seulement)",
+          "ingredients": "Seigle, eau, culture de levain, sel de mer."
+        }
+      ]
+    },
+    "yeast": {
+      "heading": "Pains à la levure",
+      "descriptor": "(sans huile ni sucre)",
+      "note": "Sauf le pain aux raisins qui contient du miel",
+      "items": [
+        {
+          "name": "Raisins",
+          "ingredients": "Blé, eau, raisins Thompson, miel non-pasteurisé, sel de mer, levure."
+        },
+        {
+          "name": "Protéine",
+          "ingredients": "Blé, eau, graines de tournesol, sel de mer, millet, levure, lin, farine de soya, sésame entier, lait de soya en poudre."
+        },
+        {
+          "name": "12 Grains",
+          "ingredients": "Blé, eau, 12 grains moulus (orge, avoine, seigle, riz, lentilles vertes, épeautre, soya, sarrasin, maïs, blé, millet, lin), sel de mer, millet, levure, lin."
+        },
+        {
+          "name": "Maïs",
+          "ingredients": "Blé, eau, maïs, sel de mer, millet, levure, lin."
+        },
+        {
+          "name": "Tout blé",
+          "ingredients": "Blé, eau, sel de mer, levure."
+        },
+        {
+          "name": "Son d’avoine et lin",
+          "ingredients": "Blé, eau, son d'avoine, lin, sel de mer, levure."
+        }
+      ]
+    }
+  },
+  "treats": {
+    "heading": "Nos gâteries",
+    "intro": [
+      "Aucun sucre n'entre dans notre boulangerie !",
+      "Élaborées au fil de nombreux essais, nos recettes allient les saveurs des fruits frais, les richesses des fruits séchés (édulcorants naturels) et les qualités nutritives des céréales intégrales moulues tous les jours à la boulangerie.",
+      "Nos muffins ont tous pour premiers ingrédients les fruits.",
+      "En voici quelques exemples:"
+    ],
+    "examples": {
+      "heading": "Exemples",
+      "items": [
+        {
+          "name": "Bananes et cacao (seigle)",
+          "ingredients": "Bananes fraîches, seigle intégral, dattes, œufs frais, huile de canola, décoction de graines de lin, cacao, soda à pâte, poudre à pâte."
+        },
+        {
+          "name": "Canneberges et citron (kamut)",
+          "ingredients": "Canneberges, kamut intégral, dattes, œufs frais, huile de canola, décoction de graines de lin, zestes de citrons, soda à pâte, poudre à pâte."
+        },
+        {
+          "name": "Reine Élisabeth (avoine)",
+          "ingredients": "Noix de coco, avoine intégrale, dattes, noix de Grenoble, œufs frais, huile de canola, décoction de graines de lin, soda à pâte, poudre à pâte."
+        }
+      ]
+    },
+    "additional": {
+      "heading": "Aussi",
+      "items": [
+        "Pommes et cannelle (blé)",
+        "Carottes (kamut)",
+        "Fruits et noix (blé)",
+        "Bleuets (kamut)",
+        "Noisettes et chocolat (seigle)",
+        "Bananes (blé)",
+        "Ananas et gingembre (kamut)"
+      ],
+      "note": "Manger sainement ne doit jamais être se punir !"
+    }
+  },
+
+  "dishes": {
+    "heading": "Nos plats mijotés",
+    "intro": ["Congelés dès leurs préparations"],
+    "vegetarian": {
+      "heading": "Végétarien",
+      "items": [
+        "Chorba (soupe) au tofu",
+        "Chili végétarien",
+        "Ratatouille",
+        "Moussaka végétarienne",
+        "Sauce à spaghetti végétarienne (lentilles)",
+        "Cassoulet de lentilles",
+        "…et encore d’autres"
+      ]
+    },
+    "meat": {
+      "heading": "Viande",
+      "items": [
+        "Soupe au poulet et aux légumes",
+        "Chorba (soupe) à l’agneau",
+        "Chili au bœuf",
+        "Moussaka à l’agneau",
+        "Pot-au-feu au bœuf",
+        "Sauce à spaghetti à la viande",
+        "Poulet aux olives",
+        "Poulet chasseur",
+        "Poulet au cari",
+        "Tourtière québécoise",
+        "Cassoulet de pois chiches à l'agneau"
+      ]
+    }
+  }
 }

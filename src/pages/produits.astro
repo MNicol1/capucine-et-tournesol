@@ -4,5 +4,147 @@ import content from '../content/produits.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
-    <h1>{content.heading}</h1>
+<!-- Section 1: Breads -->
+<section class="section-breads">
+  <h2>{content.breads.heading}</h2>
+
+  <div class="breads-intro">
+    <p>{content.breads.intro[0]}</p>
+    <p>{content.breads.intro[1]}</p>
+    <p>{content.breads.intro[2]}</p>
+  </div>
+
+  <div class="products-columns">
+    <div class="products-column">
+      <h3>{content.breads.sourdough.heading}</h3>
+      <p class="breads-descriptor">{content.breads.sourdough.descriptor}</p>
+      <p class="breads-note">{content.breads.sourdough.note}</p>
+
+      <h4>{content.breads.sourdough.items[0].name}</h4>
+      <p>{content.breads.sourdough.items[0].ingredients}</p>
+
+      <h4>{content.breads.sourdough.items[1].name}</h4>
+      <p>{content.breads.sourdough.items[1].ingredients}</p>
+
+      <h4>{content.breads.sourdough.items[2].name}</h4>
+      <p>{content.breads.sourdough.items[2].ingredients}</p>
+
+      <h4>{content.breads.sourdough.items[3].name}</h4>
+      <p>{content.breads.sourdough.items[3].ingredients}</p>
+
+      <h4>{content.breads.sourdough.items[4].name}</h4>
+      <p>{content.breads.sourdough.items[4].ingredients}</p>
+    </div>
+
+    <div class="products-column">
+      <h3>{content.breads.yeast.heading}</h3>
+      <p class="breads-descriptor">{content.breads.yeast.descriptor}</p>
+      <p class="breads-note">{content.breads.yeast.note}</p>
+
+      <h4>{content.breads.yeast.items[0].name}</h4>
+      <p>{content.breads.yeast.items[0].ingredients}</p>
+
+      <h4>{content.breads.yeast.items[1].name}</h4>
+      <p>{content.breads.yeast.items[1].ingredients}</p>
+
+      <h4>{content.breads.yeast.items[2].name}</h4>
+      <p>{content.breads.yeast.items[2].ingredients}</p>
+
+      <h4>{content.breads.yeast.items[3].name}</h4>
+      <p>{content.breads.yeast.items[3].ingredients}</p>
+
+      <h4>{content.breads.yeast.items[4].name}</h4>
+      <p>{content.breads.yeast.items[4].ingredients}</p>
+
+      <h4>{content.breads.yeast.items[5].name}</h4>
+      <p>{content.breads.yeast.items[5].ingredients}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Treats -->
+<section class="section-treats">
+  <h2>{content.treats.heading}</h2>
+
+  <div class="treats-intro">
+    <p>{content.treats.intro[0]}</p>
+    <p>{content.treats.intro[1]}</p>
+    <p>{content.treats.intro[2]}</p>
+  </div>
+
+  <div class="products-columns">
+    <div class="products-column">
+      <h3>{content.treats.examples.heading}</h3>
+
+      <h4>{content.treats.examples.items[0].name}</h4>
+      <p>{content.treats.examples.items[0].ingredients}</p>
+
+      <h4>{content.treats.examples.items[1].name}</h4>
+      <p>{content.treats.examples.items[1].ingredients}</p>
+
+      <h4>{content.treats.examples.items[2].name}</h4>
+      <p>{content.treats.examples.items[2].ingredients}</p>
+    </div>
+
+<div class="products-column">
+  <h3>{content.treats.additional.heading}</h3>
+
+  <h4>{content.treats.additional.items[0]}</h4>
+  <h4>{content.treats.additional.items[1]}</h4>
+  <h4>{content.treats.additional.items[2]}</h4>
+  <h4>{content.treats.additional.items[3]}</h4>
+  <h4>{content.treats.additional.items[4]}</h4>
+  <h4>{content.treats.additional.items[5]}</h4>
+
+
+</div>
+  </div>
+   <h3 class="treats-note">{content.treats.additional.note}</h3>
+</section>
+
+<!-- Section 3: Dishes -->
+<section class="section-dishes">
+  <h2>{content.dishes.heading}</h2>
+
+  <div class="dishes-intro">
+    <p>{content.dishes.intro[0]}</p>
+  </div>
+
+  <div class="products-columns">
+    <div class="products-column">
+      <h3>{content.dishes.vegetarian.heading}</h3>
+      <ul>
+        <li>{content.dishes.vegetarian.items[0]}</li>
+        <li>{content.dishes.vegetarian.items[1]}</li>
+        <li>{content.dishes.vegetarian.items[2]}</li>
+        <li>{content.dishes.vegetarian.items[3]}</li>
+        <li>{content.dishes.vegetarian.items[4]}</li>
+        <li>{content.dishes.vegetarian.items[5]}</li>
+        <li>{content.dishes.vegetarian.items[6]}</li>
+      </ul>
+    </div>
+
+    <div class="products-column">
+      <h3>{content.dishes.meat.heading}</h3>
+      <ul>
+        <li>{content.dishes.meat.items[0]}</li>
+        <li>{content.dishes.meat.items[1]}</li>
+        <li>{content.dishes.meat.items[2]}</li>
+        <li>{content.dishes.meat.items[3]}</li>
+        <li>{content.dishes.meat.items[4]}</li>
+        <li>{content.dishes.meat.items[5]}</li>
+        <li>{content.dishes.meat.items[6]}</li>
+        <li>{content.dishes.meat.items[7]}</li>
+        <li>{content.dishes.meat.items[8]}</li>
+        <li>{content.dishes.meat.items[9]}</li>
+        <li>{content.dishes.meat.items[10]}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 </BaseLayout>
