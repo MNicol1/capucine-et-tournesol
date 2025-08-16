@@ -550,3 +550,44 @@ a:focus-visible,
     padding: 0; /* maintain side gutter on mobile */
   }
 }
+
+/* === Chromosome Table === */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.grain-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  min-width: 500px;
+}
+
+.grain-table th,
+.grain-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.grain-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* === Cereal Subsection Grouping === */
+
+.cereal-subsection {
+  margin-top: 1.5rem;
+  padding-left: 2.25rem;
+  border-left: 2px solid #ccc;
+}
+
+section#cereales h4 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
