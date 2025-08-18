@@ -4,5 +4,60 @@ import content from '../content/bread-making.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
-    <h1>{content.heading}</h1>
+
+<div class="faire-son-pain">
+  <section>
+    <h2>{content.pageTitle}</h2>
+    <h3>{content.sectionOne}</h3>
+    <p>{content.panificationParagraph1}</p>
+    <p>{content.panificationParagraph2}</p>
+    <p>{content.panificationParagraph3}</p>
+    <p>{content.panificationParagraph4}</p>
+  </section>
+
+<section>
+  <h3>{content.sectionTwo}</h3>
+  <p>{content.fermentationIntro}</p>
+
+  <h4>{content.fermentationLevain}</h4>
+  <div class="fermentation-subsection">
+    <p>{content.fermentationLevainIntro}</p>
+    <hp>{content.fermentationLevainStepsIntro}</p>
+
+    <h5>{content.fermentationLevainPreparation}</h5>
+    <p>{content.fermentationLevainPreparationParagraph1}</p>
+    <p>{content.fermentationLevainPreparationParagraph2}</p>
+    <p>{content.fermentationLevainPreparationParagraph3}</p>
+
+    <h5>{content.fermentationLevainConfection}</h5>
+    <p>{content.fermentationLevainConfectionParagraph1}</p>
+    <p>{content.fermentationLevainConfectionParagraph2}</p>
+  </div>
+
+  <h4>{content.fermentationLevure}</h4>
+  <div class="fermentation-subsection">
+    <p>{content.fermentationLevureIntro}</p>
+    <p>{content.fermentationLevureParagraph1}</p>
+    <p>{content.fermentationLevureParagraph2}</p>
+    <p>{content.fermentationLevureParagraph3}</p>
+  </div>
+</section>
+
+
+  <section>
+    <h3>{content.sectionThree}</h3>
+    <p>{content.sectionThreeParagraph1}</p>
+    <p>{content.sectionThreeParagraph2}</p>
+    <p>{content.sectionThreeParagraph3}</p>
+    <p>{content.sectionThreeParagraph4}</p>
+    <p>{content.sectionThreeParagraph5}</p>
+    <p>{content.sectionThreeParagraph6}</p>
+    <p>{content.sectionThreeParagraph7}</p>
+    <p>{content.sectionThreeParagraph8}</p>
+  </section>
+</div>
+
+
+
+
 </BaseLayout>

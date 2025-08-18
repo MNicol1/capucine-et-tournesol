@@ -48,20 +48,50 @@ body {
   }
 }
 
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* =========================
+   TYPOGRAPHY: HEADINGS
+   ========================= */
+
+/* Baseline scale – applies site-wide */
+h1 {
+  font-size: 2.5rem; /* hero / page titles */
   margin-bottom: 0.5rem;
 }
+h2 {
+  font-size: 2rem; /* main section headings */
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.5rem; /* sub-sections */
+  margin-bottom: 0.5rem;
+}
+h4 {
+  font-size: 1.2rem; /* smaller subsections */
+  margin-bottom: 0.4rem;
+}
+h5 {
+  font-size: 1rem; /* minor labels */
+  margin-bottom: 0.3rem;
+}
+h6 {
+  font-size: 0.875rem; /* least prominent */
+  margin-bottom: 0.3rem;
+}
+
+/* Optional: fine-tune homepage hero (slightly larger) */
+.cta-text h1 {
+  font-size: 2.75rem;
+}
+.cta-text h2 {
+  font-size: 2.25rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
 
 /* Layout */
+
 /* Remove any global layout rules targeting <main> */
 .header-container {
   max-width: 1200px;
@@ -393,12 +423,6 @@ a:focus-visible,
   text-align: center;
 }
 
-.cta-text h1,
-.cta-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .cta-text p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
@@ -469,28 +493,6 @@ a:focus-visible,
   max-width: 500px;
   padding: 0 0.5rem;
   box-sizing: border-box; /* keeps padding inside width */
-}
-
-/* ===== Headings hierarchy ===== */
-.section-breads h2,
-.section-treats h2,
-.section-dishes h2 {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.section-breads h3,
-.section-treats h3,
-.section-dishes h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.4rem;
-}
-
-.section-breads h4,
-.section-treats h4 {
-  font-size: 1.05rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.2rem;
 }
 
 /* ===== Notes & descriptors (Breads) ===== */
@@ -587,7 +589,15 @@ a:focus-visible,
   border-left: 2px solid #ccc;
 }
 
-section#cereales h4 {
-  margin-top: 2rem;
-  font-size: 1.25rem;
+/* === Bread-making Subsection Grouping === */
+/* Grouped subsections for fermentation */
+.faire-son-pain .fermentation-subsection {
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.faire-son-pain h5 {
+  margin-top: 1rem;
+  font-weight: 500;
 }
