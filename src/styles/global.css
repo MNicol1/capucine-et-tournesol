@@ -601,3 +601,135 @@ a:focus-visible,
   margin-top: 1rem;
   font-weight: 500;
 }
+
+
+/* MISSION PAGE */
+
+.mission-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Optional Image */
+.mission-image {
+  display: block;
+  max-width: 75%;        /* default to 75% width */
+  margin: 0 auto 2rem;   /* centered with breathing room */
+  height: auto;
+  border-radius: 0.25rem; /* subtle rounding for softness */
+}
+
+
+/* ================================
+   Poetic Mission Text Styling
+   ================================ */
+
+.mission-text {
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+/* Intro verses - stacked tightly */
+.mission-intro p {
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Statement - stacked tightly */
+.mission-statement p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Separation between blocks */
+.mission-intro {
+  margin-bottom: 1.5rem;  /* space below intro */
+  font-size: 1.2rem;
+}
+
+.mission-statement {
+  margin-bottom: 1.5rem;  /* optional, also separates from closure */
+}
+
+.mission-statement .lead {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.mission-statement strong {
+  font-weight: 600;
+}
+
+
+/* Closing line */
+.mission-closure {
+  margin-top: 2rem;
+}
+
+.mission-closure p {
+  font-weight: 500;
+}
+
+
+/* Video Section */
+.mission-video {
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.mission-video p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive iframe container */
+.mission-video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;  /* keeps it fluid & responsive */
+  border: 2px solid black;
+  border-radius: 0.25rem;
+}
+
+/* Legacy Section */
+.mission-legacy {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.mission-legacy p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify; /* balanced block feel for long history text */
+}
+
+
+.legacy-image {
+  float: left;
+  width: 50%;
+  max-width: 18rem;
+  margin: 0 1.5rem 1rem 0;
+  border-radius: 0.25rem;
+}
+
+.mission-legacy::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .legacy-image {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+}

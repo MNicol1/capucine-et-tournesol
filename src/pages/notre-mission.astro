@@ -3,6 +3,83 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import content from '../content/mission.json';
 ---
 
-<BaseLayout title={content.title} pathname={Astro.url.pathname} >
-    <h1>{content.heading}</h1>
+<BaseLayout title={content.title} pathname={Astro.url.pathname}>
+
+
+   <h2 class="mission-heading">{content.heading}</h2>
+
+  <!-- Optional Image -->
+  <img
+    src={`/images/${content.image4}`}
+    alt={content.imageAlt1}
+    loading="lazy"
+    class="mission-image"
+  />
+
+  <!-- Poetic Mission Text -->
+<section class="mission-text">
+  <!-- Intro verses -->
+  <div class="mission-intro">
+    <p><em>{content.poemLine1}</em></p>
+    <p><em>{content.poemLine2}</em></p>
+    <p><em>{content.poemLine3}</em></p>
+    <p><em>{content.poemLine4}</em></p>
+  </div>
+
+  <!-- Main declaration -->
+  <div class="mission-statement">
+    <p class="lead">{content.poemLine5}</p>
+    <p>{content.poemLine6}</p>
+    <p>{content.poemLine7}</p>
+     <p><strong>{content.poemLine8}</strong></p>
+  </div>
+
+  <!-- Closing line -->
+  <div class="mission-closure">
+    <p>{content.poemLine9}</p>
+  </div>
+</section>
+
+  <!-- Documentary Video -->
+  <section class="mission-video">
+    <!-- <h2>{content.videoHeading}</h2>
+    <p>{content.videoIntro}</p> -->
+    <iframe
+      src={content.videoEmbedUrl}
+      width="100%"
+      height="500"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <!-- 30-Year Neighborhood Block -->
+  <section class="mission-legacy">
+    <h2>{content.legacyHeading}</h2>
+    <p>{content.legacyParagraph1}</p>
+    <p>{content.legacyParagraph2}</p>
+    <p>{content.legacyParagraph3}</p>
+    <p>{content.legacyParagraph4}</p>
+    <p>{content.legacyParagraph5}</p>
+    <p>{content.legacyParagraph6}</p>
+        <img
+    src={`/images/${content.image5}`}
+    alt={content.imageAlt1}
+    loading="lazy"
+    class="legacy-image"
+  />
+    <p>{content.legacyParagraph7}</p>
+    <p>{content.legacyParagraph8}</p>
+    <p>{content.legacyParagraph9}</p>
+    <p>{content.legacyParagraph10}</p>
+    <p>{content.legacyParagraph11}</p>
+    <p>{content.legacyParagraph12}</p>
+    <p>{content.legacyParagraph13}</p>
+    <p>{content.legacyParagraph14}</p>
+  </section>
+
+
+
 </BaseLayout>
