@@ -115,32 +115,40 @@ p {
   background-color: var(--background-base);
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
   text-align: center;
   padding: 1rem 2rem;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+.footer-gif {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem; /* centers and adds bottom space */
+}
 
+/* ========================= HEADER ========================= */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  z-index: 1000; /* header sits under mobile menu */
+  z-index: 1000;
   background-color: var(--background-base);
 }
 
 .header-container {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0 1rem;
+  height: auto;
+  min-height: 120px;
 }
 
 .brand {
@@ -148,16 +156,15 @@ header {
   align-items: center;
   gap: 0.75rem;
   min-width: 0;
+  flex: 1 1 auto;
   text-decoration: none;
   color: inherit;
 }
-
 .logo {
   height: 100%;
   max-height: 100px;
   width: auto;
 }
-
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -166,13 +173,12 @@ header {
 .brand-title {
   font-family: "Technical", sans-serif;
   font-weight: 700;
-  font-size: 1.9rem;
-  letter-spacing: 0.2px;
-  white-space: nowrap;
+  white-space: normal; /* allow wrapping */
+  font-size: clamp(1.2rem, 4vw, 1.9rem);
 }
 .brand-tagline {
   font-family: "Technical", sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(0.9rem, 3vw, 1.4rem);
   font-weight: 700;
   text-align: center;
 }
@@ -182,6 +188,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex: 0 1 auto;
 }
 .primary-nav a {
   text-decoration: none;
@@ -191,18 +198,12 @@ header {
 }
 .primary-nav a:hover {
   color: #000;
-}
-
-/* Focus visibility */
+} /* Focus visibility */
 a:focus-visible,
 .nav-toggle-button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
-}
-
-/* =========================
-   MOBILE MENU
-   ========================= */
+} /* ========================= MOBILE MENU ========================= */
 
 /* Accessible visually-hidden checkbox (focusable) */
 .nav-toggle {
@@ -215,18 +216,19 @@ a:focus-visible,
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* Toggle button hidden on desktop */
+} /* Toggle button hidden on desktop */
 .nav-toggle-button {
   display: none;
   user-select: none;
   cursor: pointer;
   line-height: 1;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
 }
 
-/* --- Mobile rules --- */
-@media (max-width: 720px) {
+/* --- Mobile / Tablet rules --- */
+@media (max-width: 1024px) {
   .nav-toggle-icon::before {
     content: "☰";
     font-size: 2rem; /* smaller = thinner lines */
@@ -236,7 +238,6 @@ a:focus-visible,
     content: "✕";
     font-size: 2rem;
   }
-
   .nav-toggle-button {
     display: flex;
     width: 44px;
@@ -249,7 +250,6 @@ a:focus-visible,
     z-index: 1003; /* above menu panel */
     -webkit-tap-highlight-color: transparent;
   }
-
   .logo {
     max-height: 80px;
   }
@@ -356,7 +356,8 @@ a:focus-visible,
 }
 
 /* Remove / prevent active & hover state of nav on mobile */
-@media (max-width: 720px) {
+
+@media (max-width: 1024px) {
   .section-nav a,
   .section-nav a:visited,
   .section-nav a:hover,
@@ -444,7 +445,8 @@ a:focus-visible,
 }
 
 /* Responsive stacking on mobile */
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .cta-block {
     display: flex;
     flex-direction: column;
@@ -465,6 +467,28 @@ a:focus-visible,
 /* ================================
    PRODUCTS PAGE - UNIFIED STYLES
    ================================ */
+
+.breads-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px; /* no spacing between */
+  margin: 2rem 0;
+}
+
+.breads-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* crops evenly if images are not same ratio */
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .breads-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem; /* tiny gap if you want breathing room */
+  }
+}
 
 /* ===== Section intros ===== */
 .breads-intro,
@@ -602,7 +626,6 @@ a:focus-visible,
   font-weight: 500;
 }
 
-
 /* MISSION PAGE */
 
 .mission-heading {
@@ -613,12 +636,11 @@ a:focus-visible,
 /* Optional Image */
 .mission-image {
   display: block;
-  max-width: 75%;        /* default to 75% width */
-  margin: 0 auto 2rem;   /* centered with breathing room */
+  max-width: 75%; /* default to 75% width */
+  margin: 0 auto 2rem; /* centered with breathing room */
   height: auto;
   border-radius: 0.25rem; /* subtle rounding for softness */
 }
-
 
 /* ================================
    Poetic Mission Text Styling
@@ -647,12 +669,12 @@ a:focus-visible,
 
 /* Separation between blocks */
 .mission-intro {
-  margin-bottom: 1.5rem;  /* space below intro */
+  margin-bottom: 1.5rem; /* space below intro */
   font-size: 1.2rem;
 }
 
 .mission-statement {
-  margin-bottom: 1.5rem;  /* optional, also separates from closure */
+  margin-bottom: 1.5rem; /* optional, also separates from closure */
 }
 
 .mission-statement .lead {
@@ -664,7 +686,6 @@ a:focus-visible,
   font-weight: 600;
 }
 
-
 /* Closing line */
 .mission-closure {
   margin-top: 2rem;
@@ -674,10 +695,9 @@ a:focus-visible,
   font-weight: 500;
 }
 
-
 /* Video Section */
 .mission-video {
-  max-width: 60rem;
+  max-width: min(75%, 60rem);
   margin: 0 auto 3rem;
   padding: 0 1rem;
   text-align: center;
@@ -688,14 +708,26 @@ a:focus-visible,
   line-height: 1.5;
 }
 
-/* Responsive iframe container */
+/* Responsive iframe */
 .mission-video iframe {
   width: 100%;
-  aspect-ratio: 16/9;  /* keeps it fluid & responsive */
-  border: 2px solid black;
-  border-radius: 0.25rem;
+  aspect-ratio: 16/9;
+  border: none; /* remove hard border */
+  border-radius: 0.25rem; /* subtle rounding */
+  background: #000;
 }
 
+/* Mobile: edge-to-edge full width */
+@media (max-width: 768px) {
+  .mission-video {
+    max-width: 100%;
+    padding: 0; /* remove side padding */
+  }
+
+  .mission-video iframe {
+    border-radius: 0; /* optional: flush with edges */
+  }
+}
 /* Legacy Section */
 .mission-legacy {
   max-width: 50rem;
@@ -708,7 +740,6 @@ a:focus-visible,
   margin-bottom: 1rem;
   text-align: justify; /* balanced block feel for long history text */
 }
-
 
 .legacy-image {
   float: left;
@@ -728,6 +759,12 @@ a:focus-visible,
   .legacy-image {
     float: none;
     display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .mission-image {
     width: 100%;
     max-width: 100%;
     margin: 0 auto 1.5rem;
