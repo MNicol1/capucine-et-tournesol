@@ -1,6 +1,12 @@
 {
   "title": "Products | Capucine et Tournesol",
 
+  "image6": "image6.webp",
+  "image7": "image7.webp",
+  "image8": "image8.webp",
+  "image9": "image9.webp",
+  "imageAlt": "breads",
+
   "breads": {
     "heading": "Nos pains",
     "intro": [

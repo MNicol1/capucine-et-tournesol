@@ -296,34 +296,46 @@ a:focus-visible,
   }
 }
 
-/* =========================
-   STICKY FIXED SECTION NAV
-   ========================= */
-
 .page-content {
   padding: 2rem;
   margin: 0 auto;
 }
 
+/* =========================
+   SECTION NAV
+   ========================= */
+
 .section-nav {
   background-color: var(--background-base);
-
   position: fixed;
-  top: 120px; /* header height */
-  z-index: 999; /* sits under header */
-  width: 100%;
-  overflow-x: auto; /* single owner of horizontal scroll */
-  -webkit-overflow-scrolling: touch;
+  top: 120px;
+  z-index: 999;
+
+  /* Constrain to BaseLayout width */
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .section-nav ul {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
+  gap: 0.25rem;
   list-style: none;
-  padding: 1rem 2rem;
   margin: 0;
-  min-width: max-content;
+  padding: 0.5rem 1rem;
+
+  border: 1px solid hsl(0 0% 88%);
+  border-radius: 999px;
+  background: hsl(0 0% 96%);
+
+  max-width: 100%; /* keep inside parent width */
+  box-sizing: border-box; /* include border/padding in width */
 }
 
 .section-nav li {
@@ -331,23 +343,26 @@ a:focus-visible,
 }
 
 .section-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
   font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 4px;
+  text-decoration: none;
+  color: hsl(0 0% 20%);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
 
 .section-nav a:hover,
-.section-nav a:focus {
-  background-color: #f0f0f0;
+.section-nav a:focus-visible {
+  background: hsl(0 0% 90%);
 }
 
+.section-nav a[aria-current="true"],
 .section-nav a.active {
-  border-bottom: 2px solid #333;
-  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Anchor offset for in-page sections: header + section nav space */
@@ -355,27 +370,39 @@ a:focus-visible,
   scroll-margin-top: 180px;
 }
 
-/* Remove / prevent active & hover state of nav on mobile */
-
+/* =========================
+   MOBILE
+   ========================= */
 @media (max-width: 1024px) {
+  .section-nav {
+    padding: 0; /* no gutters */
+    justify-content: flex-start; /* align pills left */
+    overflow-x: auto; /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .section-nav ul {
+    padding: 0.5rem;
+    min-width: max-content; /* force pills to line up in one row */
+    max-width: none; /* let it scroll */
+  }
+
   .section-nav a,
   .section-nav a:visited,
   .section-nav a:hover,
   .section-nav a:focus,
   .section-nav a:active {
-    font-weight: 500; /* lock weight */
-    border-bottom: none; /* no underline highlight */
-    background: none; /* no bg highlight */
-    color: inherit; /* keep default color */
+    font-weight: 600;
+    background: none;
+    color: inherit;
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* In case JS adds an active class */
-  .section-nav a.active {
-    font-weight: 500 !important;
-    border-bottom: none !important;
-    background: none !important;
-    color: inherit !important;
+  .section-nav a.active,
+  .section-nav a[aria-current="true"] {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    color: hsl(0 0% 20%);
   }
 }
 
@@ -743,8 +770,8 @@ a:focus-visible,
 
 .legacy-image {
   float: left;
-  width: 50%;
-  max-width: 18rem;
+  width: 60%;
+  max-width: 30rem;
   margin: 0 1.5rem 1rem 0;
   border-radius: 0.25rem;
 }
