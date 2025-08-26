@@ -5,10 +5,10 @@ import content from '../content/mission.json';
 
 <BaseLayout title={content.title} pathname={Astro.url.pathname}>
 
+<!-- <h2 class="mission-heading">{content.heading}</h2> -->
 
-   <h2 class="mission-heading">{content.heading}</h2>
 
-  <!-- Image -->
+<section class="mission-hero">
   <img
     src={`/images/${content.image4}`}
     alt={content.imageAlt1}
@@ -16,34 +16,33 @@ import content from '../content/mission.json';
     class="mission-image"
   />
 
-  <!-- Poetic Mission Text -->
-<section class="mission-text">
-  <!-- Intro verses -->
-  <div class="mission-intro">
-    <p><em>{content.poemLine1}</em></p>
-    <p><em>{content.poemLine2}</em></p>
-    <p><em>{content.poemLine3}</em></p>
-    <p><em>{content.poemLine4}</em></p>
-  </div>
+  <div class="mission-text">
 
-  <!-- Main declaration -->
-  <div class="mission-statement">
-    <p class="lead">{content.poemLine5}</p>
-    <p>{content.poemLine6}</p>
-    <p>{content.poemLine7}</p>
-     <p><strong>{content.poemLine8}</strong></p>
-  </div>
+    <!-- Intro (poetic values) -->
+    <div class="mission-intro">
+      <p><em>{content.missionIntro1}</em></p>
+      <p><em>{content.missionIntro2}</em></p>
+      <p><em>{content.missionIntro3}</em></p>
+      <p><em>{content.missionIntro4}</em></p>
+    </div>
 
-  <!-- Closing line -->
-  <div class="mission-closure">
-    <p>{content.poemLine9}</p>
+    <!-- Main declaration -->
+    <div class="mission-statement">
+      <p>{content.missionParagraph1}</p>
+      <p>{content.missionParagraph2}</p>
+      <p>{content.missionClosure}</p>
+    </div>
+
   </div>
 </section>
 
+
+
+
+
   <!-- Documentary Video -->
   <section class="mission-video">
-    <!-- <h2>{content.videoHeading}</h2>
-    <p>{content.videoIntro}</p> -->
+    <h2 class="video-heading">{content.videoHeading}</h2>
 
 <iframe
   src="https://player.vimeo.com/video/371524487?portrait=0&badge=0"
@@ -52,13 +51,13 @@ import content from '../content/mission.json';
   loading="lazy">
 </iframe>
 
-
+<p class="video-caption">{content.videoCaption}</p>
 
 
   </section>
 
   <!-- 30-Year Neighborhood Block -->
-  <section class="mission-legacy">
+  <section class="mission-legacy" id="mile-end">
     <h2>{content.legacyHeading}</h2>
     <p>{content.legacyParagraph1}</p>
     <p>{content.legacyParagraph2}</p>

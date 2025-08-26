@@ -6,20 +6,19 @@
   "image4": "image4.webp",
   "imageAlt1": "Image of bakery",
 
-  "poemLine1": "Respecter la matière, l'aliment,",
-  "poemLine2": "celui qui l'a cultivé,",
-  "poemLine3": "le sol qui l'a produit,",
-  "poemLine4": "et surtout, celui qui s'en nourrit.",
-  "poemLine5": "Pour la santé, pour l'énergie et pour le goût,",
-  "poemLine6": "nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.",
-  "poemLine7": "Nos farines ne subissent aucun blutage (séparation),",
-  "poemLine8": "chaque composante de la céréale est conservée dans son intégralité.",
+  "missionIntro1": "Respecter la matière, l'aliment,",
+  "missionIntro2": "celui qui l'a cultivé,",
+  "missionIntro3": "le sol qui l'a produit,",
+  "missionIntro4": "et surtout, celui qui s'en nourrit.",
 
-  "poemLine9": "Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.",
+  "missionParagraph1": "Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.",
+  "missionParagraph2": "Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.",
 
-  "videoHeading": "Un Regard sur Notre Travail",
-  "videoIntro": "Un court documentaire de 10 minutes sur notre approche, notre atelier et notre engagement quotidien.",
+  "missionClosure": "Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.",
+
+  "videoHeading": "Regardez notre histoire",
   "videoEmbedUrl": "https://player.vimeo.com/video/371524487",
+  "videoCaption": "Un court documentaire sur notre histoire, réalisé par Kopeli Productions",
 
   "legacyHeading": "Depuis 30 ans dans le Mile-End",
   "legacyParagraph1": "Le 16 janvier 2025 souligne les 30 ans de l’arrivée de la boulangerie à Montréal, rue Bernard.",
@@ -37,6 +36,5 @@
   "legacyParagraph13": "J’aimerais néanmoins aujourd’hui vous exprimer mon immense reconnaissance pour le support que vous m’avez apporté toutes ces années. Parmi vous, certains sont fidèles depuis les premiers jours.",
   "legacyParagraph14": "Merci, Philippe",
 
-  "image5": "image5.webp",
-  "imageAlt1": "Image of bakery"
+  "image5": "image5.webp"
 }

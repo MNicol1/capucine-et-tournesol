@@ -14,9 +14,12 @@ import content from '../content/home.json';
       <img src={`/images/${content.image3}`} alt={content.imageAlt1} />
     </div>
     <div class="cta-text">
-      <h1>{content.text1}</h1>
-      <p>{content.text2}</p>
-      <a href="/notre-mission" class="cta-button">About Us</a>
+      <div class="cta-content">
+        <h1>{content.text1}</h1>
+        <h3> <a href="/notre-mission#mile-end" class="mile-end-link">{content.text2}</a></h3>
+      </div>
+
+      <!-- <a href="/notre-mission" class="cta-button">About Us</a> -->
     </div>
   </section>
 
@@ -26,9 +29,13 @@ import content from '../content/home.json';
       <img src={`/images/${content.image2}`} alt={content.imageAlt2} />
     </div>
     <div class="cta-text">
-      <h2>{content.text3}</h2>
-      <h3>{content.text4}</h3>
-      <a href="/produits" class="cta-button">Explore products</a>
+      <div class="cta-content">
+       <h2>{content.text3}</h2>
+       <h3>{content.text4}</h3>
+      </div>
+       
+
+      <a href="/produits" class="cta-button">Découvrir nos produits</a>
     </div>
   </section>
 
@@ -38,9 +45,11 @@ import content from '../content/home.json';
       <img src={`/images/${content.image1}`} alt={content.imageAlt3} />
     </div>
     <div class="cta-text">
-      <h2>{content.text5}</h2>
+      <div class="cta-content">
+        <h2>{content.text5}</h2>
+        </div>
 
-      <a href="/info" class="cta-button">Learn more</a>
+      <!-- <a href="/info" class="cta-button">Learn more</a> -->
     </div>
   </section>
 

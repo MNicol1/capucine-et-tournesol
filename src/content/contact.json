@@ -1,6 +1,5 @@
 {
   "title": "Contact | Capucine et Tournesol",
-  "heading": "Contact",
 
   "address": "226 Rue Bernard Ouest, Montréal, QC H2T 2K4",
   "phone": "514-277-0232",
@@ -15,6 +14,6 @@
     { "label": "Vendredi", "hours": "08h00 – 18h00" },
     { "label": "Samedi", "hours": "08h00 – 17h00" },
     { "label": "Dimanche", "hours": "Fermé" }
-  ]
+  ],
+  "note": "Attention pour les commandes, au 514-277-0232 durant les heures d'ouverture seulement."
 }
-

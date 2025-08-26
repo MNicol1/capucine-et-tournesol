@@ -24,7 +24,7 @@
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 /* Global */
@@ -80,10 +80,10 @@ h6 {
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
 }
 .cta-text h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 p {
@@ -121,14 +121,53 @@ p {
 
 footer {
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
+}
+
+.footer-logo {
+  margin-bottom: 1.5rem;
 }
 
 .footer-gif {
   max-width: 80px;
   height: auto;
   display: block;
-  margin: 0 auto 2rem; /* centers and adds bottom space */
+  margin: 0 auto 2rem;
+}
+
+.footer-info {
+  margin-bottom: 1.5rem;
+}
+
+.footer-info div {
+  margin: 0.25rem 0;
+}
+
+.footer-info a {
+  color: #333;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.footer-info a:hover {
+  color: gray;
+}
+
+.footer-social {
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  display: inline-flex; /* makes it easy to center the icon */
+  align-items: center;
+  justify-content: center;
+  width: 44px; /* ensures tap target size */
+  height: 44px;
+}
+
+.social-icon {
+  width: 28px; /* actual icon size */
+  height: auto;
 }
 
 /* ========================= HEADER ========================= */
@@ -406,6 +445,14 @@ a:focus-visible,
   }
 }
 
+#mile-end {
+  scroll-margin-top: 120px;
+}
+
+.mile-end-link {
+  color: black;
+}
+
 /* HOME PAGE  */
 .home-cta-sections {
   display: flex;
@@ -454,6 +501,10 @@ a:focus-visible,
 .cta-text p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+.cta-content {
+  margin-bottom: 2rem;
 }
 
 .cta-button {
@@ -655,87 +706,85 @@ a:focus-visible,
 
 /* MISSION PAGE */
 
-.mission-heading {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.mission-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%; /* spans full screen */
+  margin: 0 auto 4rem;
+  padding: 0;
 }
 
-/* Optional Image */
 .mission-image {
-  display: block;
-  max-width: 75%; /* default to 75% width */
-  margin: 0 auto 2rem; /* centered with breathing room */
+  flex: 1 1 50%;
+  width: 50%;
   height: auto;
-  border-radius: 0.25rem; /* subtle rounding for softness */
+  object-fit: cover;
+  border-radius: 0; /* remove rounding if you want edge-to-edge */
 }
-
-/* ================================
-   Poetic Mission Text Styling
-   ================================ */
 
 .mission-text {
-  max-width: 42rem;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
+  flex: 1 1 50%;
+  width: 50%;
+  padding: 2rem;
   line-height: 1.6;
+  text-align: left;
 }
-/* Intro verses - stacked tightly */
+
 .mission-intro p {
   margin: 0;
   font-style: italic;
   font-weight: 500;
+  line-height: 1.5;
   text-align: center;
-  line-height: 1.5;
 }
 
-/* Statement - stacked tightly */
-.mission-statement p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Separation between blocks */
 .mission-intro {
-  margin-bottom: 1.5rem; /* space below intro */
-  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.mission-statement {
-  margin-bottom: 1.5rem; /* optional, also separates from closure */
+.mission-statement p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
 }
 
-.mission-statement .lead {
-  font-weight: 600;
-  font-size: 1.2rem;
+/* Mobile: stack image above text */
+@media (max-width: 768px) {
+  .mission-hero {
+    flex-direction: column;
+  }
+  .mission-image,
+  .mission-text {
+    width: 100%;
+    flex: none;
+  }
+  .mission-image {
+    max-height: 300px; /* optional */
+    object-fit: cover;
+  }
 }
 
-.mission-statement strong {
-  font-weight: 600;
-}
-
-/* Closing line */
-.mission-closure {
-  margin-top: 2rem;
-}
-
-.mission-closure p {
-  font-weight: 500;
+/* Shared layout rhythm for sections */
+.mission-video,
+.mission-legacy {
+  max-width: 50rem; /* consistent width across both */
+  margin: 0 auto 4rem; /* centered with equal bottom space */
+  padding: 0 1rem; /* consistent left/right breathing */
 }
 
 /* Video Section */
+.video-heading {
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 2rem 0;
+}
+
 .mission-video {
-  max-width: min(75%, 60rem);
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
   text-align: center;
 }
 
-.mission-video p {
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-/* Responsive iframe */
 .mission-video iframe {
   width: 100%;
   aspect-ratio: 16/9;
@@ -744,24 +793,13 @@ a:focus-visible,
   background: #000;
 }
 
-/* Mobile: edge-to-edge full width */
-@media (max-width: 768px) {
-  .mission-video {
-    max-width: 100%;
-    padding: 0; /* remove side padding */
-  }
-
-  .mission-video iframe {
-    border-radius: 0; /* optional: flush with edges */
-  }
+.video-caption {
+  margin-top: 0.75rem;
+  font-style: italic;
+  text-align: left;
 }
+
 /* Legacy Section */
-.mission-legacy {
-  max-width: 50rem;
-  margin: 0 auto;
-  padding: 0 1rem 4rem;
-}
-
 .mission-legacy p {
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -782,7 +820,21 @@ a:focus-visible,
   clear: both;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .mission-video {
+    max-width: 100%;
+    padding: 0; /* edge-to-edge on small screens */
+  }
+
+  .mission-legacy {
+    padding: 0;
+  }
+
+  .mission-video iframe {
+    border-radius: 0; /* optional: flush with edges */
+  }
+
   .legacy-image {
     float: none;
     display: block;
@@ -795,5 +847,54 @@ a:focus-visible,
     width: 100%;
     max-width: 100%;
     margin: 0 auto 1.5rem;
+  }
+}
+
+/* CONTACT PAGE */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.contact-map {
+  aspect-ratio: 4 / 3; /* or 16 / 9 if you prefer wide */
+  width: 100%;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hours-row {
+  display: flex;
+  gap: 1rem; /* small space between day and time */
+  justify-content: flex-start; /* align them left, not spread out */
+}
+
+.hours-row .day {
+  font-weight: 500;
+  min-width: 150px; /* keeps days aligned in a neat column */
+}
+
+.email {
+  text-decoration: underline;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }

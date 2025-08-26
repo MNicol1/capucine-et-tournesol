@@ -3,15 +3,27 @@ import content from '../content/footer.json';
 ---
 
 <footer>
-<div>
-    <div>
-    <img src="/windmill.gif" alt="Animated logo" class="footer-gif" />
-  </div>
-    <div>{content.address}</div>
-    <div>{content.hours}</div>
-    <div>{content.phone}</div>
+  <div class="footer">
+    <div class="footer-logo">
+      <img src="/windmill.gif" alt="Animated logo" class="footer-gif" />
+    </div>
+
+    <div class="footer-info">
+      <div>{content.address}</div>
+      <div>{content.hours}</div>
+      <div>{content.phone}</div>
       <div>
-    <a href={`mailto:${content.email}`}>{content.emailLabel}</a>
+        <a class="email" href={`mailto:${content.email}`}>{content.emailLabel}</a>
+      </div>
+    </div>
+
+    <div class="footer-social">
+  <a href="https://www.facebook.com/pages/Boulangerie-Capucine-et-Tournesol/184532918320389" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <img src="/facebook.png" alt="Facebook" class="social-icon" />
+</a>
+
+    </div>
   </div>
-</div>
 </footer>

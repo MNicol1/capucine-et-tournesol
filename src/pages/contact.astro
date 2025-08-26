@@ -4,20 +4,29 @@ import content from '../content/contact.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
-    <h1>{content.heading}</h1>
+  <section class="contact-grid">
+    <!-- Left column: Google Map -->
+    <div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.283338176949!2d-73.60720112486585!3d45.524503529414716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91979bffadabb%3A0xece1dcac1878d894!2s226%20Rue%20Bernard%20O%2C%20Montr%C3%A9al%2C%20QC%20H2V%204K7!5e0!3m2!1sen!2sca!4v1755877601351!5m2!1sen!2sca"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
-      <div>
-    <div>{content.address}</div>
-
-    <div>{content.hoursTitle}</div>
-    {content.hours.map((h) => (
-      <div>{h.label} : {h.hours}</div>
-    ))}
-  </div>
-
-  <div>{content.phone}</div>
-
-  <div>
-    <a href={`mailto:${content.email}`}>{content.emailLabel}</a>
-  </div>
+    <!-- Right column: info -->
+    <div class="contact-info">
+      <h2>{content.hoursTitle}</h2>
+      <div class="hours">
+        {content.hours.map((h) => (
+          <div class="hours-row">
+            <span class="day">{h.label}</span>
+            <span class="time">{h.hours}</span>
+          </div>
+        ))}
+      </div>
+      <div><strong>{content.note}</strong></div>
+      <div class="address">{content.address}</div>
+      <div class="phone">{content.phone}</div>
+      <div >
+        <a class="email" href={`mailto:${content.email}`}>{content.emailLabel}</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
