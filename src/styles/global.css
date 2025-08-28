@@ -52,6 +52,16 @@ body {
    TYPOGRAPHY: HEADINGS
    ========================= */
 
+/* Use Technical for brand + display text */
+h1,
+h2,
+h3,
+h4,
+.mission-intro {
+  font-family: "Technical", system-ui, sans-serif;
+  font-weight: 600;
+}
+
 /* Baseline scale – applies site-wide */
 h1 {
   font-size: 2.5rem; /* hero / page titles */
@@ -108,12 +118,32 @@ p {
 }
 
 /* All other pages: centered content with standard padding */
+/* All content pages */
 .main--content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 1rem;   /* 16px */
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: var(--background-base);
 }
+
+/* Scale up gutters at wider viewports */
+@media (min-width: 768px) {
+  .main--content {
+    padding-left: 1.5rem;  /* 24px */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main--content {
+    padding-left: 2rem;    /* 32px */
+    padding-right: 2rem;
+  }
+}
+
 
 /* =========================
    FOOTER
@@ -180,6 +210,7 @@ header {
   background-color: var(--background-base);
 }
 
+
 .header-container {
   display: flex;
   align-items: center;
@@ -189,6 +220,8 @@ header {
   height: auto;
   min-height: 120px;
 }
+
+
 
 .brand {
   display: flex;
@@ -233,6 +266,7 @@ header {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 17px;
   padding: 0.5rem; /* better desktop hit target */
 }
 .primary-nav a:hover {
@@ -412,6 +446,7 @@ a:focus-visible,
 /* =========================
    MOBILE
    ========================= */
+
 @media (max-width: 1024px) {
   .section-nav {
     padding: 0; /* no gutters */
@@ -453,11 +488,14 @@ a:focus-visible,
   color: black;
 }
 
-/* HOME PAGE  */
+/* =========================
+       HOME PAGE
+   ========================= */
+
 .home-cta-sections {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 0 0 6rem 0;
   margin: 0;
 }
 
@@ -540,35 +578,68 @@ a:focus-visible,
   .cta-text {
     padding: 2rem 1rem;
   }
-}
-
-/* ================================
+}/* ================================
    PRODUCTS PAGE - UNIFIED STYLES
    ================================ */
 
+/* === Section containers === */
+.section-breads,
+.section-treats,
+.section-dishes {
+  max-width: 60rem;   /* ~960px */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Image grids (Breads only) === */
 .breads-images {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 10px; /* no spacing between */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin: 2rem 0;
 }
 
 .breads-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* crops evenly if images are not same ratio */
+  object-fit: cover;
   display: block;
   border-radius: 6px;
 }
 
+.section-breads h3 {
+  margin-bottom: 0;   /* remove default gap */
+  padding-bottom: 0;  /* if you had extra padding */
+}
+
+.breads-descriptor {
+  margin-top: 0;      /* prevent any top margin on the note */
+}
+
+.products-column h3 {
+  border-bottom: 1.5px solid black;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  max-width: 50%;
+}
+
+
 @media (max-width: 900px) {
   .breads-images {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.25rem; /* tiny gap if you want breathing room */
+    gap: 0.25rem;
   }
 }
 
-/* ===== Section intros ===== */
+/* === Paragraph base (all section text) === */
+.section-breads p,
+.section-treats p,
+.section-dishes p {
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+/* === Intro paragraphs (narrower + more space) === */
 .breads-intro,
 .treats-intro,
 .dishes-intro {
@@ -578,26 +649,33 @@ a:focus-visible,
 .breads-intro p,
 .treats-intro p,
 .dishes-intro p {
-  margin-bottom: 0.5rem;
-  line-height: 1.45;
+  max-width: 46rem;     /* ~672px for readable line length */
+  line-height: 1.5;     /* slightly looser */
+  margin-bottom: 1rem;  /* more breathing room than base */
 }
 
-/* ===== Shared column layout ===== */
+/* === Shared column layout === */
 .products-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center; /* centers columns in the page */
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .products-column {
   flex: 1 1 0;
-  max-width: 500px;
+  max-width: 400px;
   padding: 0 0.5rem;
-  box-sizing: border-box; /* keeps padding inside width */
+  box-sizing: border-box;
 }
 
-/* ===== Notes & descriptors (Breads) ===== */
+/* === Notes & descriptors (Breads) === */
+.breads-heading {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .breads-descriptor {
   font-style: italic;
   color: var(--text-muted);
@@ -606,30 +684,20 @@ a:focus-visible,
 
 .breads-note {
   font-style: italic;
-  margin-bottom: 0.75rem;
 }
 
-/* ===== Ingredients text ===== */
-.section-breads p,
-.section-treats p {
-  margin: 0;
-  line-height: 1.45;
-}
-
-/* ===== Lists ===== */
-/* Default lists in Treats (examples only) */
+/* === Lists === */
 .section-treats ul {
   margin: 0;
   padding-left: 1.2rem;
   list-style-type: disc;
 }
 
-/* Remove bullets for Treats additional + all Dishes lists */
 .section-treats .products-column ul,
 .section-dishes .products-column ul {
   list-style: none;
   margin: 0;
-  padding: 0; /* removes browser's default indent */
+  padding: 0;
 }
 
 .products-column li {
@@ -637,12 +705,12 @@ a:focus-visible,
   line-height: 1.45;
 }
 
-/* ===== Special spacing ===== */
+/* === Special spacing === */
 .treats-note {
-  margin-top: 1.5rem; /* space before note after products */
+  margin-top: 1.5rem;
 }
 
-/* ===== Responsive ===== */
+/* === Responsive === */
 @media (max-width: 768px) {
   .products-columns {
     flex-direction: column;
@@ -650,12 +718,14 @@ a:focus-visible,
   }
   .products-column {
     width: 100%;
-    max-width: 500px; /* keep consistent column width */
-    padding: 0; /* maintain side gutter on mobile */
+    max-width: 500px;
+    padding: 0;
   }
 }
 
-/* === Chromosome Table === */
+
+
+/* === LEARN PAGE   Chromosome Table === */
 
 .table-wrapper {
   overflow-x: auto;
@@ -727,7 +797,7 @@ a:focus-visible,
 .mission-text {
   flex: 1 1 50%;
   width: 50%;
-  padding: 2rem;
+  padding: 0 2rem;
   line-height: 1.6;
   text-align: left;
 }
@@ -735,19 +805,19 @@ a:focus-visible,
 .mission-intro p {
   margin: 0;
   font-style: italic;
-  font-weight: 500;
   line-height: 1.5;
   text-align: center;
 }
 
 .mission-intro {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .mission-statement p {
   margin: 0 0 0.75rem;
   line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 /* Mobile: stack image above text */
@@ -769,7 +839,7 @@ a:focus-visible,
 /* Shared layout rhythm for sections */
 .mission-video,
 .mission-legacy {
-  max-width: 50rem; /* consistent width across both */
+  max-width: 45rem; /* consistent width across both */
   margin: 0 auto 4rem; /* centered with equal bottom space */
   padding: 0 1rem; /* consistent left/right breathing */
 }

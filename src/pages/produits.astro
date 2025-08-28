@@ -5,9 +5,8 @@ import content from '../content/produits.json';
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
 <!-- Section 1: Breads -->
-<section class="section-breads">
 
-    
+
   <div class="breads-images">
   <img 
     src={`/images/${content.image6}`} 
@@ -36,6 +35,10 @@ import content from '../content/produits.json';
 </div>
 
 
+
+<section class="section-breads">
+
+  
   <h2>{content.breads.heading}</h2>
 
   <div class="breads-intro">
@@ -103,16 +106,6 @@ import content from '../content/produits.json';
     <p>{content.treats.intro[1]}</p>
     <p>{content.treats.intro[2]}</p>
   </div>
-
-  <!-- <div class="treats-image-wrapper">
-  <img
-    src={`/images/${content.image10}`}
-    alt={content.imageAlt}
-    loading="lazy"
-    class="treats-image"
-  />
-</div> -->
-
 
   <div class="products-columns">
     <div class="products-column">
