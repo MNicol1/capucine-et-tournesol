@@ -12,7 +12,7 @@
     "intro": [
       "Les ingrédients parlent par eux-mêmes",
       "Nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.",
-      "Nos farines ne subissent aucun blutage (séparation), chaque composante de la céréale est conservée dans son intégralité."
+      "Nos farines ne subissent aucun blutage (séparation), chaque composante de la céréale est conservée dans son intégralité. Sans gluten ajouté"
     ],
     "sourdough": {
       "heading": "Pains au levain",
@@ -86,15 +86,15 @@
       "items": [
         {
           "name": "Bananes et cacao (seigle)",
-          "ingredients": "Bananes fraîches, seigle intégral, dattes, œufs frais, huile de canola, décoction de graines de lin, cacao, soda à pâte, poudre à pâte."
+          "ingredients": "Bananes fraîches, seigle intégral, dattes, huile de canola, décoction de graines de lin, cacao, soda à pâte, poudre à pâte."
         },
         {
           "name": "Canneberges et citron (kamut)",
-          "ingredients": "Canneberges, kamut intégral, dattes, œufs frais, huile de canola, décoction de graines de lin, zestes de citrons, soda à pâte, poudre à pâte."
+          "ingredients": "Canneberges, kamut intégral, dattes, huile de canola, décoction de graines de lin, zestes de citrons, soda à pâte, poudre à pâte."
         },
         {
           "name": "Reine Élisabeth (avoine)",
-          "ingredients": "Noix de coco, avoine intégrale, dattes, noix de Grenoble, œufs frais, huile de canola, décoction de graines de lin, soda à pâte, poudre à pâte."
+          "ingredients": "Noix de coco, avoine intégrale, dattes, noix de Grenoble, huile de canola, décoction de graines de lin, soda à pâte, poudre à pâte."
         }
       ]
     },
@@ -108,8 +108,7 @@
         "Noisettes et chocolat (seigle)",
         "Bananes (blé)",
         "Ananas et gingembre (kamut)"
-      ],
-      "note": "Manger sainement ne doit jamais être se punir !"
+      ]
     }
   },
 
@@ -124,7 +123,6 @@
         "Ratatouille",
         "Moussaka végétarienne",
         "Sauce à spaghetti végétarienne (lentilles)",
-        "Cassoulet de lentilles",
         "…et encore d’autres"
       ]
     },
@@ -141,7 +139,8 @@
         "Poulet chasseur",
         "Poulet au cari",
         "Tourtière québécoise",
-        "Cassoulet de pois chiches à l'agneau"
+        "Cassoulet de pois chiches à l'agneau",
+        "Cassoulet de lentilles"
       ]
     }
   }
