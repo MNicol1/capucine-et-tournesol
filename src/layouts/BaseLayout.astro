@@ -5,6 +5,7 @@ const isHome = pathname === '/';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
 ---
 
 <html lang="fr">
@@ -31,5 +32,6 @@ import '../styles/global.css';
       <slot />
     </main>
     <Footer />
+     <script src="/scripts/scroll.js" defer></script>
   </body>
 </html>
