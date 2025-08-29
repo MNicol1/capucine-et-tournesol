@@ -57,7 +57,8 @@ h1,
 h2,
 h3,
 h4,
-.mission-intro {
+.mission-intro,
+.content-centered {
   font-family: "Technical", system-ui, sans-serif;
   font-weight: 600;
 }
@@ -413,6 +414,8 @@ a:focus-visible,
   border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
+  /* font-family: "Technical", system-ui, sans-serif; */
+
   text-decoration: none;
   color: hsl(0 0% 20%);
   transition: background 0.2s ease, box-shadow 0.2s ease;
@@ -428,11 +431,9 @@ a:focus-visible,
 
 .section-nav a.active,
 .section-nav a[aria-current="true"] {
-  background: rgb(128, 0, 0);
-  color: #fff;
-
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4),
-    /* deeper shadow for lift */ 0 0 0 5px rgba(255, 255, 255, 0.5); /* brighter, wider glow */
+  background: #e1d8cd;
+  color: black;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 /* Anchor offset for in-page sections: header + section nav space */
@@ -705,11 +706,6 @@ a:focus-visible,
   line-height: 1.45;
 }
 
-/* === Special spacing === */
-.treats-note {
-  margin-top: 1.5rem;
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
   .products-columns {
@@ -730,6 +726,7 @@ a:focus-visible,
   margin: 0 auto;
   padding: 2rem 1rem; /* left/right breathing room */
   line-height: 1.6;
+  border-bottom: 1px solid #ccc;
 }
 
 .page-content section {
@@ -739,6 +736,20 @@ a:focus-visible,
 .table-wrapper {
   overflow-x: auto;
   margin: 1.5rem 0;
+}
+
+.content-centered {
+  width: 70%;
+  margin: 1rem auto; /* centers the block */
+  text-align: center; /* centers the text inside */
+  font-size: 1.3rem;
+}
+
+article {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 2rem 0;
+  margin: 3rem 0;
 }
 
 .grain-table {
@@ -765,7 +776,7 @@ a:focus-visible,
 /* === Cereal Subsection Grouping === */
 
 .cereal-subsection {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 2rem 1rem;
   padding-left: 2.25rem;
   border-left: 2px solid #ccc;
 }
@@ -782,13 +793,14 @@ a:focus-visible,
 /* Grouped subsections for fermentation */
 .faire-son-pain .fermentation-subsection {
   border-left: 3px solid #ccc;
-  padding-left: 1rem;
-  margin: 1rem 0 2rem 0;
+  padding-left: 1.2rem;
+  margin: 1rem 0 2rem 1rem;
 }
 
-.faire-son-pain h5 {
-  margin-top: 1rem;
-  font-weight: 500;
+.faire-son-pain .fermentation-subsection h4::before {
+  content: "•"; /* bullet symbol */
+  color: black; /* change color if needed */
+  margin-right: 0.5rem;
 }
 
 /* MISSION PAGE */
@@ -942,22 +954,23 @@ a:focus-visible,
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 3rem;
   padding: 1rem 2rem;
 }
-
 .contact-map {
-  aspect-ratio: 4 / 3; /* or 16 / 9 if you prefer wide */
-  width: 100%;
+  /* this stays full 1fr width/height of grid */
+  display: flex;
+  justify-content: center; /* center the map horizontally */
+  align-items: center; /* center vertically */
 }
 
 .contact-map iframe {
-  width: 100%;
-  height: 100%; /* or whatever fits your layout */
+  width: 85%; /* shrink inside the box */
+  aspect-ratio: 1/1; /* make it a square */
+  max-width: 400px; /* optional cap */
   border: 0;
-  border-radius: 8px; /* soft corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* subtle shadow */
-  margin: 1rem 0rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .contact-info {
@@ -985,5 +998,22 @@ a:focus-visible,
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    order: -1;
+  }
+
+  .contact-map {
+    justify-content: stretch; /* reset */
+    align-items: stretch; /* reset */
+    order: 0;
+  }
+
+  .contact-map iframe {
+    width: 100%; /* full width again */
+    aspect-ratio: auto; /* let height follow width */
+    max-width: none; /* remove the cap */
+    height: 250px; /* set a comfortable height */
   }
 }

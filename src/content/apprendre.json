@@ -18,15 +18,18 @@
 
   "pourquoiBold1": "Voilà pour la très grande majorité des produits de boulangerie offerts dans le commerce, (artisans inclus). Il ne s’agit plus d’un aliment mais bien d’une substance morte, vide de tous nutriments naturels et souvent toxique.",
 
+  "pourquoiQuestion": "Comment ne pas s’étonner des intolérances au blé ?",
+
   "pourquoiParagraph8": "Concernant la farine blanche non-blanchie (biologique ou pas) souvent employée pour la fabrication de baguettes et de viennoiseries considérés comme supérieurs, saviez-vous qu’elle subit la première étape mécanique de la même transformation que les farines commerciales ?",
-  "pourquoiParagraph9": "Elle est moulue sur cylindres (écrasée, chauffée) dans le seul but de lui extraire le son et le germe. Il n’y a qu’une seule raison de moudre sur cylindre, c’est de faciliter le raffinage.",
-  "pourquoiParagraph10": "À part le blanchiment chimique, la blanche non-blanchie est presque aussi pauvre que la farines commerciale et il faut lui ajouter des vitamines pour être conforme aux lois.",
-  "pourquoiParagraph11": "La farine tamisée (biologique) est quant à elle moulue sur pierres et conserve un peu plus des nutriments naturels du blé. La farines dite de grains entiers naturels (biologiques ou non) contiennent moins de la moitié de la fibre contenue dans le grain. Sa durée de conservation indique que le germe y est absent ou du moins presque entièrement retiré.",
+  "pourquoiParagraph9": "Elle est moulue sur cylindres (écrasée, chauffée) dans le seul but de lui extraire le son et le germe. Il n’y a qu’une seule raison de moudre sur cylindre, c’est de faciliter le raffinage. À part le blanchiment chimique, la blanche non-blanchie est presque aussi pauvre que la farines commerciale et il faut lui ajouter des vitamines pour être conforme aux lois.",
+  "pourquoiParagraph10": "La farine tamisée (biologique) est quant à elle moulue sur pierres et conserve un peu plus des nutriments naturels du blé.",
+  "pourquoiParagraph11": "La farines dite de grains entiers naturels (biologiques ou non) contiennent moins de la moitié de la fibre contenue dans le grain. Sa durée de conservation indique que le germe y est absent ou du moins presque entièrement retiré.",
 
   "pourquoiBold2": "Plusieurs boulangeries vont même jusqu’à ajouter de la farine de gluten pur à leur pain.",
 
   "pourquoiBold3": "Une farine qui contient tous les éléments du grain contient ce qu’elle a de plus vivant et se dégrade très rapidement. En quelques jours, elle prend un goût rance et plusieurs nutriments disparaissent par oxydation si on ne l’utilise pas rapidement. Demanderiez-vous à vos tomates de se conserver six mois dans votre garde manger comme les farines que vous achetez ?",
-  "pourquoiBold4": "En tant que boulangers, nous croyons que la seule façon de faire notre travail comme il le faut, et d'échapper à ce manège du raffinage des aliments est de moudre notre farine nous-mêmes. Depuis la création de la boulangerie Capucine et Tournesol, nous moulons quotidiennement toutes nos farines sur pierres sans rien extraire et sans rien ajouter.",
+  "pourquoiBold4": "En tant que boulangers, nous croyons que la seule façon de faire notre travail comme il le faut, et d'échapper à ce manège du raffinage des aliments est de moudre notre farine nous-mêmes. ",
+  "pourquoiBold5": "Depuis la création de la boulangerie Capucine et Tournesol, nous moulons quotidiennement toutes nos farines sur pierres sans rien extraire et sans rien ajouter.",
 
   "sectionTwoSubheading": "Qu'est-ce que le pain intégral ?",
 
@@ -58,7 +61,7 @@
   "integralP24": "Cela fait maintenant plus de vingt ans que Capucine et Tournesol vous proposent des pains faits selon ces critères... La mode est venue bien après.",
 
   "integralEnd1": "Le mot intégral doit aussi rimer avec intégrité.",
-  "integralEnd2": "Chez Capucine et Tournesol, depuis 1988,l'ensemble des pains est fait de farines 100% intégrales.",
+  "integralEnd2": "Chez Capucine et Tournesol, depuis 1988, l'ensemble des pains est fait de farines 100% intégrales.",
   "integralEnd3": "Aucun améliorant chimique, farine blanche ni sucre d'aucune forme n'entre à la boulangerie.",
   "integralEnd4": "Nous sommes d'avis que pour s'assurer qu'un pain est intégral et que toutes les conditions nécessaires sont réunies, il faut demander au boulanger s'il moud ses farines tous les jours.",
 
