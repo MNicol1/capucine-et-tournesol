@@ -1,5 +1,9 @@
 # Capucine et Tournesol Website
 
+This repository contains the source code and content for the Capucine et Tournesol bakery website.  
+**All rights reserved. Unauthorized use, copying, or modification is prohibited.**
+
+
 This project is built using **Astro** and **GitHub Pages**.  
 It will serve as a **lightweight CMS**, where JSON files in the repository will be used to manage content.
 
@@ -38,6 +42,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
