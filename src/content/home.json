@@ -3,7 +3,11 @@
   "text2": "Depuis 30 ans dans le Mile-End",
   "text3": "Le vrai pain intégral et des gâteries sucrées",
   "text4": "Fraîchement moulu et cuit chaque jour",
-  "text5": "Vous trouverez une mine d'informations sur les céréales, les farines, et des conseils pour faire votre pain",
+
+  "text5": "Vous trouverez une mine",
+  "link1": "d'informations",
+  "text6": "sur les céréales, les farines, et des conseils pour",
+  "link2": "faire votre pain",
 
   "image1": "image1.webp",
   "imageAlt1": "Grains being milled",

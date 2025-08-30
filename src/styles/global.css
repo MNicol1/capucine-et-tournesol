@@ -80,14 +80,6 @@ h4 {
   font-size: 1.2rem; /* smaller subsections */
   margin-bottom: 0.4rem;
 }
-h5 {
-  font-size: 1rem; /* minor labels */
-  margin-bottom: 0.3rem;
-}
-h6 {
-  font-size: 0.875rem; /* least prominent */
-  margin-bottom: 0.3rem;
-}
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
@@ -99,6 +91,33 @@ h6 {
 
 p {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Adjust size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Adjust size for smaller screens */
+  }
+
+  h3 {
+    font-size: 1.3rem; /* Adjust size for smaller screens */
+  }
+
+  h4 {
+    font-size: 1.1rem; /* Adjust size for smaller screens */
+  }
+
+  /* Optionally tweak hero text size further */
+  .cta-text h1 {
+    font-size: 2.1rem; /* Adjusted size for mobile */
+  }
+
+  .cta-text h2 {
+    font-size: 1.8rem; /* Adjusted size for mobile */
+  }
 }
 
 /* Layout */
@@ -123,8 +142,8 @@ p {
 .main--content {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 1rem; /* 16px */
-  padding-right: 1rem;
+  padding-left: 2rem; /* 16px */
+  padding-right: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: var(--background-base);
@@ -148,14 +167,18 @@ p {
 /* =========================
    FOOTER
    ========================= */
-
 footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* Stacks logo and items vertically */
+  align-items: center; /* Horizontally center all items */
+  justify-content: center; /* Vertically center content */
   text-align: center;
-  padding: 2rem 2rem;
+  background: rgb(245, 252, 255);
 }
 
 .footer-logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Space below the logo */
 }
 
 .footer-gif {
@@ -165,9 +188,72 @@ footer {
   margin: 0 auto 2rem;
 }
 
-.footer-info {
-  margin-bottom: 1.5rem;
+.footer-container {
+  display: flex; /* Flexbox row layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Vertically centers items */
+  gap: 1rem; /* Space between items */
+  flex-wrap: nowrap; /* Prevent wrapping; keeps all items in a row */
+  text-align: center; /* Ensures the text is centered */
+  max-width: 800px; /* Limits the width of the container to 800px (adjust as needed) */
+  width: 100%; /* Makes the container take up full available width, but within the max-width */
 }
+
+.footer-item a {
+  color: #333; /* Default color (dark) */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+.footer-item {
+  font-size: 1rem; /* Font size for better readability */
+  text-decoration: underline;
+  color: #333; /* Dark text color */
+  font-weight: 500; /* Bold text */
+  margin: 0; /* Controls horizontal space between items (left and right) */
+  padding: 0.5rem;
+}
+
+.footer-item a:hover {
+  color: #7b7b7b;
+}
+
+.footer-copyright {
+  margin-top: 0.5rem;
+  font-size: 0.875rem; /* Smaller font size for copyright text */
+  color: #555; /* Lighter text color */
+  text-align: center; /* Centers the copyright text */
+  width: 100%; /* Ensures the copyright spans the full width */
+}
+
+footer div {
+  width: 100%; /* Ensures divs take the full width within the footer */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left for better spacing */
+  }
+  .footer-copyright {
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* footer {
+  text-align: center;
+  padding: 2rem 2rem;
+   font-size: 0.875rem;
+}
+
+
+.footer-gif {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
 
 .footer-info div {
   margin: 0.25rem 0;
@@ -183,22 +269,19 @@ footer {
   color: gray;
 }
 
-.footer-social {
-  margin-top: 1rem;
-}
 
 .footer-social a {
-  display: inline-flex; /* makes it easy to center the icon */
+  display: inline-flex; 
   align-items: center;
   justify-content: center;
-  width: 44px; /* ensures tap target size */
+  width: 44px; 
   height: 44px;
 }
 
 .social-icon {
-  width: 28px; /* actual icon size */
+  width: 28px; 
   height: auto;
-}
+} */
 
 /* ========================= HEADER ========================= */
 header {
@@ -261,19 +344,26 @@ header {
 }
 .primary-nav a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
   font-weight: 500;
   font-size: 17px;
   padding: 0.5rem; /* better desktop hit target */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
+
 .primary-nav a:hover {
-  color: #000;
-} /* Focus visibility */
+  /* text-decoration: underline; */
+  color: #787878;
+}
+
+/* Focus visibility */
 a:focus-visible,
 .nav-toggle-button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
-} /* ========================= MOBILE MENU ========================= */
+}
+
+/* ========================= MOBILE MENU ========================= */
 
 /* Accessible visually-hidden checkbox (focusable) */
 .nav-toggle {
@@ -301,12 +391,12 @@ a:focus-visible,
 @media (max-width: 1024px) {
   .nav-toggle-icon::before {
     content: "☰";
-    font-size: 2rem; /* smaller = thinner lines */
+    font-size: 2.3rem; /* smaller = thinner lines */
     line-height: 1;
   }
   .nav-toggle:checked + .nav-toggle-button .nav-toggle-icon::before {
     content: "✕";
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
   .nav-toggle-button {
     display: flex;
@@ -332,10 +422,10 @@ a:focus-visible,
 
   /* Full-screen overlay menu */
   .primary-nav {
-    display: none;
+    /* display: none; */
     position: fixed;
     inset: 0;
-    background: #fff;
+    background: rgb(245, 252, 255);
     padding: 96px 1.25rem 1.25rem;
     flex-direction: column;
     justify-content: flex-start;
@@ -343,8 +433,8 @@ a:focus-visible,
     gap: 0.75rem;
     z-index: 1002; /* higher than header (1000) */
     opacity: 0;
-    transform: translateY(-12px);
-    transition: opacity 240ms ease, transform 240ms ease;
+    transform: translateX(500px);
+    transition: opacity 500ms ease, transform 500ms ease;
     overflow-y: auto;
   }
 
@@ -352,14 +442,14 @@ a:focus-visible,
   .nav-toggle:checked ~ .primary-nav {
     display: flex;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   /* Link tap targets */
   .primary-nav a {
     display: block;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.3;
     padding: 14px 8px;
     min-height: 44px;
@@ -477,8 +567,8 @@ a:focus-visible,
   /* re-apply active background */
   .section-nav a.active,
   .section-nav a[aria-current="true"] {
-    background: rgb(128, 0, 0);
-    color: #fff;
+    background: #e1d8cd;
+    color: black;
   }
 }
 
@@ -488,6 +578,10 @@ a:focus-visible,
 
 .mile-end-link {
   color: black;
+}
+
+.mile-end-link:hover {
+  text-decoration: none;
 }
 
 /* =========================
@@ -562,6 +656,15 @@ a:focus-visible,
   background-color: #333;
 }
 
+.link-inherit {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: underline; /* Remove underline if necessary */
+}
+
+.link-inherit:hover {
+  text-decoration: none;
+}
+
 /* Responsive stacking on mobile */
 
 @media (max-width: 1024px) {
@@ -578,13 +681,18 @@ a:focus-visible,
   }
 
   .cta-text {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
   }
 } /* ================================
    PRODUCTS PAGE - UNIFIED STYLES
    ================================ */
 
 /* === Section containers === */
+
+.products-page section {
+  scroll-margin-top: 130px; /* Adjust based on your fixed header height */
+}
+
 .section-breads,
 .section-treats,
 .section-dishes {
@@ -593,12 +701,35 @@ a:focus-visible,
   padding: 0 1rem;
 }
 
+.section-headings {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.section-headings h2 {
+  margin: 0;
+}
+
+.section-headings a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.section-headings a:hover {
+  color: rgb(97, 97, 97);
+}
+
 /* === Image grids (Breads only) === */
 .breads-images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 .breads-image {
@@ -717,6 +848,19 @@ a:focus-visible,
     max-width: 500px;
     padding: 0;
   }
+  .section-headings {
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center them */
+    gap: 1rem; /* space between stacked headings */
+  }
+
+  .section-breads,
+  .section-treats,
+  .section-dishes {
+    max-width: 60rem; /* ~960px */
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 /* === LEARN PAGE  === */
@@ -726,7 +870,6 @@ a:focus-visible,
   margin: 0 auto;
   padding: 2rem 1rem; /* left/right breathing room */
   line-height: 1.6;
-  border-bottom: 1px solid #ccc;
 }
 
 .page-content section {
@@ -781,6 +924,21 @@ article {
   border-left: 2px solid #ccc;
 }
 
+@media (max-width: 768px) {
+  .page-content {
+    padding: 2rem 0rem;
+  }
+
+  .content-centered {
+    width: 85%;
+    font-size: 1.2rem;
+  }
+
+  .cereal-subsection {
+    padding-left: 1.2rem;
+  }
+}
+
 /* === BREAD-MAKING  === */
 
 .faire-son-pain {
@@ -801,6 +959,16 @@ article {
   content: "•"; /* bullet symbol */
   color: black; /* change color if needed */
   margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .faire-son-pain {
+    padding: 2rem 0;
+  }
+
+  .faire-son-pain .fermentation-subsection {
+    padding-left: 1.2rem;
+  }
 }
 
 /* MISSION PAGE */
@@ -853,15 +1021,22 @@ article {
 @media (max-width: 768px) {
   .mission-hero {
     flex-direction: column;
+    margin: 0 auto 1rem;
   }
   .mission-image,
   .mission-text {
     width: 100%;
     flex: none;
   }
+  .mission-text {
+    padding: 1rem 0.2rem;
+  }
   .mission-image {
     max-height: 300px; /* optional */
     object-fit: cover;
+  }
+  .mission-intro {
+    font-size: 1.5rem;
   }
 }
 
@@ -921,6 +1096,9 @@ article {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+  .video-heading {
+    padding: 1rem 0;
+  }
   .mission-video {
     max-width: 100%;
     padding: 0; /* edge-to-edge on small screens */
@@ -955,7 +1133,7 @@ article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 5rem 2rem;
 }
 .contact-map {
   /* this stays full 1fr width/height of grid */
@@ -998,6 +1176,7 @@ article {
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    padding: 0rem 0rem 5rem 0rem;
   }
 
   .contact-info {

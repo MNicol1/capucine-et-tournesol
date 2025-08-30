@@ -5,7 +5,7 @@ import content from '../content/produits.json';
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
 <!-- Section 1: Breads -->
-
+  <div class="products-page">
 
   <div class="breads-images">
   <img 
@@ -34,12 +34,17 @@ import content from '../content/produits.json';
   />
 </div>
 
+  <div class="section-headings">
+    <h2><a href="#nos-pains">Nos Pains</a></h2>
+    <h2><a href="#nos-gateries">Nos Gâteries</a></h2>
+    <h2><a href="#nos-plats-mijotes">Nos Plats Mijotés</a></h2>
+  </div>
 
 
-<section class="section-breads">
+<section id="nos-pains" class="section-breads">
 
   
-  <h2>{content.breads.heading}</h2>
+  <h2 >{content.breads.heading}</h2>
 
   <div class="breads-intro">
     <p>{content.breads.intro[0]}</p>
@@ -98,8 +103,8 @@ import content from '../content/produits.json';
 </section>
 
 <!-- Section 2: Treats -->
-<section class="section-treats">
-  <h2>{content.treats.heading}</h2>
+<section id="nos-gateries" class="section-treats">
+  <h2 >{content.treats.heading}</h2>
 
   <div class="treats-intro">
     <p>{content.treats.intro[0]}</p>
@@ -137,8 +142,8 @@ import content from '../content/produits.json';
 </section>
 
 <!-- Section 3: Dishes -->
-<section class="section-dishes">
-  <h2>{content.dishes.heading}</h2>
+<section id="nos-plats-mijotes" class="section-dishes">
+  <h2 >{content.dishes.heading}</h2>
 
   <div class="dishes-intro">
     <p>{content.dishes.intro[0]}</p>
@@ -176,6 +181,7 @@ import content from '../content/produits.json';
     </div>
   </div>
 </section>
+</div>
 
 
 
