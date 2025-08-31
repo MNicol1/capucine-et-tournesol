@@ -1,9 +1,6 @@
 ---
 const { title = "Capucine et Tournesol" } = Astro.props;
-const { pathname } = Astro.props;
 
-// Works for both "/" and "/reponame/"
-const isHome = pathname === "/";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -24,10 +21,6 @@ import "../styles/global.css";
 
   <body>
     <Header />
-<main class={isHome ? "main--home" : "main--content"}>
-  <slot />
-</main>
-
     <Footer />
     <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
   </body>

@@ -5,8 +5,7 @@ import content from '../content/mission.json';
 
 <BaseLayout title={content.title} pathname={Astro.url.pathname}>
 
-<!-- <h2 class="mission-heading">{content.heading}</h2> -->
-
+<main class="main--content">
 
 <section class="mission-hero">
   <img
@@ -82,6 +81,6 @@ import content from '../content/mission.json';
     <p>{content.legacyParagraph14}</p>
   </section>
 
-
+</main>
 
 </BaseLayout>

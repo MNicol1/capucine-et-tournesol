@@ -5,7 +5,7 @@ import content from '../content/home.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname}>
-<!-- Inside the page that gets slotted into BaseLayout -->
+  <main class="main--home">
 <div class="home-cta-sections">
 
   <!-- Section 1 -->
@@ -65,5 +65,6 @@ import content from '../content/home.json';
   </section>
 
 </div>
+</main>
 
 </BaseLayout>

@@ -4,7 +4,7 @@ import content from '../content/bread-making.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
-
+ <main class="main--content">
 <div class="faire-son-pain">
   <section>
     <h2>{content.pageTitle}</h2>
@@ -58,6 +58,7 @@ import content from '../content/bread-making.json';
     <p>{content.sectionThreeParagraph8}</p>
   </section>
 </div>
+</main>
 
 
 

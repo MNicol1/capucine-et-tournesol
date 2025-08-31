@@ -4,7 +4,7 @@ import content from '../content/apprendre.json';
 ---
 
 <BaseLayout pathname={Astro.url.pathname} title={content.title}>
-
+ <main class="main--content">
   
  <nav class="section-nav" aria-label="Navigation de section">
   <ul>
@@ -178,5 +178,5 @@ import content from '../content/apprendre.json';
   <p>{content.glutenP7}</p>
 </section>
 </div>
-
+</main>
 </BaseLayout>
