@@ -17,10 +17,13 @@ import content from '../content/home.json';
     <div class="cta-text">
       <div class="cta-content">
         <h1>{content.text1}</h1>
-        <h3> <a href="/notre-mission#mile-end" class="mile-end-link">{content.text2}</a></h3>
-      </div>
+     <h3>
+  <a href={`${import.meta.env.BASE_URL}notre-mission/#mile-end`} class="mile-end-link">
+    {content.text2}
+  </a>
+</h3>
 
-      <!-- <a href="/notre-mission" class="cta-button">About Us</a> -->
+      </div>
     </div>
   </section>
 
@@ -37,7 +40,7 @@ import content from '../content/home.json';
       </div>
   
 
-      <a href="/produits" class="cta-button">Découvrir nos produits</a>
+      <a href={`${import.meta.env.BASE_URL}produits/`} class="cta-button">Découvrir nos produits</a>
     </div>
   </section>
 
@@ -51,15 +54,13 @@ import content from '../content/home.json';
       <div class="cta-content">
 <h2>
   {content.text5}
-  <a class="link-inherit" href="/apprendre">{content.link1}</a>
+  <a class="link-inherit" href={`${import.meta.env.BASE_URL}apprendre/`}>{content.link1}</a>
   {content.text6}
-  <a class="link-inherit" href="/faire-son-pain">{content.link2}</a>
+  <a class="link-inherit" href={`${import.meta.env.BASE_URL}faire-son-pain/`}>{content.link2}</a>
 </h2>
 
 
         </div>
-
-      <!-- <a href="/info" class="cta-button">Learn more</a> -->
     </div>
   </section>
 
