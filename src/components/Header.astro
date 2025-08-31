@@ -1,7 +1,7 @@
 <header>
   <div class="header-container">
-    <a href="/" class="brand" aria-label="Capucine et Tournesol – boulangerie-meunerie">
-      <img src="/logo-header.svg" alt="" class="logo" />
+    <a href={`${import.meta.env.BASE_URL}`} class="brand" aria-label="Capucine et Tournesol – boulangerie-meunerie">
+      <img src={`${import.meta.env.BASE_URL}logo-header.svg`} alt="" class="logo" />
       <div class="brand-text">
         <span translate="no" class="brand-title notranslate">Capucine et Tournesol</span>
         <span translate="no" class="brand-tagline notranslate">boulangerie-meunerie</span>
@@ -11,16 +11,16 @@
     <!-- Mobile menu toggle (CSS-only) -->
     <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Toggle menu" />
     <label for="nav-toggle" class="nav-toggle-button" aria-label="Menu">
-      <!-- simple icon; keep text fallback for a11y -->
-     <span class="nav-toggle-icon" aria-hidden="true"></span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
     </label>
 
     <nav id="primary-nav" class="primary-nav">
-      <a href="/notre-mission">Notre Mission</a>
-      <a href="/produits">Produits</a>
-      <a href="/apprendre">Apprendre</a>
-      <a href="/faire-son-pain">Faire son pain</a>
-      <a href="/contact">Contact</a>
+      <a href={`${import.meta.env.BASE_URL}notre-mission/`}>Notre Mission</a>
+      <a href={`${import.meta.env.BASE_URL}produits/`}>Produits</a>
+      <a href={`${import.meta.env.BASE_URL}apprendre/`}>Apprendre</a>
+      <a href={`${import.meta.env.BASE_URL}faire-son-pain/`}>Faire son pain</a>
+      <a href={`${import.meta.env.BASE_URL}contact/`}>Contact</a>
     </nav>
   </div>
 </header>
+
