@@ -944,7 +944,7 @@ article {
 .faire-son-pain {
   max-width: 45rem; /* 720px, nice reading width */
   margin: 0 auto;
-  padding: 2rem 1rem; /* left/right breathing room */
+  padding: 1rem; /* left/right breathing room */
   line-height: 1.6;
 }
 
@@ -963,7 +963,7 @@ article {
 
 @media (max-width: 768px) {
   .faire-son-pain {
-    padding: 2rem 0;
+    padding: 0;
   }
 
   .faire-son-pain .fermentation-subsection {

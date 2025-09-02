@@ -1,8 +1,12 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-// https://astro.build/config
+const isProd = process.env.NODE_ENV === "production";
+
 export default defineConfig({
-   site: 'https://mnicol1.github.io/capucine-et-tournesol',
-  base: '/capucine-et-tournesol/',
+  site: isProd
+    ? "https://mnicol1.github.io/capucine-et-tournesol"
+    : "http://localhost:4321",
+  base: isProd ? "/capucine-et-tournesol/" : "/",
 });
+
