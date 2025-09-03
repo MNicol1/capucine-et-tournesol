@@ -342,6 +342,7 @@ header {
   gap: 1rem;
   flex: 0 1 auto;
 }
+
 .primary-nav a {
   text-decoration: none;
   color: inherit;
@@ -376,7 +377,9 @@ a:focus-visible,
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-} /* Toggle button hidden on desktop */
+}
+
+/* Toggle button hidden on desktop */
 .nav-toggle-button {
   display: none;
   user-select: none;
@@ -424,24 +427,26 @@ a:focus-visible,
   .primary-nav {
     /* display: none; */
     position: fixed;
-    inset: 0;
-    background: rgb(245, 252, 255);
+    inset: 0 0 0 auto;      /* anchor to right edge */
+    width: 100vw;   
+    /* background: rgb(245, 252, 255); */
+    background: rgb(240, 240, 225);
     padding: 96px 1.25rem 1.25rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
     z-index: 1002; /* higher than header (1000) */
-    opacity: 0;
-    transform: translateX(500px);
-    transition: opacity 500ms ease, transform 500ms ease;
+    /* opacity: 0; */
+    transform: translateX(100%);
+    transition: transform 500ms ease;
     overflow-y: auto;
   }
 
   /* Open state */
   .nav-toggle:checked ~ .primary-nav {
     display: flex;
-    opacity: 1;
+    /* opacity: 1; */
     transform: translateX(0);
   }
 
