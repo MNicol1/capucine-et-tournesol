@@ -1,12 +1,24 @@
 <header>
   <div class="header-container">
-    <a href={`${import.meta.env.BASE_URL}`} class="brand" aria-label="Capucine et Tournesol – boulangerie-meunerie">
-      <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="brand logo" class="logo" width="240" height="244" />
-      <div class="brand-text">
-        <span translate="no" class="brand-title notranslate">Capucine et Tournesol</span>
-        <span translate="no" class="brand-tagline notranslate">boulangerie-meunerie</span>
-      </div>
-    </a>
+<a
+  href={Astro.url.pathname === import.meta.env.BASE_URL ? "#" : import.meta.env.BASE_URL}
+  rel="prefetch"
+  class="brand"
+  aria-label="Capucine et Tournesol – boulangerie-meunerie"
+>
+  <img
+    src={`${import.meta.env.BASE_URL}logo.webp`}
+    alt="brand logo"
+    class="logo"
+    width="240"
+    height="244"
+  />
+  <div class="brand-text">
+    <span translate="no" class="brand-title notranslate">Capucine et Tournesol</span>
+    <span translate="no" class="brand-tagline notranslate">boulangerie-meunerie</span>
+  </div>
+</a>
+
 
     <!-- Mobile menu toggle (CSS-only) -->
     <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Toggle menu" />
