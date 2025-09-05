@@ -89,11 +89,17 @@ h4 {
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
-  font-size: 3rem;
+  font-size: 2.9rem;
 }
 .cta-text h2 {
   font-size: 2rem;
 }
+
+.cta-text h3,
+.cta-text .styled-h3 {
+  font-size: 1.5rem;
+}
+
 
 p {
   margin-bottom: 1rem;
@@ -122,8 +128,14 @@ p {
   }
 
   .cta-text h2 {
-    font-size: 1.8rem; /* Adjusted size for mobile */
+    font-size: 1.7rem; /* Adjusted size for mobile */
   }
+
+.cta-text h3,
+.cta-text .styled-h3 {
+  font-size: 1.3rem;
+}
+
 }
 
 /* Layout */
@@ -428,7 +440,7 @@ a:focus-visible,
 .section-nav {
   background-color: var(--background-base);
   position: fixed;
-  top: 120px;
+    top: var(--header-offset);
   z-index: 999;
 
   /* Constrain to BaseLayout width */
@@ -541,7 +553,7 @@ a:focus-visible,
 }
 
 .mile-end-link {
-  color: black;
+  color: #333333;
 }
 
 .mile-end-link:hover {
@@ -596,10 +608,10 @@ a:focus-visible,
   text-align: center;
 }
 
-.cta-text p {
+/* .cta-text p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-}
+} */
 
 .cta-content {
   margin-bottom: 2rem;
@@ -645,7 +657,7 @@ a:focus-visible,
   }
 
   .cta-text {
-    padding: 4rem 1rem;
+    padding: 4rem 1.2rem;
   }
 } /* ================================
    PRODUCTS PAGE - UNIFIED STYLES
@@ -1099,19 +1111,12 @@ article {
   gap: 3rem;
   padding: 1rem 2rem 5rem 2rem;
 }
+
 .contact-map {
   /* this stays full 1fr width/height of grid */
   display: flex;
   justify-content: center; /* center the map horizontally */
   align-items: center; /* center vertically */
-}
-
-.contact-map a {
-  display: block; /* makes it behave like a div */
-  width: min(85%, 400px); /* cap at 400px on desktop */
-  margin: 0; /* remove extra margins */
-  padding: 0; /* remove any padding */
-  line-height: 0; /* kills inline “text gap” under images */
 }
 
 .contact-map a {
@@ -1122,17 +1127,26 @@ article {
   line-height: 0;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
-
-  /* smooth transition for both */
   transition: filter 0.3s ease, box-shadow 0.3s ease;
+
+  position: relative; /* needed for overlay */
 }
 
-.contact-map a:hover,
-.contact-map a:focus {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-  filter: brightness(0.92);
+/* Overlay bar */
+.contact-map .map-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 29, 29, 0.55);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.7rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .contact-map .map-preview {
@@ -1140,6 +1154,20 @@ article {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Hover effect only on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .contact-map a:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    filter: brightness(0.92);
+  }
+}
+
+/* Keep focus style for accessibility */
+.contact-map a:focus {
+  outline: 2px solid #000; /* or match your site’s accent color */
+  outline-offset: 3px;
 }
 
 .contact-info {
