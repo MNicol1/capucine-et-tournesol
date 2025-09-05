@@ -19,12 +19,18 @@
 
 :root {
   --background-base: rgb(240, 240, 225);
+  --header-offset: 120px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-offset: 96px; /* smaller header on tablet/mobile */
+  }
 }
 
 html,
 body {
   height: 100%;
-  /* scroll-behavior: smooth; */
 }
 
 /* Global */
@@ -34,7 +40,7 @@ body {
   line-height: 1.6;
   color: #333;
   font-size: 16px;
-  padding-top: 120px; /* fixed header offset */
+  padding-top: var(--header-offset);
   background-color: var(--background-base);
 }
 
@@ -122,13 +128,6 @@ p {
 
 /* Layout */
 
-/* Remove any global layout rules targeting <main> */
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: inherit;
-}
-
 /* Homepage layout: full-bleed, no constraints */
 .main--home {
   padding: 0;
@@ -199,18 +198,16 @@ footer {
   width: 100%; /* Makes the container take up full available width, but within the max-width */
 }
 
-.footer-item a {
-  color: #333; /* Default color (dark) */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+.footer-item {
+  padding: 0.5rem; /* restores breathing room between items */
 }
 
-.footer-item {
-  font-size: 1rem; /* Font size for better readability */
+.footer-item a {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: underline;
-  color: #333; /* Dark text color */
-  font-weight: 500; /* Bold text */
-  margin: 0; /* Controls horizontal space between items (left and right) */
-  padding: 0.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-item a:hover {
@@ -240,49 +237,6 @@ footer div {
   }
 }
 
-/* footer {
-  text-align: center;
-  padding: 2rem 2rem;
-   font-size: 0.875rem;
-}
-
-
-.footer-gif {
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-
-.footer-info div {
-  margin: 0.25rem 0;
-}
-
-.footer-info a {
-  color: #333;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.footer-info a:hover {
-  color: gray;
-}
-
-
-.footer-social a {
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  width: 44px; 
-  height: 44px;
-}
-
-.social-icon {
-  width: 28px; 
-  height: auto;
-} */
-
 /* ========================= HEADER ========================= */
 header {
   position: fixed;
@@ -294,13 +248,16 @@ header {
 }
 
 .header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: inherit;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0 1rem;
-  height: auto;
-  min-height: 120px;
+  min-height: var(--header-offset); /* uses the variable you added */
 }
 
 .brand {
@@ -425,10 +382,10 @@ a:focus-visible,
 
   /* Full-screen overlay menu */
   .primary-nav {
-    /* display: none; */
+    display: flex;
     position: fixed;
-    inset: 0 0 0 auto;      /* anchor to right edge */
-    width: 100vw;   
+    inset: 0 0 0 auto; /* anchor to right edge */
+    width: 100vw;
     /* background: rgb(245, 252, 255); */
     background: rgb(240, 240, 225);
     padding: 96px 1.25rem 1.25rem;
@@ -445,7 +402,6 @@ a:focus-visible,
 
   /* Open state */
   .nav-toggle:checked ~ .primary-nav {
-    display: flex;
     /* opacity: 1; */
     transform: translateX(0);
   }
@@ -532,8 +488,11 @@ a:focus-visible,
 }
 
 /* Anchor offset for in-page sections: header + section nav space */
-.page-content section {
-  scroll-margin-top: 180px;
+.page-content section,
+#mile-end {
+  scroll-margin-top: calc(
+    var(--header-offset) + 60px
+  ); /* add extra spacing if needed */
 }
 
 /* =========================
@@ -575,10 +534,6 @@ a:focus-visible,
     background: #e1d8cd;
     color: black;
   }
-}
-
-#mile-end {
-  scroll-margin-top: 120px;
 }
 
 .mile-end-link {
