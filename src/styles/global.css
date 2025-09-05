@@ -268,12 +268,17 @@ header {
   flex: 1 1 auto;
   text-decoration: none;
   color: inherit;
+  min-height: var(--header-offset);
 }
+
 .logo {
-  height: 100%;
   max-height: 100px;
+  height: auto;
   width: auto;
+  display: block;
 }
+
+
 .brand-text {
   display: flex;
   flex-direction: column;
