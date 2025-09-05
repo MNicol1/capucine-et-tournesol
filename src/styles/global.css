@@ -278,7 +278,6 @@ header {
   display: block;
 }
 
-
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -1107,13 +1106,40 @@ article {
   align-items: center; /* center vertically */
 }
 
-.contact-map iframe {
-  width: 85%; /* shrink inside the box */
-  aspect-ratio: 1/1; /* make it a square */
-  max-width: 400px; /* optional cap */
-  border: 0;
+.contact-map a {
+  display: block; /* makes it behave like a div */
+  width: min(85%, 400px); /* cap at 400px on desktop */
+  margin: 0; /* remove extra margins */
+  padding: 0; /* remove any padding */
+  line-height: 0; /* kills inline “text gap” under images */
+}
+
+.contact-map a {
+  display: block;
+  width: min(85%, 400px);
+  margin: 0;
+  padding: 0;
+  line-height: 0;
   border-radius: 8px;
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  /* smooth transition for both */
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-map a:hover,
+.contact-map a:focus {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  filter: brightness(0.92);
+}
+
+.contact-map .map-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .contact-info {
@@ -1154,10 +1180,8 @@ article {
     order: 0;
   }
 
-  .contact-map iframe {
-    width: 100%; /* full width again */
-    aspect-ratio: auto; /* let height follow width */
-    max-width: none; /* remove the cap */
-    height: 250px; /* set a comfortable height */
+  .contact-map a {
+    width: 100%;
+    max-width: none;
   }
 }
