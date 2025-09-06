@@ -15,5 +15,6 @@
     { "label": "Samedi", "hours": "08h00 – 17h00" },
     { "label": "Dimanche", "hours": "Fermé" }
   ],
-  "note": "Attention pour les commandes, au 514-277-0232 durant les heures d'ouverture seulement."
+  "note": "Attention pour les commandes, au 514-277-0232 durant les heures d'ouverture seulement.",
+  "mapNote": "Ouvrir la carte →"
 }
