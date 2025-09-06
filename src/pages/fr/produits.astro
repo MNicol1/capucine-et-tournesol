@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import content from '../content/produits.json';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/fr/products.json';
 ---
 
-<BaseLayout title={content.title}>
+<BaseLayout lang="fr" title={content.title}>
 
 <main class="main--content">
 
@@ -43,9 +43,9 @@ import content from '../content/produits.json';
 </div>
 
   <div class="section-headings">
-    <h2><a href="#nos-pains">Nos Pains</a></h2>
-    <h2><a href="#nos-gateries">Nos Gâteries</a></h2>
-    <h2><a href="#nos-plats-mijotes">Nos Plats Mijotés</a></h2>
+    <h2><a href="#nos-pains"></a>{content.heading1}</h2>
+    <h2><a href="#nos-gateries"></a>{content.heading2}</h2>
+    <h2><a href="#nos-plats-mijotes"></a>{content.heading3}</h2>
   </div>
 
 

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import content from '../content/bread-making.json';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/en/bread-making.json';
 ---
 
-<BaseLayout title={content.title}>
+<BaseLayout lang="en" title={content.title}>
  <main class="main--content">
 <div class="faire-son-pain">
   <section>
@@ -59,8 +59,4 @@ import content from '../content/bread-making.json';
   </section>
 </div>
 </main>
-
-
-
-
 </BaseLayout>

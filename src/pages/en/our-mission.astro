@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import content from '../content/mission.json';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/en/mission.json';
 ---
 
-<BaseLayout title={content.title}>
+<BaseLayout lang="en" title={content.title}>
 
 <main class="main--content">
 
@@ -25,13 +25,14 @@ import content from '../content/mission.json';
       <p><em>{content.missionIntro2}</em></p>
       <p><em>{content.missionIntro3}</em></p>
       <p><em>{content.missionIntro4}</em></p>
+      <p><em>{content.missionIntro5}</em></p>
     </div>
 
     <!-- Main declaration -->
     <div class="mission-statement">
-      <p>{content.missionParagraph1}</p>
-      <p>{content.missionParagraph2}</p>
-      <p>{content.missionClosure}</p>
+      <p>— {content.missionParagraph1}</p>
+      <p>— {content.missionParagraph2}</p>
+      <p>— {content.missionClosure}</p>
     </div>
 
   </div>

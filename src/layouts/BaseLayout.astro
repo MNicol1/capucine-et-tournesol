@@ -1,13 +1,32 @@
 ---
-const { title = "Capucine et Tournesol" } = Astro.props;
+const {
+  lang = "fr",
+  title = "Capucine et Tournesol",
+} = Astro.props;
 
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
+import langMap from "../content/lang-map.json";
+
+// Build hreflang equivalents
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const parts = pathname.split("/").filter(Boolean); // e.g. ["fr", "notre-mission"]
+const currentSlug = parts[1] ?? "";
+
+const otherLang = lang === "fr" ? "en" : "fr";
+const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
+
+// Your live domain
+const ORIGIN = "https://mnicol1.github.io/capucine-et-tournesol"; // replace with real domain
 ---
 
-<html lang="fr">
+
+
+<!DOCTYPE html>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
    <link rel="apple-touch-icon" sizes="180x180" href={import.meta.env.BASE_URL + "apple-touch-icon.png"} />
@@ -18,17 +37,25 @@ import "../styles/global.css";
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="description" content="Boulangerie-meunerie de Montréal — pain intégral, gâteries sucrées et plats mijotés, faits de grains moulus et cuits chaque jour. Depuis 30 ans au service du quartier." />
+   <meta name="description" content={lang === "fr" ? "Boulangerie à Montréal — pain intégral, gâteries sucrées et plats mijotés à base de grains moulus, cuits chaque jour. Au service du quartier depuis 30 ans." : "Bakery in Montréal — wholegrain breads, baked goods, and slow-cooked meals from freshly milled grains, baked daily. Serving the neighbourhood for 30 years."}>
+
+
 
     <link rel="preload" as="font" href={import.meta.env.BASE_URL + "Technical.woff2"} type="font/woff2" crossorigin />
     <link rel="preload" as="image" type="image/webp" href={import.meta.env.BASE_URL + "logo.webp"} fetchpriority="high">
 
+    <!-- SEO: alternate language versions -->
+    <link rel="alternate" hreflang="fr" href={`${ORIGIN}${import.meta.env.BASE_URL}fr/${lang === "fr" ? currentSlug : (langMap as any).en[currentSlug] ?? ""}`}>
+    <link rel="alternate" hreflang="en" href={`${ORIGIN}${import.meta.env.BASE_URL}en/${lang === "en" ? currentSlug : (langMap as any).fr[currentSlug] ?? ""}`}>
+    <link rel="alternate" hreflang="x-default" href={`${ORIGIN}${import.meta.env.BASE_URL}`}>
+
+
   </head>
 
   <body>
-    <Header />
+    <Header lang={lang} />
      <slot />
-    <Footer />
+    <Footer lang={lang} />
     <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
   </body>
 </html>

@@ -1,35 +1,65 @@
 ---
-import content from '../content/footer.json';
+const { lang } = Astro.props;
+
+import frFooter from "../content/fr/footer.json";
+import enFooter from "../content/en/footer.json";
+
+const content = lang === "fr" ? frFooter : enFooter;
 ---
 
 <footer>
-
-     <div class="footer-logo">
-      <img src={`${import.meta.env.BASE_URL}windmill.gif`} alt="Animated logo" class="footer-gif" width="66" height="66" />
-    </div>
+  <div class="footer-logo">
+    <img
+      src={`${import.meta.env.BASE_URL}windmill.gif`}
+      alt="Animated logo"
+      class="footer-gif"
+      width="66"
+      height="66"
+    />
+  </div>
 
   <div class="footer-container">
     <div class="footer-item">
-  <a href={`${import.meta.env.BASE_URL}contact/`}>Heures &#x2197;</a>
+      <a href={`${import.meta.env.BASE_URL}${lang}/contact/`}>
+        {content.labels.hours} &#x2197;
+      </a>
     </div>
+
     <div class="footer-item">
-  <a href={`${import.meta.env.BASE_URL}contact/`}>Adresse &#x2197;</a>
+      <a href={`${import.meta.env.BASE_URL}${lang}/contact/`}>
+        {content.labels.address} &#x2197;
+      </a>
     </div>
-  <div class="footer-item">
-    <a href="tel:+5142770232">Téléphone</a>
+
+    <div class="footer-item">
+      <a href="tel:+5142770232">{content.labels.phone}</a>
+    </div>
+
+    <div class="footer-item">
+      <a href="mailto:capucine_et_tournesol@hotmail.com">
+        {content.labels.email}
+      </a>
+    </div>
+
+    <div class="footer-item">
+      <a
+        href="https://www.facebook.com/pages/Boulangerie-Capucine-et-Tournesol/184532918320389"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content.labels.facebook}
+      </a>
+    </div>
   </div>
-  <div class="footer-item">
-    <a href="mailto:capucine_et_tournesol@hotmail.com">E-mail</a>
+
+  <div class="footer-copyright">
+    Site design by:
+    <span>
+      <a style="color: inherit;"
+         href="https://www.marknicolasnicol.com"
+         target="_blank"
+         rel="noopener noreferrer">MNN</a>
+    </span>
   </div>
-  <div class="footer-item">
-    <a href="https://www.facebook.com/pages/Boulangerie-Capucine-et-Tournesol/184532918320389" 
-   target="_blank" 
-   rel="noopener noreferrer">Facebook</a>
-  </div>
-  </div>
-   <div class="footer-copyright" >Site design by: <span><a style="color: inherit;" href="https://www.marknicolasnicol.com" 
-   target="_blank" 
-   rel="noopener noreferrer">MNN</a></span></div>
   <div class="footer-copyright">&copy; <span id="year"></span> Capucine et Tournesol</div>
- 
 </footer>

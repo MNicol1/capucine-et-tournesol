@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/fr/contact.json';
+---
+
+<BaseLayout lang="fr" title={content.title}>
+
+  <main class="main--content">
+  <section class="contact-grid">
+    <!-- Left column: Google Map -->
+
+
+<div class="contact-map">
+  <a 
+    href="https://www.google.com/maps/place/226+Rue+Bernard+O,+Montréal,+QC+H2V+4K7" 
+    target="_blank" 
+    rel="noopener"
+  >
+    <img 
+      src={`${import.meta.env.BASE_URL}images/map.webp`} 
+      alt="Map preview showing Capucine et Tournesol location" 
+      width="600" 
+      height="554" 
+      class="map-preview"
+    />
+     <span class="map-overlay">{content.mapNote}</span>
+  </a>
+</div>
+
+    <!-- Right column: info -->
+    <div class="contact-info">
+      <h2>{content.hoursTitle}</h2>
+      <div class="hours">
+        {content.hours.map((h) => (
+          <div class="hours-row">
+            <span class="day">{h.label}</span>
+            <span class="time">{h.hours}</span>
+          </div>
+        ))}
+      </div>
+      <div><strong>{content.note}</strong></div>
+      <div class="address">{content.address}</div>
+      <!-- <div class="phone">{content.phone}</div> -->
+      <div >
+        <!-- <a class="email" href={`mailto:${content.email}`}>{content.emailLabel}</a> -->
+         <a >Email: {content.email} </a>
+      </div>
+    </div>
+  </section>
+  </main>
+</BaseLayout>

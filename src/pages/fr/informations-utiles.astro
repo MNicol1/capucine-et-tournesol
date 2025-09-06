@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/fr/infos.json';
+---
+
+<BaseLayout lang="fr" title={content.title}>
+ <main class="main--content">
+  
+ <nav class="section-nav" aria-label="Navigation de section">
+  <ul>
+    <li><a href="#pourquoi-moudre">{content.sectionOne}</a></li>
+    <li><a href="#pain-integral">{content.sectionTwo}</a></li>
+    <li><a href="#cereales">{content.sectionThree}</a></li>
+    <li><a href="#pas-sans-gluten">{content.sectionFour}</a></li>
+  </ul>
+</nav>
+
+<div class="page-content">
+
+<section id="pourquoi-moudre">
+  <h2>{content.sectionOne}</h2>
+  <h3>{content.sectionOneSubheading}</h3>
+
+  <p>{content.pourquoiParagraph1}</p>
+  <p>{content.pourquoiParagraph2}</p>
+  <p>{content.pourquoiParagraph3}</p>
+  <p>{content.pourquoiParagraph4}</p>
+  <p>{content.pourquoiParagraph5}</p>
+  <p>{content.pourquoiParagraph6}</p>
+  <p>{content.pourquoiParagraph7}</p>
+
+  <p><strong>{content.pourquoiBold1}</strong></p>
+    <h3>{content.pourquoiQuestion}</h3>
+
+  <p>{content.pourquoiParagraph8}</p>
+  <p>{content.pourquoiParagraph9}</p>
+  <p>{content.pourquoiParagraph10}</p>
+  <p>{content.pourquoiParagraph11}</p>
+
+<p class="content-centered">
+  {content.pourquoiBold2}
+</p>
+
+
+  <p>{content.pourquoiBold3}</p>
+  <p><strong>{content.pourquoiBold4}</strong></p>
+    <p><strong>{content.pourquoiBold5}</strong></p>
+</section>
+
+<section id="pain-integral">
+  <h2>{content.sectionTwo}</h2>
+  <h3>{content.sectionTwoSubheading}</h3>
+
+  <p>{content.integralP1}</p>
+  <p>{content.integralP2}</p>
+  <p class="content-centered"><strong>{content.integralP3}</strong></p>
+  <p>{content.integralP4}</p>
+  <p>{content.integralP5}</p>
+  <p>{content.integralP6}</p>
+  <p>{content.integralP7}</p>
+  <p class="content-centered">{content.integralP8}</p>
+  <p>{content.integralP9}</p>
+  <p>{content.integralP10}</p>
+  <p class="content-centered">{content.integralP11}</p>
+  <p>{content.integralP12}</p>
+  <p>{content.integralP13}</p>
+  <p>{content.integralP14}</p>
+  <p>{content.integralP15}</p>
+  <p>{content.integralP16}</p>
+  <p>{content.integralP17}</p>
+
+  <article>
+    <h3>{content.integralArticleTitle}</h3>
+    <p>{content.integralP18}</p>
+    <p>{content.integralP19}</p>
+    <p>{content.integralP20}</p>
+    <p>{content.integralP21}</p>
+    <p>{content.integralP22}</p>
+    <p>{content.integralP23}</p>
+    <p>{content.integralP24}</p>
+  </article>
+
+  <p><strong>{content.integralEnd1}</strong></p>
+  <p><strong>{content.integralEnd2}</strong></p>
+  <p><strong>{content.integralEnd3}</strong></p>
+  <p><strong>{content.integralEnd4}</strong></p>
+</section>
+
+
+
+<section id="cereales">
+  <h2>{content.sectionThree}</h2>
+  <p>{content.cerealesP1}</p>
+
+  <h3>{content.sectionThreeWheatHeading}</h3>
+  <p>{content.cerealesP2}</p>
+  <p>{content.cerealesP3}</p>
+  <p>{content.cerealesP4}</p>
+
+  <div class="table-wrapper">
+    <table class="grain-table">
+      <thead>
+        <tr>
+          <th>Groupe</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diploïdes (14 chromosomes)</td>
+          <td>{content.cerealesP5}</td>
+        </tr>
+        <tr>
+          <td>Tétraploïdes (28 chromosomes)</td>
+          <td>{content.cerealesP6}</td>
+        </tr>
+        <tr>
+          <td>Hexaploïdes (42 chromosomes)</td>
+          <td>{content.cerealesP7}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>{content.cerealesP8}</p>
+
+  <!-- Grouped under wheat -->
+  <h4>{content.epeautreHeading}</h4>
+  <div class="cereal-subsection">
+    <p>{content.cerealesP9}</p>
+    <p>{content.cerealesP10}</p>
+    <p><strong>Panification:</strong> {content.cerealesP11}</p>
+    <p><strong>Farines:</strong> {content.cerealesP12}</p>
+    <p><strong>Valeurs nutritives:</strong> {content.cerealesP13}</p>
+    <p>{content.cerealesP14}</p>
+    <p>{content.cerealesP16}</p>
+    <p>{content.cerealesP17}</p>
+  </div>
+
+  <h4>{content.kamutHeading}</h4>
+  <div class="cereal-subsection">
+    <p>{content.cerealesP18}</p>
+    <p>{content.cerealesP19}</p>
+    <p>{content.cerealesP20}</p>
+    <p><strong>Panification:</strong> {content.cerealesP21}</p>
+    <p><strong>Farines:</strong> {content.cerealesP22}</p>
+    <p><strong>Valeurs nutritives:</strong> {content.cerealesP23}</p>
+    <p>{content.cerealesP24}</p>
+  </div>
+
+  <!-- Separated category -->
+  <h3>{content.seigleHeading}</h3>
+  <p>{content.cerealesP25}</p>
+  <p>{content.cerealesP26}</p>
+  <p>{content.cerealesP27}</p>
+  <p><strong>Panification:</strong> {content.cerealesP28}</p>
+  <p><strong>Farines:</strong> {content.cerealesP29}</p>
+  <p><strong>Valeurs nutritives:</strong> {content.cerealesP30}</p>
+  <p>{content.cerealesP31}</p>
+  <p><strong>Notes:</strong> {content.cerealesP32}</p>
+  <p>{content.cerealesP33}</p>
+</section>
+
+
+
+
+<section id="pas-sans-gluten">
+  <h2>{content.sectionFour}</h2>
+  <p class="content-centered">{content.sectionFourSubheading}</p>
+
+  <p>{content.glutenP1}</p>
+  <p>{content.glutenP2}</p>
+  <p>{content.glutenP3}</p>
+  <p>{content.glutenP4}</p>
+  <p>{content.glutenP5}</p>
+  <p>{content.glutenP6}</p>
+  <p>{content.glutenP7}</p>
+</section>
+</div>
+</main>
+</BaseLayout>

@@ -5,7 +5,11 @@
   "image7": "image7.webp",
   "image8": "image8.webp",
   "image9": "image9.webp",
-  "imageAlt": "image of bread",
+  "imageAlt": "Image of bread",
+
+  "heading1": "Nos Pains",
+  "heading2": "Nos Gâteries",
+  "heading3": "Nos Plats Mijotés",
 
   "breads": {
     "heading": "Nos pains",

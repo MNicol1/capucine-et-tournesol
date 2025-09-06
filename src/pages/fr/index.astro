@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import content from '../../content/fr/home.json';
+---
+
+<BaseLayout lang="fr" >
+  <main class="main--home">
+<div class="home-cta-sections">
+
+  <!-- Section 1 -->
+  <section class="cta-block">
+    <div class="cta-image">
+<img src={`${import.meta.env.BASE_URL}images/${content.image1}`} alt={content.imageAlt1} width="1200" height="800" />
+
+    </div>
+    <div class="cta-text">
+      <div class="cta-content">
+        <h1>{content.text1}</h1>
+     <h2 class="styled-h3">
+  <a href={`${import.meta.env.BASE_URL}fr/notre-mission/#mile-end`} class="mile-end-link">
+    {content.text2}
+  </a>
+</h2>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="cta-block reverse">
+    <div class="cta-image">
+      <img src={`${import.meta.env.BASE_URL}images/${content.image2}`} alt={content.imageAlt2} loading="lazy" width="1200" height="968" />
+
+    </div>
+    <div class="cta-text">
+      <div class="cta-content">
+       <h2>{content.text3}</h2>
+       <h3>{content.text4}</h3>
+      </div>
+  
+
+      <a href={`${import.meta.env.BASE_URL}fr/produits/`} class="cta-button">Découvrir nos produits</a>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="cta-block">
+    <div class="cta-image">
+  <img src={`${import.meta.env.BASE_URL}images/${content.image3}`} alt={content.imageAlt3} width="1200" 
+  height="991" loading="lazy"  />
+
+    </div>
+    <div class="cta-text">
+      <div class="cta-content">
+<h2>
+  {content.text5}
+  <a class="link-inherit" href={`${import.meta.env.BASE_URL}fr/informations-utiles/`}>{content.link1}</a>
+  {content.text6}
+  <a class="link-inherit" href={`${import.meta.env.BASE_URL}fr/faire-son-pain/`}>{content.link2}</a>
+</h2>
+
+
+        </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+</BaseLayout>

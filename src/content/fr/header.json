@@ -1,0 +1,9 @@
+{
+  "nav": [
+    { "label": "Notre mission", "href": "notre-mission/" },
+    { "label": "Produits", "href": "produits/" },
+    { "label": "Infos utiles", "href": "informations-utiles/" },
+    { "label": "Faire son pain", "href": "faire-son-pain/" },
+    { "label": "Contact", "href": "contact/" }
+  ]
+}

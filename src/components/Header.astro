@@ -1,11 +1,40 @@
+---
+const { lang } = Astro.props;
+
+import frHeader from "../content/fr/header.json";
+import enHeader from "../content/en/header.json";
+
+import langMap from "../content/lang-map.json";
+
+const headerContent = lang === "fr" ? frHeader : enHeader;
+
+
+// Current path without base
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const parts = pathname.split("/").filter(Boolean); // ["fr","notre-mission"]
+const currentSlug = parts[1] ?? ""; // empty string for homepage
+
+// Find equivalent slug
+const otherLang = lang === "fr" ? "en" : "fr";
+const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
+
+
+// Build toggle URL
+const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
+
+---
+
 <header>
   <div class="header-container">
 <a
-  href={Astro.url.pathname === import.meta.env.BASE_URL ? "#" : import.meta.env.BASE_URL}
+  href={Astro.url.pathname === import.meta.env.BASE_URL + lang + "/" 
+    ? "#" 
+    : import.meta.env.BASE_URL + lang + "/"}
   rel="prefetch"
   class="brand"
   aria-label="Capucine et Tournesol – boulangerie-meunerie"
 >
+
   <img
     src={`${import.meta.env.BASE_URL}logo.webp`}
     alt="brand logo"
@@ -26,13 +55,18 @@
       <span class="nav-toggle-icon" aria-hidden="true"></span>
     </label>
 
-    <nav id="primary-nav" class="primary-nav">
-      <a href={`${import.meta.env.BASE_URL}notre-mission/`}>Notre Mission</a>
-      <a href={`${import.meta.env.BASE_URL}produits/`}>Produits</a>
-      <a href={`${import.meta.env.BASE_URL}informations-utiles/`}>Infos utiles</a>
-      <a href={`${import.meta.env.BASE_URL}faire-son-pain/`}>Faire son pain</a>
-      <a href={`${import.meta.env.BASE_URL}contact/`}>Contact</a>
+   <nav id="primary-nav" class="primary-nav">
+      {headerContent.nav.map(item => (
+        <a href={`${import.meta.env.BASE_URL}${lang}/${item.href}`}>{item.label}</a>
+      ))}
+         <!-- Language toggle -->
+    <div class="lang-toggle">
+      <a href={toggleUrl}>{otherLang.toUpperCase()}</a>
+    </div>
     </nav>
+
+    
+ 
   </div>
 </header>
 

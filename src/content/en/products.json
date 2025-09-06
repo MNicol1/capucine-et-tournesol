@@ -1,0 +1,152 @@
+{
+  "title": "Products | Capucine and Tournesol",
+
+  "image6": "image6.webp",
+  "image7": "image7.webp",
+  "image8": "image8.webp",
+  "image9": "image9.webp",
+  "imageAlt": "Image of bread",
+
+  "heading1": "Our Breads",
+  "heading2": "Our Baked Goods",
+  "heading3": "Our Slow-Cooked Dishes",
+
+  "breads": {
+    "heading": "Our Breads",
+    "intro": [
+      "The ingredients speak for themselves",
+      "We use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.",
+      "Our flours undergo no sifting (separation); every component of the grain is preserved in its entirety. No added gluten."
+    ],
+    "sourdough": {
+      "heading": "Sourdough Breads",
+      "descriptor": "(no yeast, no oil, no sugar)",
+      "note": "The sourdough culture consists only of water and flour from the same grain as the bread.",
+      "items": [
+        {
+          "name": "Spelt",
+          "ingredients": "Spelt, water, sourdough culture, sea salt."
+        },
+        {
+          "name": "Kamut",
+          "ingredients": "Kamut, water, sourdough culture, sea salt."
+        },
+        {
+          "name": "16 Grains (Wheat-Free)",
+          "ingredients": "Water, kamut, spelt, sourdough culture, 11 milled grains (barley, oats, rye, rice, green lentils, spelt, soy, buckwheat, corn, millet, flax), sea salt, millet, hemp, amaranth, flax."
+        },
+        {
+          "name": "Wheat with Sesame or with Sunflower",
+          "ingredients": "Wheat, water, sourdough culture, sesame or sunflower, sea salt."
+        },
+        {
+          "name": "Rye (Friday only)",
+          "ingredients": "Rye, water, sourdough culture, sea salt."
+        }
+      ]
+    },
+    "yeast": {
+      "heading": "Yeast Breads",
+      "descriptor": "(no oil, no sugar)",
+      "note": "Except for the raisin bread, which contains honey",
+      "items": [
+        {
+          "name": "Raisin",
+          "ingredients": "Wheat, water, Thompson raisins, unpasteurized honey, sea salt, yeast."
+        },
+        {
+          "name": "Protein",
+          "ingredients": "Wheat, water, sunflower seeds, sea salt, millet, yeast, flax, soy flour, whole sesame, soy milk powder."
+        },
+        {
+          "name": "12 Grains",
+          "ingredients": "Wheat, water, 12 milled grains (barley, oats, rye, rice, green lentils, spelt, soy, buckwheat, corn, wheat, millet, flax), sea salt, millet, yeast, flax."
+        },
+        {
+          "name": "Corn",
+          "ingredients": "Wheat, water, corn, sea salt, millet, yeast, flax."
+        },
+        {
+          "name": "All Wheat",
+          "ingredients": "Wheat, water, sea salt, yeast."
+        },
+        {
+          "name": "Oat Bran and Flax",
+          "ingredients": "Wheat, water, oat bran, flax, sea salt, yeast."
+        }
+      ]
+    }
+  },
+
+  "treats": {
+    "heading": "Our Baked Goods",
+    "intro": [
+      "No sugar enters our bakery!",
+      "Developed through many trials, our recipes combine the flavors of fresh fruits, the richness of dried fruits (natural sweeteners), and the nutritional qualities of whole grains milled daily at the bakery.",
+      "In all our muffins, fruit is always the first ingredient.",
+      "Here are a few examples:"
+    ],
+    "examples": {
+      "heading": "Examples",
+      "items": [
+        {
+          "name": "Banana and Cocoa (Rye)",
+          "ingredients": "Fresh bananas, whole rye, dates, canola oil, flaxseed decoction, cocoa, baking soda, baking powder."
+        },
+        {
+          "name": "Cranberry and Lemon (Kamut)",
+          "ingredients": "Cranberries, whole kamut, dates, canola oil, flaxseed decoction, lemon zest, baking soda, baking powder."
+        },
+        {
+          "name": "Queen Elizabeth (Oats)",
+          "ingredients": "Coconut, whole oats, dates, walnuts, canola oil, flaxseed decoction, baking soda, baking powder."
+        }
+      ]
+    },
+    "additional": {
+      "heading": "Also",
+      "items": [
+        "Apple and Cinnamon (Wheat)",
+        "Carrot (Kamut)",
+        "Fruit and Nuts (Wheat)",
+        "Blueberry (Kamut)",
+        "Hazelnut and Chocolate (Rye)",
+        "Banana (Wheat)",
+        "Pineapple and Ginger (Kamut)"
+      ]
+    }
+  },
+
+  "dishes": {
+    "heading": "Our Slow-Cooked Dishes",
+    "intro": ["Frozen right after preparation"],
+    "vegetarian": {
+      "heading": "Vegetarian",
+      "items": [
+        "Chorba (Soup) with Tofu",
+        "Vegetarian Chili",
+        "Ratatouille",
+        "Vegetarian Moussaka",
+        "Vegetarian Spaghetti Sauce (Lentils)",
+        "...and many more"
+      ]
+    },
+    "meat": {
+      "heading": "Meat",
+      "items": [
+        "Chicken and Vegetable Soup",
+        "Chorba (Soup) with Lamb",
+        "Beef Chili",
+        "Moussaka with Lamb",
+        "Beef Pot-au-Feu",
+        "Meat Spaghetti Sauce",
+        "Chicken with Olives",
+        "Hunter’s Chicken",
+        "Chicken Curry",
+        "Québécois Tourtière",
+        "Chickpea Cassoulet with Lamb",
+        "Lentil Cassoulet"
+      ]
+    }
+  }
+}
