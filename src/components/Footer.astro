@@ -4,7 +4,22 @@ const { lang } = Astro.props;
 import frFooter from "../content/fr/footer.json";
 import enFooter from "../content/en/footer.json";
 
+import langMap from "../content/lang-map.json";
+
 const content = lang === "fr" ? frFooter : enFooter;
+
+// Figure out current slug (same as in Header)
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const parts = pathname.split("/").filter(Boolean); // e.g. ["fr","notre-mission"]
+const currentSlug = parts[1] ?? "";
+
+const otherLang = lang === "fr" ? "en" : "fr";
+const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
+
+// Build toggle URL
+const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
+
+
 ---
 
 <footer>
@@ -49,6 +64,10 @@ const content = lang === "fr" ? frFooter : enFooter;
       >
         {content.labels.facebook}
       </a>
+    </div>
+        <!-- Language toggle -->
+    <div class="footer-item lang-toggle">
+      <a href={toggleUrl}>{otherLang.toUpperCase()}</a>
     </div>
   </div>
 
