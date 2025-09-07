@@ -39,9 +39,31 @@ import content from '../../content/en/contact.json';
         ))}
       </div>
       <div><strong>{content.note}</strong></div>
-      <div class="contact">&#10687;: {content.address}</div>
-      <div class="contact">&#x260E;&#xFE0E;: {content.phone}</div>
-      <div class="contact" >&#9993;: {content.email}</div>
+   <div class="contact">
+  <!-- Address -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 384 512" aria-hidden="true">
+    <path d="M168 0C75.1 0 0 75.1 0 168c0 87.9 133.5 247.9 153.4 272.4c7.4 8.9 20.8 8.9 28.2 0C214.5 415.9 348 255.9 348 168C348 75.1 272.9 0 180 0zM180 240c-39.8 0-72-32.2-72-72s32.2-72 72-72s72 32.2 72 72s-32.2 72-72 72z"/>
+  </svg>
+  {content.address}
+</div>
+
+<div class="contact">
+  <!-- Phone -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 512 512" aria-hidden="true">
+    <path d="M493.4 24.6l-104-24C377.1-1.1 362.6 5.1 354.7 17.9l-48 80c-7.6 12.6-5.1 28.6 5.9 38.1l60.2 52.2c-36.1 76.8-99.2 139.9-176 176l-52.2-60.2c-9.5-11-25.5-13.5-38.1-5.9l-80 48c-12.8 7.9-19 22.4-15.3 36.7l24 104C41.6 489.6 55.1 500 70.5 500c241.6 0 437.5-195.9 437.5-437.5c0-15.4-10.4-28.9-24.6-34.9z"/>
+  </svg>
+  {content.phone}
+</div>
+
+<div class="contact">
+  <!-- Email -->
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M2 4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H2zm0 2h20v.01L12 13 2 6.01V6zm0 12V8l10 7 10-7v10H2z"/>
+</svg>
+
+  {content.email}
+</div>
+
     </div>
   </section>
   </main>
