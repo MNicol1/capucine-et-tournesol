@@ -745,7 +745,7 @@ a:focus-visible,
   border-bottom: 1.5px solid black;
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  max-width: 45%;
+  max-width: 47%;
 }
 
 @media (max-width: 900px) {

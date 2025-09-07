@@ -14,7 +14,7 @@
   "breads": {
     "heading": "Breads",
     "intro": [
-      "The ingredients speak for themselves",
+      "The ingredients speak for themselves.",
       "We use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.",
       "Our flours undergo no sifting (separation); every component of the grain is preserved in its entirety. No added gluten."
     ],
@@ -36,7 +36,7 @@
           "ingredients": "Water, kamut, spelt, sourdough culture, 11 milled grains (barley, oats, rye, rice, green lentils, spelt, soy, buckwheat, corn, millet, flax), sea salt, millet, hemp, amaranth, flax."
         },
         {
-          "name": "Wheat with Sesame or with Sunflower",
+          "name": "Wheat with Sesame or Sunflower",
           "ingredients": "Wheat, water, sourdough culture, sesame or sunflower, sea salt."
         },
         {
@@ -48,7 +48,7 @@
     "yeast": {
       "heading": "Yeast Breads",
       "descriptor": "(no oil, no sugar)",
-      "note": "Except for the raisin bread, which contains honey",
+      "note": "Except for the raisin bread, which contains honey.",
       "items": [
         {
           "name": "Raisin",
@@ -87,7 +87,7 @@
       "Here are a few examples:"
     ],
     "examples": {
-      "heading": "Examples",
+      "heading": "Examples:",
       "items": [
         {
           "name": "Banana and Cocoa (Rye)",
@@ -104,7 +104,7 @@
       ]
     },
     "additional": {
-      "heading": "Also",
+      "heading": "Also:",
       "items": [
         "Apple and Cinnamon (Wheat)",
         "Carrot (Kamut)",
@@ -119,7 +119,7 @@
 
   "dishes": {
     "heading": "Slow-Cooked Dishes",
-    "intro": ["Frozen right after preparation"],
+    "intro": ["Frozen right after preparation."],
     "vegetarian": {
       "heading": "Vegetarian",
       "items": [
