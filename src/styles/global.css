@@ -1204,8 +1204,13 @@ article {
 }
 
 .contact {
-  /* text-decoration: underline; */
+  color: #000;
   font-weight: medium;
+}
+
+a[href^="tel"] {
+  color: #000; /* force black text */
+  text-decoration: none; /* optional: remove underline */
 }
 
 @media (max-width: 768px) {

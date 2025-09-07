@@ -7,12 +7,12 @@
   "image9": "image9.webp",
   "imageAlt": "Image of bread",
 
-  "heading1": "Our Breads",
-  "heading2": "Our Baked Goods",
-  "heading3": "Our Slow-Cooked Dishes",
+  "heading1": "Breads",
+  "heading2": "Baked Goods",
+  "heading3": "Slow-Cooked Dishes",
 
   "breads": {
-    "heading": "Our Breads",
+    "heading": "Breads",
     "intro": [
       "The ingredients speak for themselves",
       "We use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.",
@@ -79,7 +79,7 @@
   },
 
   "treats": {
-    "heading": "Our Baked Goods",
+    "heading": "Baked Goods",
     "intro": [
       "No sugar enters our bakery!",
       "Developed through many trials, our recipes combine the flavors of fresh fruits, the richness of dried fruits (natural sweeteners), and the nutritional qualities of whole grains milled daily at the bakery.",
@@ -118,7 +118,7 @@
   },
 
   "dishes": {
-    "heading": "Our Slow-Cooked Dishes",
+    "heading": "Slow-Cooked Dishes",
     "intro": ["Frozen right after preparation"],
     "vegetarian": {
       "heading": "Vegetarian",
