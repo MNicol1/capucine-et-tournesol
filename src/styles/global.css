@@ -1203,9 +1203,9 @@ article {
   min-width: 150px; /* keeps days aligned in a neat column */
 }
 
-.email {
-  text-decoration: underline;
-  color: black;
+.contact {
+  /* text-decoration: underline; */
+  font-weight: medium;
 }
 
 @media (max-width: 768px) {
