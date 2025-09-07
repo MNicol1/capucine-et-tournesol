@@ -4,7 +4,34 @@
     <meta http-equiv="refresh" content={`0; url=${import.meta.env.BASE_URL}fr/`} />
   </head>
   <body>
-    <!-- <p>Redirecting to <a href={`${import.meta.env.BASE_URL}fr/`}>FR homepage</a>…</p> -->
+   <noscript>
+      <p><a href={`${import.meta.env.BASE_URL}fr/`}>Go to homepage</a></p>
+    </noscript>
   </body>
 </html>
 
+<!--
+      Root Redirect (index.astro)
+
+      Purpose:
+      - The site has no content at "/" since all pages live under "/fr/" or "/en/".
+      - Without this file, visiting the root URL would result in a 404.
+
+      Approach:
+      - Use a meta refresh redirect to send users to "/fr/" (default language).
+      - Keep <body> empty to avoid flashing a "Redirecting…" message.
+
+      Benefits:
+      - Simplicity: no JavaScript needed.
+      - Sustainability: minimal resources (just one extra request).
+      - Reliability: works in all browsers, even with JS disabled.
+      - UX: no distracting flash on load.
+      - Future-proof: if default language changes, only the URL here needs updating.
+
+      Alternatives:
+      - JS auto-detect (better UX for EN users, adds complexity).
+      - Language chooser page (no redirect, but adds a click).
+      - Server-side redirect (ideal, but not supported on GitHub Pages).
+
+      This is the lightest and most standard option for a bilingual static site on GitHub Pages.
+    -->
