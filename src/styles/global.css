@@ -1125,6 +1125,11 @@ article {
 
 /* CONTACT PAGE */
 
+.contact-note,
+.contact {
+  color: inherit;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1212,10 +1217,6 @@ article {
   height: 20px;
   margin-right: 6px;
   vertical-align: middle;
-}
-
-a[href^="tel"] {
-  color: #000; /* force black text */
 }
 
 @media (max-width: 768px) {
