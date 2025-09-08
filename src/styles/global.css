@@ -1125,9 +1125,8 @@ article {
 
 /* CONTACT PAGE */
 
-.contact-note,
-.contact {
-  color: inherit;
+.contact-info a[href^="tel"] {
+  color: inherit !important;
 }
 
 .contact-grid {
