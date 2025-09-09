@@ -868,6 +868,10 @@ a:focus-visible,
   line-height: 1.6;
 }
 
+.page-content ul {
+  padding-left: 40px;
+}
+
 .page-content section {
   padding-top: 2rem; /* adjust as needed */
 }
@@ -923,6 +927,10 @@ article {
 @media (max-width: 768px) {
   .page-content {
     padding: 2rem 0rem;
+  }
+
+  .page-content ul {
+    padding-left: 20px;
   }
 
   .content-centered {
