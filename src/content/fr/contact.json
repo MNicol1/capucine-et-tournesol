@@ -7,7 +7,7 @@
   "hoursTitle": "Horaires d’ouverture",
   "hours": [
     { "label": "Lundi", "hours": "Fermé" },
-    { "label": "Mardi", "hours": "Fermé" },
+    { "label": "Mardi", "hours": "08h00 – 18h00" },
     { "label": "Mercredi", "hours": "08h00 – 18h00" },
     { "label": "Jeudi", "hours": "08h00 – 18h00" },
     { "label": "Vendredi", "hours": "08h00 – 18h00" },
