@@ -10,7 +10,7 @@ For editing purposes, here are helpful markdown file format instructions. For th
 
 For paragraphs, just type normally and leave a space in between sentence(s) to create new paragraphs.
 
-Simple example: 
+**Simple example:** 
 
 This a paragraph one. 
 
@@ -23,9 +23,12 @@ This is another paragraph.
 Use `#` at the start of a line:
 
 i.e.:
+# Our Slow-Clooked Dishes
 
+is
 ```html
 # Our Slow-Clooked Dishes
+
 #   = <h1> (main home page title)
 ##  = <h2> (section headings)
 ### = <h3> (subheadings)
@@ -41,7 +44,7 @@ i.e.:
 
 ---
 
-## Special Styling
+## Special Format and Styling 
 
 Sometimes you’ll see HTML tags within the markdown, like this:
 
