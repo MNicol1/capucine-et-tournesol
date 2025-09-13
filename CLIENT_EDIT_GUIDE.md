@@ -22,11 +22,14 @@ This is another paragraph.
 
 Use `#` at the start of a line:
 
-i.e. : # Our Slow-Clooked Dishes
+i.e.:
 
-- `##` = Section heading
-- `###` = Subheading
-  OR specifically :  # = <h1> (main home page title) ## = <h2> (section headings) ### = <h3> (subheadings)
+```html
+# Our Slow-Clooked Dishes
+#   = <h1> (main home page title)
+##  = <h2> (section headings)
+### = <h3> (subheadings)
+
 
 ---
 
