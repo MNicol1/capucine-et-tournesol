@@ -28,10 +28,11 @@ i.e.:
 # Our Slow-Clooked Dishes
 #   = <h1> (main home page title)
 ##  = <h2> (section headings)
-### = <h3> (subheadings)```
-
+### = <h3> (subheadings)
+```
 
 ---
+
 
 ## Bold and Italic
 
@@ -47,3 +48,4 @@ Sometimes you’ll see HTML tags within the markdown, like this:
 ```html
 <p class="content-centered">Text here</p>
 ⚠️ Do not remove or edit the <p class="...">. Only edit the text inside.
+```
