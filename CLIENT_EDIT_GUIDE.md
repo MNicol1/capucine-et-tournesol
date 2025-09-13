@@ -28,7 +28,7 @@ i.e.:
 # Our Slow-Clooked Dishes
 #   = <h1> (main home page title)
 ##  = <h2> (section headings)
-### = <h3> (subheadings)
+### = <h3> (subheadings)```
 
 
 ---
