@@ -124,7 +124,7 @@ Sometimes you’ll see HTML tags within the markdown, like this:
 <p class="...">. Only edit the text inside.</p>
 ```
 
-⚠️ ## Important Notes When Mixing Markdown and HTML
+### Important Notes When Mixing Markdown and HTML ⚠️ 
 
 - Always leave a **blank line between Markdown text and HTML tags**.  
   Example:
@@ -137,7 +137,7 @@ Sometimes you’ll see HTML tags within the markdown, like this:
   </div>
   ```
 
-  
+
 ## Editing JSON files
 
 Only change the text within the quotes. Be sure to always leave the text within quotation marks, and keep or place a comma (,) after the last quotation mark if there is a line after the first. But if it is the last line in a json file do not have a comma.
@@ -147,18 +147,18 @@ Only change the text within the quotes. Be sure to always leave the text within 
 
 Example:
 
-{
-"text1": "Where Eating Becomes Nourishment"
+{<br/>
+"text1": "Where Eating Becomes Nourishment"<br/>
 }
 
-{
+{<br/>
 "text1": "Where Eating Becomes Nourishment", <br/>
-"text2": "Serving the Mile-End for Over 30 Years"
+"text2": "Serving the Mile-End for Over 30 Years"<br/>
 }
 
 If you want to hide or remove text without deleting the line, replace the text with empty quotes "". For example:
 
-{
-"text1": ""
+{<br/>
+"text1": ""<br/>
 }
 
