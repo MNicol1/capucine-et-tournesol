@@ -1,62 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import content from '../../content/en/bread-making.json';
+import Content from '../../content/en/bread-making.md';
+import content from '../../content/en/bread-making-meta.json'; 
 ---
 
-<BaseLayout lang="en" title={content.title}>
- <main class="main--content">
-<div class="faire-son-pain">
-  <section>
-    <h2>{content.pageTitle}</h2>
-    <h3>{content.sectionOne}</h3>
-    <p>{content.panificationParagraph1}</p>
-    <p>{content.panificationParagraph2}</p>
-    <p>{content.panificationParagraph3}</p>
-    <p>{content.panificationParagraph4}</p>
-  </section>
-
-<section>
-  <h3>{content.sectionTwo}</h3>
-  <p>{content.fermentationIntro}</p>
-
-  <h3>{content.fermentationLevain}</h3>
-      <p style="font-style: italic;">{content.fermentationLevainIntro}</p>
-  <div class="fermentation-subsection">
-
-    <p><strong>{content.fermentationLevainStepsIntro}</strong></p>
-
-    <h4>{content.fermentationLevainPreparation}</h4>
-    <p>{content.fermentationLevainPreparationParagraph1}</p>
-    <p>{content.fermentationLevainPreparationParagraph2}</p>
-    <p>{content.fermentationLevainPreparationParagraph3}</p>
-
-    <h4>{content.fermentationLevainConfection}</h4>
-    <p>{content.fermentationLevainConfectionParagraph1}</p>
-    <p>{content.fermentationLevainConfectionParagraph2}</p>
-  </div>
-
-  <h3>{content.fermentationLevure}</h3>
-    <p style="font-style: italic;" >{content.fermentationLevureIntro}</p>
-  <div class="fermentation-subsection">
-  
-    <p>{content.fermentationLevureParagraph1}</p>
-    <p>{content.fermentationLevureParagraph2}</p>
-    <p>{content.fermentationLevureParagraph3}</p>
-  </div>
-</section>
-
-
-  <section>
-    <h3>{content.sectionThree}</h3>
-    <p>{content.sectionThreeParagraph1}</p>
-    <p>{content.sectionThreeParagraph2}</p>
-    <p>{content.sectionThreeParagraph3}</p>
-    <p>{content.sectionThreeParagraph4}</p>
-    <p>{content.sectionThreeParagraph5}</p>
-    <p>{content.sectionThreeParagraph6}</p>
-    <p>{content.sectionThreeParagraph7}</p>
-    <p>{content.sectionThreeParagraph8}</p>
-  </section>
-</div>
-</main>
+<BaseLayout lang="en" title={content.BreadMakingTitle}>
+  <main class="main--content">
+    <div class="faire-son-pain">
+      <Content />
+    </div>
+  </main>
 </BaseLayout>

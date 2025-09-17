@@ -1,89 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import content from '../../content/fr/mission.json';
+import Content from '../../content/fr/mission.md';
+import meta from '../../content/fr/mission-meta.json';
 ---
 
-<BaseLayout lang="fr" title={content.title}>
-
-<main class="main--content">
-
-<section class="mission-hero">
-  <img
-    src={`${import.meta.env.BASE_URL}images/${content.image4}`}
-    alt={content.imageAlt1}
-    class="mission-image"
-    width="1200" 
-    height="800"
-  />
-
-
-  <div class="mission-text">
-
-    <!-- Intro (poetic values) -->
-    <div class="mission-intro">
-      <p><em>{content.missionIntro1}</em></p>
-      <p><em>{content.missionIntro2}</em></p>
-      <p><em>{content.missionIntro3}</em></p>
-      <p><em>{content.missionIntro4}</em></p>
-    </div>
-
-    <!-- Main declaration -->
-  <div class="mission-statement">
-      <p>— {content.missionParagraph1}</p>
-      <p>— {content.missionParagraph2}</p>
-      <p>— {content.missionClosure}</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-  <!-- Documentary Video -->
-  <section class="mission-video">
-    <h2 class="video-heading">{content.videoHeading}</h2>
-
-<iframe
-  src="https://player.vimeo.com/video/371524487?portrait=0&badge=0"
-  width="100%"
-  allow="fullscreen"
-  loading="lazy"
-  title="Capucine et Tournesol documentary video">
-  
-</iframe>
-
-<p class="video-caption">{content.videoCaption}</p>
-
-
-  </section>
-
-  <!-- 30-Year Neighborhood Block -->
-  <section class="mission-legacy" id="mile-end">
-    <h2>{content.legacyHeading}</h2>
-    <p>{content.legacyParagraph1}</p>
-    <p>{content.legacyParagraph2}</p>
-    <p>{content.legacyParagraph3}</p>
-    <p>{content.legacyParagraph4}</p>
-    <p>{content.legacyParagraph5}</p>
-    <p>{content.legacyParagraph6}</p>
-        <!-- <img
-    src={`/images/${content.image5}`}
-    alt={content.imageAlt1}
-    loading="lazy"
-    class="legacy-image"
-  /> -->
-    <p>{content.legacyParagraph7}</p>
-    <p>{content.legacyParagraph8}</p>
-    <p>{content.legacyParagraph9}</p>
-    <p>{content.legacyParagraph10}</p>
-    <p>{content.legacyParagraph11}</p>
-    <p>{content.legacyParagraph12}</p>
-    <p>{content.legacyParagraph13}</p>
-    <p>{content.legacyParagraph14}</p>
-  </section>
-
-</main>
-
+<BaseLayout lang="fr" title={meta.title}>
+  <main class="main--content">
+    <Content />
+  </main>
 </BaseLayout>
