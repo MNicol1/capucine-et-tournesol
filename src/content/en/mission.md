@@ -9,17 +9,27 @@
 <div class="mission-text">
 
 <div class="mission-intro">
-  <p><em>Respect the source, the ingredient,</em></p>
-  <p><em>the one who cultivated it,</em></p>
-  <p><em>the soil that produced it,</em></p>
-  <p><em>and above all,</em></p>
-  <p><em>the one who is nourished by it.</em></p>
+
+Respect the source, the ingredient,
+
+the one who cultivated it,
+
+the soil that produced it,
+
+and above all,
+
+the one who is nourished by it.
+
 </div>
 
 <div class="mission-statement">
-  <p>— For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.</p>
-  <p>— Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.</p>
-  <p>— No fats or sugars of any kind are added to our breads.</p>
+
+— For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.
+
+— Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.
+
+— No fats or sugars of any kind are added to our breads.
+
 </div>
 </div>
 </section>

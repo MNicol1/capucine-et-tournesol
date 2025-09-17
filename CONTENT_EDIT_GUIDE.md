@@ -147,3 +147,16 @@ If you want to hide or remove text without deleting the line, replace the text w
 {
 "text1": ""
 }
+
+### Important Notes When Mixing Markdown and HTML
+
+- Always leave a **blank line between Markdown text and HTML tags**.  
+  Example:
+
+  ```md
+  <div class="mission-intro">
+
+  This line is inside the div.
+
+  </div>
+  ```

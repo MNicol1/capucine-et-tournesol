@@ -9,16 +9,25 @@
 <div class="mission-text">
 
 <div class="mission-intro">
-  <p><em>Respecter la matière, l'aliment,</em></p>
-  <p><em>celui qui l'a cultivé,</em></p>
-  <p><em>le sol qui l'a produit,</em></p>
-  <p><em>et surtout, celui qui s'en nourrit.</em></p>
+
+Respecter la matière, l'aliment,
+
+celui qui l'a cultivé,
+
+le sol qui l'a produit,
+
+et surtout, celui qui s'en nourrit.
+
 </div>
 
 <div class="mission-statement">
-  <p>— Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.</p>
-  <p>— Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.</p>
-  <p>— Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.</p>
+
+— Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.
+
+— Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.
+
+— Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.
+
 </div>
 </div>
 </section>
