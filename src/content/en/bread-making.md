@@ -2,7 +2,7 @@
 
 ### Breadmaking
 
-The first thing an artisan baker must know is what distinguishes breadmaking from pastry-making. And that difference comes down to a single word: gluten.
+The very first thing an artisan baker must know is what distinguishes breadmaking from pastry-making. And that difference comes down to a single word: gluten.
 
 When we prepare a cake or a muffin, we are simply assembling ingredients. At most, we might beat some eggs, but there is no dough to work. Unlike pastry, breadmaking is about working the dough. Kneading serves to develop the gluten.
 
