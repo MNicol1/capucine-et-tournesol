@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # lets you run it manually in the Actions tab
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
 
 permissions:
   contents: read
@@ -11,10 +14,23 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          echo "Checking JSON syntax..."
+          # will fail if any JSON is invalid
+          find src/content -name "*.json" -print0 | xargs -0 -n1 jq empty
+
+  build:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install, build, and upload your site
@@ -23,8 +39,6 @@ jobs:
         #   path: .
         #   node-version: 20
         #   package-manager: pnpm@latest
-        # env:
-        #   PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2'
 
   deploy:
     needs: build
