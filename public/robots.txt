@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://capucine-et-tournesol.com/sitemap-index.xml
