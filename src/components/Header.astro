@@ -1,10 +1,10 @@
 ---
 const { lang } = Astro.props;
 
-import frHeader from "../content/fr/header.json";
-import enHeader from "../content/en/header.json";
+import frHeader from "../sitecontent/fr/header.json";
+import enHeader from "../sitecontent/en/header.json";
 
-import langMap from "../content/lang-map.json";
+import langMap from "../sitecontent/lang-map.json";
 
 const headerContent = lang === "fr" ? frHeader : enHeader;
 

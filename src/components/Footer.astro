@@ -1,10 +1,10 @@
 ---
 const { lang } = Astro.props;
 
-import frFooter from "../content/fr/footer.json";
-import enFooter from "../content/en/footer.json";
+import frFooter from "../sitecontent/fr/footer.json";
+import enFooter from "../sitecontent/en/footer.json";
 
-import langMap from "../content/lang-map.json";
+import langMap from "../sitecontent/lang-map.json";
 
 const content = lang === "fr" ? frFooter : enFooter;
 
