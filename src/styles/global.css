@@ -75,20 +75,19 @@ h1 {
   margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 2rem;         /* ~32px */
-  margin-bottom: 1.25rem;  /* ~22px */
+  font-size: 2rem; /* ~32px */
+  margin-bottom: 1.25rem; /* ~22px */
 }
 
 h3 {
-  font-size: 1.5rem;       /* ~24px */
-  margin-bottom: 1rem;     /* ~18px */
+  font-size: 1.5rem; /* ~24px */
+  margin-bottom: 1rem; /* ~18px */
 }
 
 h4 {
-  font-size: 1.2rem;       /* ~19px */
-  margin-bottom: 0.75rem;  /* ~14px */
+  font-size: 1.2rem; /* ~19px */
+  margin-bottom: 0.75rem; /* ~14px */
 }
-
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
@@ -110,14 +109,12 @@ p {
 }
 
 @media (max-width: 768px) {
-
-    p {
+  p {
     margin-bottom: 1.45rem; /* ~22px, gives breathing room */
   }
 
   body {
     line-height: 1.55;
-   
   }
 
   h1 {
@@ -135,7 +132,7 @@ p {
   }
 
   h4 {
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
     margin-bottom: 0.6rem;
   }
 
@@ -762,7 +759,7 @@ a:focus-visible,
   border-bottom: 1.5px solid black;
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
-  max-width: 47%;
+  max-width: 55%;
 }
 
 @media (max-width: 900px) {
@@ -801,7 +798,7 @@ a:focus-visible,
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 .products-column {
@@ -809,6 +806,10 @@ a:focus-visible,
   max-width: 400px;
   padding: 0 0.5rem;
   box-sizing: border-box;
+}
+
+.products-column h4 {
+  font-size: 1.4rem;
 }
 
 /* === Notes & descriptors (Breads) === */
@@ -852,9 +853,12 @@ a:focus-visible,
     max-width: 62%;
   }
 
+
+
   .products-columns {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
   .products-column {
     width: 100%;
@@ -899,7 +903,6 @@ a:focus-visible,
 }
 
 .content-centered {
-  
   width: 75%;
   margin: 2rem auto; /* centers the block */
   text-align: center; /* centers the text inside */
@@ -908,7 +911,6 @@ a:focus-visible,
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   line-height: 1.4;
-
 }
 
 article {
@@ -948,10 +950,9 @@ article {
 }
 
 @media (max-width: 768px) {
-
-   .grain-table {
-    font-size: 1rem;       /* 16px, matches readable baseline */
-    min-width: 100%;       /* let it shrink but still scrollable */
+  .grain-table {
+    font-size: 1rem; /* 16px, matches readable baseline */
+    min-width: 100%; /* let it shrink but still scrollable */
   }
   .page-content {
     padding: 2rem 0rem;
