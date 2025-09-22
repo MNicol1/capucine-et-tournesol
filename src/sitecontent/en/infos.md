@@ -14,7 +14,7 @@
   <li><p>Did you know that commercial whole wheat flour is usually just enriched white flour with a few handfuls of bran added back in?</p></li>
 </ul>
 
-**This is the case for the vast majority of bakery products sold on the market (including artisanal ones). It is no longer a food but a dead substance, stripped of all natural nutrients and often toxic.**
+This is the case for the vast majority of bakery products sold on the market (including artisanal ones). It is no longer a food but a dead substance, **stripped of all natural nutrients and often toxic.**
 
 ### How can we be surprised by wheat intolerances?
 
@@ -30,9 +30,9 @@ So-called natural whole grain flours (organic or not) contain less than half of 
 
 A flour that contains all the elements of the grain contains what is most alive in it and degrades very quickly. Within a few days, it takes on a rancid taste and many nutrients disappear through oxidation if it is not used quickly. Would you expect your tomatoes to keep for six months in your pantry like the flours you buy?
 
-**As bakers, we believe the only way to do our work properly and to escape this merry-go-round of food refining is to grind our own flour ourselves.**
+As bakers, we believe the only way to do our work properly and to escape this merry-go-round of food refining is **to grind our own flour ourselves.**
 
-**Since the creation of Capucine and Tournesol bakery, we have milled all our flours daily on stones, removing nothing and adding nothing.**
+Since the creation of Capucine and Tournesol bakery, **we have milled all our flours daily on stones, removing nothing and adding nothing.**
 
 </section>
 
@@ -68,7 +68,9 @@ It is essential for the consumer to also make sure that ingredients such as suga
 
 Our sourdough cultures are pure. For twenty years, they have been fed only with water and whole flour from the same grain as the bread.
 
+<p class="content-centered">
 For us, the word whole must also rhyme with integrity.
+</p>
 
 Of course, we could offer you fancy breads (olive, nut, etc.) or thick-crust white breads alongside our loaves, but we refuse to conduct business that would divert us from our goal: to offer you the only product we truly believe in.
 
@@ -96,13 +98,11 @@ For more than twenty years, Capucine and Tournesol has been offering breads made
 
 </article>
 
-**The word whole must also rhyme with integrity.**
+At Capucine and Tournesol, since 1988, all breads have been made from **100% whole flours**.
 
-**At Capucine and Tournesol, since 1988, all breads have been made from 100% whole flours.**
+No chemical improvers, no white flour, and no sugar of any kind enter the bakery.
 
-**No chemical improvers, no white flour, and no sugar of any kind enter the bakery.**
-
-**We believe that to be sure a bread is truly whole and that all necessary conditions are met, you must ask the baker if they mill their flours every day.**
+We believe that to be sure a bread is truly whole and that all necessary conditions are met, you must ask the baker if they mill their flours every day.
 
 </section>
 

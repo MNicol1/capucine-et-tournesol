@@ -14,7 +14,7 @@
   <li><p>Saviez-vous que la farine de blé entier commerciale n’est habituellement que de la farine blanche enrichie à laquelle on ajoute quelques poignées de son moulu ?</p></li>
 </ul>
 
-**Voilà pour la très grande majorité des produits de boulangerie offerts dans le commerce, (artisans inclus). Il ne s’agit plus d’un aliment mais bien d’une substance morte, vide de tous nutriments naturels et souvent toxique.**
+Voilà pour la très grande majorité des produits de boulangerie offerts dans le commerce, (artisans inclus). Il ne s’agit plus d’un aliment mais bien d’une substance morte, **vide de tous nutriments naturels et souvent toxique.**
 
 ### Comment ne pas s’étonner des intolérances au blé ?
 
@@ -30,9 +30,9 @@ La farines dite de grains entiers naturels (biologiques ou non) contiennent moin
 
 Une farine qui contient tous les éléments du grain contient ce qu’elle a de plus vivant et se dégrade très rapidement. En quelques jours, elle prend un goût rance et plusieurs nutriments disparaissent par oxydation si on ne l’utilise pas rapidement. Demanderiez-vous à vos tomates de se conserver six mois dans votre garde manger comme les farines que vous achetez ?
 
-**En tant que boulangers, nous croyons que la seule façon de faire notre travail comme il le faut, et d'échapper à ce manège du raffinage des aliments est de moudre notre farine nous-mêmes.**
+En tant que boulangers, nous croyons que la seule façon de faire notre travail comme il le faut, et d'échapper à ce manège du raffinage des aliments est **de moudre notre farine nous-mêmes.**
 
-**Depuis la création de la boulangerie Capucine et Tournesol, nous moulons quotidiennement toutes nos farines sur pierres sans rien extraire et sans rien ajouter.**
+Depuis la création de la boulangerie Capucine et Tournesol, **nous moulons quotidiennement toutes nos farines sur pierres sans rien extraire et sans rien ajouter.**
 
 </section>
 
@@ -68,7 +68,7 @@ Il est impératif pour le consommateur, de s'assurer aussi que des ingrédients 
 
 Nos cultures de levain sont pures. Depuis vingt ans, elles ne sont nourries que d'eau et de farine intégrale provenant de la même céréale que le pain.
 
-Pour nous, le mot intégral doit aussi rimer avec intégrité.
+<p class="content-centered">Pour nous, le mot intégral doit aussi rimer avec intégrité.</p>
 
 Nous pourrions, bien sûr vous offrir des pains de fantaisie (olive, noix etc.) ou des pains blancs à croûte épaisse sur les mêmes étales que nos pains mais nous nous refusons à faire un commerce qui nous détournerait de notre objectif : Vous offrir le seul produit auquel nous croyons.
 
@@ -96,13 +96,11 @@ Cela fait maintenant plus de vingt ans que Capucine et Tournesol vous proposent 
 
 </article>
 
-**Le mot intégral doit aussi rimer avec intégrité.**
+Chez Capucine et Tournesol, depuis 1988, l'ensemble des pains est fait de farines **100% intégrales.**
 
-**Chez Capucine et Tournesol, depuis 1988, l'ensemble des pains est fait de farines 100% intégrales.**
+Aucun améliorant chimique, farine blanche ni sucre n'entre à la boulangerie.
 
-**Aucun améliorant chimique, farine blanche ni sucre n'entre à la boulangerie.**
-
-**Nous sommes d'avis que pour s'assurer qu'un pain est intégral et que toutes les conditions nécessaires sont réunies, il faut demander au boulanger s'il moud ses farines tous les jours.**
+Nous sommes d'avis que pour s'assurer qu'un pain est intégral et que toutes les conditions nécessaires sont réunies, il faut demander au boulanger s'il moud ses farines tous les jours.
 
 </section>
 

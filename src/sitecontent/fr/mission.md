@@ -22,11 +22,11 @@ et surtout, celui qui s'en nourrit.
 
 <div class="mission-statement">
 
-— Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.
+• Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.
 
-— Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.
+• Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.
 
-— Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.
+• Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.
 
 </div>
 </div>

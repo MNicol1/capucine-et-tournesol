@@ -24,11 +24,11 @@ the one who is nourished by it.
 
 <div class="mission-statement">
 
-— For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.
+• For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.
 
-— Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.
+• Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.
 
-— No fats or sugars of any kind are added to our breads.
+• No fats or sugars of any kind are added to our breads.
 
 </div>
 </div>
