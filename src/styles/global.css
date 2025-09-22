@@ -75,19 +75,20 @@ h1 {
   margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 2rem; /* ~32px */
-  margin-bottom: 1.25rem; /* ~22px */
+  font-size: 2rem;         /* ~32px */
+  margin-bottom: 1.25rem;  /* ~22px */
 }
 
 h3 {
-  font-size: 1.5rem; /* ~24px */
-  margin-bottom: 1rem; /* ~18px */
+  font-size: 1.5rem;       /* ~24px */
+  margin-bottom: 1rem;     /* ~18px */
 }
 
 h4 {
-  font-size: 1.2rem; /* ~19px */
-  margin-bottom: 0.75rem; /* ~14px */
+  font-size: 1.2rem;       /* ~19px */
+  margin-bottom: 0.75rem;  /* ~14px */
 }
+
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
@@ -109,12 +110,14 @@ p {
 }
 
 @media (max-width: 768px) {
-  p {
+
+    p {
     margin-bottom: 1.45rem; /* ~22px, gives breathing room */
   }
 
   body {
     line-height: 1.55;
+   
   }
 
   h1 {
@@ -132,7 +135,7 @@ p {
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
     margin-bottom: 0.6rem;
   }
 
@@ -896,6 +899,7 @@ a:focus-visible,
 }
 
 .content-centered {
+  
   width: 75%;
   margin: 2rem auto; /* centers the block */
   text-align: center; /* centers the text inside */
@@ -904,6 +908,7 @@ a:focus-visible,
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   line-height: 1.4;
+
 }
 
 article {
@@ -943,9 +948,10 @@ article {
 }
 
 @media (max-width: 768px) {
-  .grain-table {
-    font-size: 1rem; /* 16px, matches readable baseline */
-    min-width: 100%; /* let it shrink but still scrollable */
+
+   .grain-table {
+    font-size: 1rem;       /* 16px, matches readable baseline */
+    min-width: 100%;       /* let it shrink but still scrollable */
   }
   .page-content {
     padding: 2rem 0rem;
@@ -1021,7 +1027,7 @@ article {
 
 .mission-text {
   position: relative;
-  top: 1.5rem; /* adjust until it looks balanced */
+  top: 3.5rem; /* adjust until it looks balanced */
   flex: 1 1 50%;
   width: 50%;
   padding: 0rem 3rem;
@@ -1058,6 +1064,7 @@ article {
     flex: none;
   }
   .mission-text {
+    top: 0;
     padding: 1rem 0.2rem;
   }
   .mission-image {
