@@ -707,6 +707,9 @@ a:focus-visible,
   padding: 0 1rem;
 }
 
+.section-dishes {
+  margin-bottom: 7rem;
+}
 .section-headings {
   display: flex;
   justify-content: center;
@@ -760,6 +763,7 @@ a:focus-visible,
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
   max-width: 55%;
+  font-size: 1.55rem;
 }
 
 @media (max-width: 900px) {
@@ -809,7 +813,7 @@ a:focus-visible,
 }
 
 .products-column h4 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 /* === Notes & descriptors (Breads) === */
@@ -845,15 +849,19 @@ a:focus-visible,
 .products-column li {
   margin-bottom: 0.4rem;
   line-height: 1.45;
+
+  /* match h4 */
+  font-family: "Technical", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.35rem; /* adjust to same size as your h4 */
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
   .products-column h3 {
     max-width: 62%;
+    font-size: 1.5rem;
   }
-
-
 
   .products-columns {
     flex-direction: column;
@@ -877,6 +885,10 @@ a:focus-visible,
     max-width: 60rem; /* ~960px */
     margin: 0 auto;
     padding: 0;
+  }
+
+  .section-dishes {
+    margin-bottom: 7rem;
   }
 }
 
