@@ -16,7 +16,7 @@
 
 This is the case for the vast majority of bakery products sold on the market (including artisanal ones). It is no longer a food but a dead substance, **stripped of all natural nutrients and often toxic.**
 
-### How can we be surprised by wheat intolerances?
+<p class="content-centered">How can we be surprised by wheat intolerances?</p>
 
 As for unbleached white flour (organic or not), often used for baguettes and pastries considered superior, did you know that it undergoes the same first mechanical step of transformation as commercial flours?
 
@@ -215,13 +215,13 @@ Méteil is a mixture of rye and wheat sown and harvested together.
 
 ## Why Don’t We Offer Gluten-Free Products?
 
-<p class="content-centered">Gluten-free products must not be prepared in a bakery that uses grains containing gluten.</p>
-
 Unfortunately, we do not have any gluten-free bread.
 
 We have emphasized that we do not add any gluten to our breads to distinguish ourselves from the unfortunate practice of bakeries that claim to make whole bread while adding gluten flour to theirs.
 
 Buckwheat or rice are not breadmaking grains. Thus, it is impossible to make bread (in the baker’s sense of the term) with these ingredients. In fact, what results are savory cakes shaped like bread. They require neither kneading nor fermentation.
+
+<p class="content-centered">Gluten-free products must not be prepared in a bakery that uses grains containing gluten.</p>
 
 The Celiac Association strongly recommends that gluten-free products never be prepared in facilities where gluten-containing grains are used. We therefore leave this work to those who specialize in it—we do not play with your health! These products are available in natural food stores. Unfortunately, they are very expensive and many people dislike their taste. We are well aware that some competitors unscrupulously offer so-called gluten-free products alongside gluten-containing ones, disregarding the risk of cross-contamination. We strongly condemn this greedy and dangerous practice.
 

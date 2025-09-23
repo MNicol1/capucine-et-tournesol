@@ -170,7 +170,7 @@ p {
   padding-left: 1.25rem; /* 16px */
   padding-right: 1.25rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
   background-color: var(--background-base);
 }
 
@@ -707,9 +707,6 @@ a:focus-visible,
   padding: 0 1rem;
 }
 
-.section-dishes {
-  margin-bottom: 7rem;
-}
 .section-headings {
   display: flex;
   justify-content: center;
@@ -887,9 +884,7 @@ a:focus-visible,
     padding: 0;
   }
 
-  .section-dishes {
-    margin-bottom: 7rem;
-  }
+  
 }
 
 /* === LEARN PAGE  === */
@@ -897,7 +892,7 @@ a:focus-visible,
 .page-content {
   max-width: 45rem; /* 720px, nice reading width */
   margin: 0 auto;
-  padding: 2rem 1rem; /* left/right breathing room */
+  padding: 2rem 1rem ; /* left/right breathing room */
   line-height: 1.6;
 }
 
@@ -915,7 +910,7 @@ a:focus-visible,
 }
 
 .content-centered {
-  width: 75%;
+  width: 80%;
   margin: 2rem auto; /* centers the block */
   text-align: center; /* centers the text inside */
   font-size: 1.5rem;

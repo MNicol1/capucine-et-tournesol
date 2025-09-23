@@ -16,7 +16,7 @@
 
 Voilà pour la très grande majorité des produits de boulangerie offerts dans le commerce, (artisans inclus). Il ne s’agit plus d’un aliment mais bien d’une substance morte, **vide de tous nutriments naturels et souvent toxique.**
 
-### Comment ne pas s’étonner des intolérances au blé ?
+<p class="content-centered">Comment ne pas s’étonner des intolérances au blé ?</p>
 
 Concernant la farine blanche non-blanchie (biologique ou pas) souvent employée pour la fabrication de baguettes et de viennoiseries considérés comme supérieurs, saviez-vous qu’elle subit la première étape mécanique de la même transformation que les farines commerciales ?
 
@@ -213,13 +213,13 @@ Le méteil est un mélange de seigle et de blé semés et récoltés ensemble.
 
 ## Pourquoi nous n'avons pas de produits sans gluten?
 
-<p class="content-centered">Les produits sans gluten ne doivent pas être préparés dans une boulangerie qui utilise des céréales qui en contiennent.</p>
-
 Malheureusement, nous n'avons aucun pain sans gluten.
 
 Nous avons précisé que nous n'ajoutons aucun gluten à nos pains pour nous démarquer de la fâcheuse habitude qu'ont les boulangeries qui prétendent faire du pain intégral d'ajouter de la farine de gluten aux leurs.
 
 Le sarrasin ou le riz ne sont pas des céréales panifiables. Ainsi, il est impossible de faire du pain (au sens boulanger du terme) avec ces ingrédients. En fait, ce sont des gâteaux salés qui ont la forme de pains. Ils ne requièrent aucun pétrissage ni fermentation.
+
+<p class="content-centered">Les produits sans gluten ne doivent pas être préparés dans une boulangerie qui utilise des céréales qui en contiennent.</p>
 
 L'association des maladies cœliaques prescrit fortement que les produits sans gluten ne soient jamais préparés là où on utilise des céréales qui en contiennent. Nous laissons donc ce travail à ceux dont c'est la spécialité, nous ne jouons pas avec votre santé ! Ces produits sont disponibles dans les boutiques de produits naturels. Ils sont malheureusement très chers et leurs goûts en rebutent plusieurs. Nous savons pertinemment que nos concurrents offrent sans scrupules et sans se préoccuper de la contamination croisée des produits dits sans gluten au côtés de produits qui en contiennent, nous déplorons énergiquement cette pratique cupide et dangereuse.
 
