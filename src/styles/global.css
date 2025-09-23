@@ -883,8 +883,6 @@ a:focus-visible,
     margin: 0 auto;
     padding: 0;
   }
-
-  
 }
 
 /* === LEARN PAGE  === */
@@ -892,7 +890,7 @@ a:focus-visible,
 .page-content {
   max-width: 45rem; /* 720px, nice reading width */
   margin: 0 auto;
-  padding: 2rem 1rem ; /* left/right breathing room */
+  padding: 2rem 1rem; /* left/right breathing room */
   line-height: 1.6;
 }
 

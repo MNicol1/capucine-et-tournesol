@@ -66,25 +66,21 @@ const ORIGIN = "https://capucine-et-tournesol.com";
       href={`${ORIGIN}/`} 
     />
 
-    <!-- Structured Data (LocalBusiness) -->
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Bakery",
-        "name": "Capucine et Tournesol",
-        "url": "https://capucine-et-tournesol.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "226 Rue Bernard O",
-          "addressLocality": "Montréal",
-          "addressRegion": "QC",
-          "postalCode": "H2V 4K7",
-          "addressCountry": "CA"
-        }
-      })}
-    </script>
-
-
+    <!-- Structured Data (LocalBusiness) TO BE ADDED AFTER SITE INDEXED -->
+<!-- <script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Capucine et Tournesol",
+  "url": "https://capucine-et-tournesol.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "226 Rue Bernard O",
+    "addressLocality": "Montréal",
+    "addressRegion": "QC",
+    "postalCode": "H2V 4K7",
+    "addressCountry": "CA"
+  }
+}, null, 2)} /> -->
 
   </head>
 
