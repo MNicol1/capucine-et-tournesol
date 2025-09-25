@@ -20,7 +20,12 @@ const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
 
 
 // Build toggle URL
-const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
+// Build toggle URL (avoid double slashes on home)
+const toggleUrl = mappedSlug
+  ? `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug.replace(/\/?$/, "/")}`
+  : `${import.meta.env.BASE_URL}${otherLang}/`;
+
+
 
 ---
 
@@ -55,7 +60,10 @@ const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
 
    <nav id="primary-nav" class="primary-nav">
       {headerContent.nav.map(item => (
-        <a href={`${import.meta.env.BASE_URL}${lang}/${item.href}`}>{item.label}</a>
+       <a href={`${import.meta.env.BASE_URL}${lang}/${item.href.replace(/\/?$/, "/")}`}>
+  {item.label}
+</a>
+
       ))}
          <!-- Language toggle -->
     <div class="lang-toggle">

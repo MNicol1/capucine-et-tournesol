@@ -17,7 +17,11 @@ const otherLang = lang === "fr" ? "en" : "fr";
 const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
 
 // Build toggle URL
-const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
+// Build toggle URL (avoid double slashes on home)
+const toggleUrl = mappedSlug
+  ? `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug.replace(/\/?$/, "/")}`
+  : `${import.meta.env.BASE_URL}${otherLang}/`;
+
 
 
 ---

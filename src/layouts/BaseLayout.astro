@@ -47,18 +47,21 @@ const ORIGIN = "https://capucine-et-tournesol.com";
     <link rel="preload" as="image" type="image/webp" href={import.meta.env.BASE_URL + "logo.webp"} fetchpriority="high">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={`https://capucine-et-tournesol.com${Astro.url.pathname}`} />
+        <link 
+      rel="canonical" 
+      href={`https://capucine-et-tournesol.com${Astro.url.pathname.replace(/\/?$/, "/")}`} 
+    />
 
     <!-- SEO: alternate language versions -->
     <link 
       rel="alternate" 
       hreflang="fr" 
-      href={`${ORIGIN}/fr/${lang === "fr" ? currentSlug : (langMap as any).en[currentSlug] ?? ""}`} 
+      href={`${ORIGIN}/fr/${lang === "fr" ? currentSlug : (langMap as any).en[currentSlug] ?? ""}`.replace(/\/?$/, "/")} 
     />
     <link 
       rel="alternate" 
       hreflang="en" 
-      href={`${ORIGIN}/en/${lang === "en" ? currentSlug : (langMap as any).fr[currentSlug] ?? ""}`} 
+      href={`${ORIGIN}/en/${lang === "en" ? currentSlug : (langMap as any).fr[currentSlug] ?? ""}`.replace(/\/?$/, "/")} 
     />
     <link 
       rel="alternate" 
