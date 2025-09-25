@@ -27,9 +27,7 @@ const toggleUrl = `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug}`;
 <header>
   <div class="header-container">
 <a
-  href={Astro.url.pathname === import.meta.env.BASE_URL + lang + "/" 
-    ? "#" 
-    : import.meta.env.BASE_URL + lang + "/"}
+  href={import.meta.env.BASE_URL + lang + "/"}
   rel="prefetch"
   class="brand"
   aria-label="Capucine et Tournesol – boulangerie-meunerie"
