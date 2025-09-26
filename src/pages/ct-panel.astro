@@ -1,0 +1,214 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CT Panel</title>
+    <style>
+      /* Base */
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0;
+        /* background: rgb(240, 240, 225); */
+        /* background: #f8f6f3; */
+        background: #f5f7f9;
+        /* background: #f4f8fb; */
+        color: #333;
+      }
+
+      main {
+        padding: 0 1rem 4rem;
+      }
+
+      header {
+        text-align: center;
+        padding: 1.5rem;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    
+      }
+
+      
+      .intro {
+        background: #fcfcfc;
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        padding: 1rem 1.25rem;
+        margin: 1.5rem 0 2rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      }
+      .intro a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      .intro a:hover {
+        text-decoration: underline;
+      }
+
+      .quick-tips li {
+        margin-bottom: 0.25rem;
+      }
+     
+      .page-card {
+        max-width: 700px;
+        margin: 0 auto 1rem;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      }
+      .page-card h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+      }
+
+     
+      .links {
+        font-size: 0.95rem;
+        margin-left: 1rem;
+      }
+      .links a {
+        margin: 0 0.25rem;
+        color: #0366d6;
+        text-decoration: none;
+      }
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      
+      .note {
+        background: #f9f9f9;
+        border-left: 4px solid #ccc;
+        padding: 0.75rem 1rem;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Capucine et Tournesol — Content Editor Panel</h1>
+    </header>
+
+    <main class="editor-list">
+
+      
+  <section class="intro">
+  <p>This page provides quick access to edit all site content directly in GitHub.</p>
+
+  <p>
+    Content is organized by the site’s pages, with each page having a French and English version. 
+    Depending on the page, the content is stored in either 
+    <strong>Markdown (.md)</strong> or <strong>JSON (.json)</strong> files.
+  </p>
+
+  <p>
+    To make edits, click the link for the desired file. You must be logged into GitHub with write access. 
+    After committing changes, the site will redeploy automatically.
+  </p>
+
+  <p>
+    For further detailed instructions, see the 
+    <a href="https://github.com/MNicol1/capucine-et-tournesol/blob/main/CONTENT_EDIT_GUIDE.md" target="_blank" rel="noopener">Content Editing Guide</a>.
+  </p>
+  <div class="quick-tips">
+    <h3>Quick Tips</h3>
+    <ul>
+      <li>When editing <strong>JSON</strong> files, always keep commas, quotes, and brackets intact.</li>
+      <li>In <strong>Markdown</strong> files, leave a blank line between paragraphs and headings.</li>
+      <li>Always <strong>preview</strong> your changes in GitHub before committing.</li>
+    </ul>
+  </div>
+  </section>
+
+            <div class="page-card">
+        <h2>Home Page (Landing)</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/home.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/home.json" target="_blank">English</a>
+        </div>
+      </div>
+
+         <div class="page-card">
+        <h2>Our Mission Page</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/mission.md" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/mission.md" target="_blank">English</a>
+          &nbsp;&nbsp; Meta:
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/mission-meta.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/mission-meta.json" target="_blank">English</a>
+        </div>
+      </div>
+
+      <div class="page-card">
+        <h2>Products Page</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/products.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/products.json" target="_blank">English</a>
+        </div>
+      </div>
+
+       <div class="page-card">
+        <h2>Info & Insights Page</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/infos.md" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/infos.md" target="_blank">English</a>
+          &nbsp;&nbsp; Meta:
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/infos.meta.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/infos.meta.json" target="_blank">English</a>
+        </div>
+      </div>
+
+      <div class="page-card">
+        <h2>Bread-making Page</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/bread-making.md" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/bread-making.md" target="_blank">English</a>
+          &nbsp;&nbsp; Meta:
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/bread-making-meta.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/bread-making-meta.json" target="_blank">English</a>
+        </div>
+      </div>
+
+      <div class="page-card">
+        <h2>Contact Page</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/contact.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/contact.json" target="_blank">English</a>
+        </div>
+      </div>
+
+
+      <div class="page-card">
+        <h2>Header</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/header.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/header.json" target="_blank">English</a>
+        </div>
+      </div>
+
+      <div class="page-card">
+        <h2>Footer</h2>
+        <div class="links">
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/fr/footer.json" target="_blank">French</a> |
+          <a href="https://github.com/MNicol1/capucine-et-tournesol/edit/main/src/sitecontent/en/footer.json" target="_blank">English</a>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>
+

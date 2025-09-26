@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /ct-panel
 
 Sitemap: https://capucine-et-tournesol.com/sitemap-index.xml
