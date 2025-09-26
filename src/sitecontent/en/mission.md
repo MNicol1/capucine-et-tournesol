@@ -21,18 +21,15 @@ and above all,
 the one who is nourished by it.
 
 </div>
-
-<div class="mission-statement">
-
-• For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.
-
-• Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.
-
-• No fats or sugars of any kind are added to our breads.
-
-</div>
 </div>
 </section>
+<div class="mission-statement">
+  <ul>
+    <li><img src="/wheat.svg" alt="Wheat icon" class="icon" />For health, for energy, and for taste, we use only top-quality grains, stone-milled at the bakery less than 24 hours before baking.</li>
+    <li><img src="/check.svg" alt="Check icon" class="icon" />Our flours undergo no sifting (separation): every component of the grain is preserved in its entirety.</li>
+    <li><img src="/no.svg" alt="No icon" class="icon" />No fats or sugars of any kind are added to our breads.</li>
+  </ul>
+</div>
 
 <section class="mission-video">
 

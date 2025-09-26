@@ -1,15 +1,16 @@
 <section class="mission-hero"> 
-<img
+  <img
     src="/images/image4.webp"
-    alt="Image of baked bread"
+    alt="Image de pains cuits"
     class="mission-image"
     width="1200"
-    height="800"/>
+    height="800"
+  />
 
 <div class="mission-text">
 
 <div class="mission-intro">
-
+    
 Respecter la matière, l'aliment,
 
 celui qui l'a cultivé,
@@ -20,17 +21,26 @@ et surtout, celui qui s'en nourrit.
 
 </div>
 
-<div class="mission-statement">
-
-• Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierres à la boulangerie, moins de 24 heures précédant la cuisson.
-
-• Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.
-
-• Ni matière grasse ni sucre d'aucune forme, ne sont ajoutés à nos pains.
-
 </div>
-</div>
+
 </section>
+
+<div class="mission-statement">
+  <ul>
+    <li>
+      <img src="/wheat.svg" alt="Icône de blé" class="icon" />
+      Pour la santé, pour l'énergie et pour le goût, nous n'utilisons que des grains de première qualité, moulus sur pierre à la boulangerie, moins de 24&nbsp;heures avant la cuisson.
+    </li>
+    <li>
+      <img src="/check.svg" alt="Icône de validation" class="icon" />
+      Nos farines ne subissent aucun blutage (séparation) : chaque composante de la céréale est conservée dans son intégralité.
+    </li>
+    <li>
+      <img src="/no.svg" alt="Icône d'interdiction" class="icon" />
+      Ni matière grasse ni sucre d'aucune forme ne sont ajoutés à nos pains.
+    </li>
+  </ul>
+</div>
 
 <section class="mission-video">
 

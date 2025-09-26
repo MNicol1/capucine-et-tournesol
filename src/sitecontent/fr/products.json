@@ -118,7 +118,7 @@
 
   "dishes": {
     "heading": "Nos plats mijotés",
-    "intro": ["Congelés dès leurs préparations"],
+    "intro": ["Congelés dès leurs préparations."],
     "vegetarian": {
       "heading": "Végétarien",
       "items": [
@@ -135,9 +135,9 @@
       "items": [
         "Soupe au poulet et aux légumes",
         "Chorba (soupe) à l’agneau",
-        "Chili au bœuf",
+        "Chili au boeuf",
         "Moussaka à l’agneau",
-        "Pot-au-feu au bœuf",
+        "Pot-au-feu au boeuf",
         "Sauce à spaghetti à la viande",
         "Poulet aux olives",
         "Poulet chasseur",
