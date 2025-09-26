@@ -1,71 +1,47 @@
-# Guide to Editing Content within Github
+# Guide to Editing Content in Github
 
-All text content is located in the src/content folder. The content folder has both an EN folder (English) and FR folder (for French version).
+For the easiest way to locate and edit files, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel). It provides direct links to the correct French and English files.
 
-The content files are organized and named according to their associated page (i.e. mission.md for the "Our Mission" page) or component (header or footer).
+Once you open a file from the panel, GitHub will take you straight to the editor. (If you’re not logged in yet, GitHub will prompt you to log in first.)
 
-The content files are either in .json or .md file formats (or sometimes both). Some pages do not have .md files because the content is not in long form or it is specifically structured (i.e Contact or Products page). But all text content can be edited within the either the .json or .md files.
+This guide is a **detailed reference** for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
 
-Some .md files are paired with a small .json file (e.g. mission-meta.json). These hold short text like navigation headings, meta titles, or page labels.
+## How Content is Organized
 
-## What goes where (.json vs .md) ?
+All text content for the site is located in the `src/content` folder. This folder has two subfolders:
 
-JSON -> Small, functional pieces of text that affect the page’s structure, not the main content.
-i.e. lables, navigation links, button text, products tables, img alt text, short captions, etc.
-MD -> Main, or any long content > paragraphs, articles, long sections of text and associated headings.
+- **en/** → English content
+- **fr/** → French content
 
-Quick rule:
+The content files are organized and named according to their associated **page** (e.g., `mission.md` for the "Our Mission" page) or **component** (e.g., `header.json`, `footer.json`).
+
+Content is stored in either **Markdown (.md)** or **JSON (.json)** format:
+
+- **JSON** → short, functional text such as labels, navigation links, buttons, image alt text, or page metadata.
+- **Markdown** → longer content such as paragraphs, articles, or sections with headings.
+
+Some pages use only JSON (e.g., **Contact** or **Products**) because their content is structured rather than long-form text. Some Markdown pages are paired with a small JSON file (e.g., `mission-meta.json`) to hold short items such as navigation headings, meta titles, or page labels.
+
+👉 **Quick rule:**
 
 If it’s short and structural → it's in JSON files.
 
 If it’s long and formatted → it's in Markdown files.
 
-## How to Edit Content in GitHub
+## How to Edit Content (via Content Panel)
 
-### 1. Log in
+1. Open the [Content Panel](https://capucine-et-tournesol.com/ct-panel).
+2. Click the link for the file you want to edit (English or French).
+   - GitHub will open the file directly in edit view.
+   - If not logged in, you’ll be prompted to log in first.
+3. Make your text changes.
+   - In **.json files**, only edit the text inside the quotes (`" "`).
+   - In **.md files**, edit the content, headings, or paragraphs.
+   - Use the **Preview** tab (for Markdown) to check formatting and verify your edits.
+4. Add a short description of your changes.
+5. Click **Commit changes** (green button).
 
-- Go to [github.com](https://github.com) and sign in with your account. (Setup 2FA for added security)
-
-### 2. Find the content
-
-- Within the site's repository, open the `src/content` folder.
-- Choose the correct language folder:
-  - `en/` → English content
-  - `fr/` → French content
-
-### 3. Pick the file
-
-- Look for the file name that matches the page you want to edit.  
-  Examples:
-  - `mission.md` → “Our Mission” page
-  - `products.json` → "Products" page
-
-### 4. Edit the file
-
-- Click on the file.
-- In the top-right, click the **pencil icon** (✏️) to edit.
-- Make your text changes directly:
-  - In `.json` files → only edit the text inside the quotes (`" "`).
-  - In `.md` files → edit the text content, headings, or paragraphs as explained earlier in this guide.
-- You can preview these changes by clicking **Preview** tab.
-
-### 5. Save your changes
-
-- Scroll down to the bottom of the page.
-- Add a short description of what you changed in the “Commit changes” box (e.g., _“Updated mission statement wording”_).
-- Click **Commit changes** (the green button).
-
-### 6. Publish
-
-- Once committed, your changes are automatically saved in the repository, and the changes will appear live on the site after a short delay.
-
----
-
-⚠️ **Tips**
-
-- Always double-check spelling and formatting before saving.
-- If you make a mistake, you can go back to the file history and restore an earlier version.
-- If you get lost in the folders, use the **breadcrumb path** at the top of the GitHub page (the clickable folder names) to go back to the project root or the `content` folder.
+Once committed, the site will automatically redeploy with your changes after a short delay.
 
 ## Basic Rules of Editing Markdown (.md files):
 
@@ -75,29 +51,23 @@ For editing purposes, here are helpful markdown file format instructions. For th
 
 ### Paragraphs
 
-For paragraph spacing, just type normally and leave a space in between sentence(s) to create new paragraphs.
+Write normally and leave a blank line between paragraphs.
 
 **Simple example:**
 
-This a paragraph one. With another sentence here as example.
+```md
+This is paragraph one.
 
-This is another paragraph. This creates a space in between.
+This is another paragraph.
+```
 
 ---
 
 ### Headings
 
-Use `#` at the start of a line, or `##`, `###`, etc. for lower heading hiearchy.
-
-i.e.:
-
-## Our Slow-Cooked Dishes
-
-eguals to
+Use # at the start of a line:
 
 ```
-## Our Slow-Cooked Dishes
-
 # Main Title   → <h1> (used for main page title)
 ## Section     → <h2> (used for section headings)
 ### Subsection → <h3> (used for subheadings)
@@ -107,58 +77,71 @@ eguals to
 
 ### Bold and Italic
 
-- Bold → `**This is bolded text**` → **text**
-- Italic → `*This is italic text*` → _text_ or _text_
+```
+**Bold text** → Bold
+*Italic text* → Italic
+```
 
 ---
 
-### Special Format and Styling
+### HTML and Markdown
 
-Sometimes you’ll see HTML tags within the markdown, like this:
+Sometimes HTML tags are used in markdown for layout purposes.
 
 ```html
-<p class="content-centered">Text here</p>
+⚠️ Do not remove or edit the html tags. Only change the text inside.
 
-⚠️ Do not remove or edit the html tags. Leave them as is.
-
-<p class="...">. Only edit the text inside.</p>
+<p class="...">. Only edit the text inside like here.</p>
 ```
 
-### Important Notes When Mixing Markdown and HTML ⚠️ 
+Always leave a **blank line between Markdown text and HTML tags**.  
+ Example:
 
-- Always leave a **blank line between Markdown text and HTML tags**.  
-  Example:
+```md
+<div class="mission-intro">
 
-  ```md
-  <div class="mission-intro">
+This line is inside the div.
 
-  This line is inside the div.
+</div>
+```
 
-  </div>
-  ```
-
+For further details, refer to the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown guide</a> for help with text formatting.
 
 ## Editing JSON files
 
-Only change the text within the quotes. Be sure to always leave the text within quotation marks, and keep or place a comma (,) after the last quotation mark if there is a line after the first. But if it is the last line in a json file do not have a comma.
-
-⚠️ Always use straight quotes " not smart quotes “ ”. <br/>
-⚠️ Don’t remove commas between items.
+- Only change the text inside the quotes (`" "`).
+- Always keep **commas, quotes, and brackets** intact.
+- Use straight quotes (`"`) — not smart quotes (“ ”).
+- If it’s the last line in the file, do not add a trailing comma.
 
 Example:
 
-{<br/>
-"text1": "Where Eating Becomes Nourishment"<br/>
+```json
+{
+  "text1": "Where Eating Becomes Nourishment",
+  "text2": "Serving the Mile-End for Over 30 Years"
 }
+```
 
-{<br/>
-"text1": "Where Eating Becomes Nourishment", <br/>
-"text2": "Serving the Mile-End for Over 30 Years"<br/>
-}
-
-If you want to hide or remove text without deleting the line, replace the text with empty quotes "". For example:
+To hide or disable text without deleting the line, replace with empty quotes:
 
 {<br/>
 "text1": ""<br/>
 }
 
+## Tips & Recovery
+
+- Double-check spelling and formatting before saving.
+- You can preview `.md` changes using GitHub’s **Preview** tab.
+- You can use the breadcrumb path at the top of GitHub to navigate back to folders.
+- If you make a mistake, use the **History** tab in GitHub to restore an earlier version.
+
+---
+
+## Editing Without the Content Panel
+
+You can also browse files directly in GitHub. This is optional if you prefer navigating manually instead of using the Content Panel:
+
+1. Go to `src/content/en` or `src/content/fr`.
+2. Find the file matching the page name (e.g., `mission.md`, `products.json`).
+3. Edit as described above.
