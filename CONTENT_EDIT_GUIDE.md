@@ -1,14 +1,12 @@
 # Guide to Editing Content in Github
 
-For the easiest way to locate and edit files, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel). It provides direct links to the correct French and English files.
+This guide is a **helpful reference** for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
 
-Once you open a file from the panel, GitHub will take you straight to the editor. (If you’re not logged in yet, GitHub will prompt you to log in first.)
-
-This guide is a **detailed reference** for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
+To easily locate and edit content files, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel), which provides direct links to the French and English versions.
 
 ## How Content is Organized
 
-All text content for the site is located in the `src/content` folder. This folder has two subfolders:
+All text content for the site is located in the `src/content` folder of this code repository. This folder has two subfolders:
 
 - **en/** → English content
 - **fr/** → French content
@@ -31,12 +29,12 @@ If it’s long and formatted → it's in Markdown files.
 ## How to Edit Content (via Content Panel)
 
 1. Open the [Content Panel](https://capucine-et-tournesol.com/ct-panel).
-2. Click the link for the file you want to edit (English or French).
+2. Click the link for the page file you want to edit (English or French).
    - GitHub will open the file directly in edit view.
    - If not logged in, you’ll be prompted to log in first.
 3. Make your text changes.
    - In **.json files**, only edit the text inside the quotes (`" "`).
-   - In **.md files**, edit the content, headings, or paragraphs.
+   - In **.md files**, edit the text content, headings, or paragraphs.
    - Use the **Preview** tab (for Markdown) to check formatting and verify your edits.
 4. Add a short description of your changes.
 5. Click **Commit changes** (green button).
@@ -45,9 +43,9 @@ Once committed, the site will automatically redeploy with your changes after a s
 
 ## Basic Rules of Editing Markdown (.md files):
 
-The majority of this site’s text content is stored in Markdown files (those with an .md extension).
+Most of this site’s text content is stored in Markdown files (.md).
 
-For editing purposes, here are helpful markdown file format instructions. For the most part, you can just edit the text content directly where you see it.
+For editing, use these helpful Markdown formatting guidelines. In most cases, you can simply edit the text directly.
 
 ### Paragraphs
 
@@ -76,6 +74,8 @@ Use # at the start of a line:
 ---
 
 ### Bold and Italic
+
+Use `*`'s in between words or sentences to bold or italicize:
 
 ```
 **Bold text** → Bold
@@ -107,6 +107,8 @@ This line is inside the div.
 
 For further details, refer to the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown guide</a> for help with text formatting.
 
+---
+
 ## Editing JSON files
 
 - Only change the text inside the quotes (`" "`).
@@ -129,9 +131,11 @@ To hide or disable text without deleting the line, replace with empty quotes:
 "text1": ""<br/>
 }
 
+---
+
 ## Tips & Recovery
 
-- Double-check spelling and formatting before saving.
+- Always double-check spelling and formatting before saving.
 - You can preview `.md` changes using GitHub’s **Preview** tab.
 - You can use the breadcrumb path at the top of GitHub to navigate back to folders.
 - If you make a mistake, use the **History** tab in GitHub to restore an earlier version.
