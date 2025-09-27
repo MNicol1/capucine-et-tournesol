@@ -1,8 +1,8 @@
 # Guide to Editing Content in Github
 
-This guide is a **helpful reference** for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
+To easily locate and edit content, use the [Content Panel](LINK-TO-CT-PANEL), which provides direct links to the French and English files.
 
-To easily locate and edit content files, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel), which provides direct links to the French and English versions.
+This guide is a reference for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
 
 ## How Content is Organized
 
@@ -41,9 +41,9 @@ If it’s long and formatted → it's in Markdown files.
 
 Once committed, the site will automatically redeploy with your changes after a short delay.
 
-## Basic Rules of Editing Markdown (.md files):
+## Editing Markdown Basics
 
-Most of this site’s text content is stored in Markdown files (.md).
+Most of this site’s text content is stored in Markdown files (`.md`).
 
 For editing, use these helpful Markdown formatting guidelines. In most cases, you can simply edit the text directly.
 
@@ -63,7 +63,7 @@ This is another paragraph.
 
 ### Headings
 
-Use # at the start of a line:
+Use `#` at the start of a line:
 
 ```
 # Main Title   → <h1> (used for main page title)
@@ -75,7 +75,7 @@ Use # at the start of a line:
 
 ### Bold and Italic
 
-Use `*`'s in between words or sentences to bold or italicize:
+Use `*` around words or sentences to bold or italicize:
 
 ```
 **Bold text** → Bold
@@ -88,10 +88,10 @@ Use `*`'s in between words or sentences to bold or italicize:
 
 Sometimes HTML tags are used in markdown for layout purposes.
 
-```html
-⚠️ Do not remove or edit the html tags. Only change the text inside.
+⚠️ Do not remove or edit the HTML tags. Only change the text inside.
 
-<p class="...">. Only edit the text inside like here.</p>
+```html
+<p class="...">Only edit the text inside like here.</p>
 ```
 
 Always leave a **blank line between Markdown text and HTML tags**.  
@@ -105,11 +105,11 @@ This line is inside the div.
 </div>
 ```
 
-For further details, refer to the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown guide</a> for help with text formatting.
+For further details, refer to the [Markdown guide](https://www.markdownguide.org/basic-syntax/) for help with text formatting.
 
 ---
 
-## Editing JSON files
+## Editing JSON Files
 
 - Only change the text inside the quotes (`" "`).
 - Always keep **commas, quotes, and brackets** intact.
@@ -127,9 +127,11 @@ Example:
 
 To hide or disable text without deleting the line, replace with empty quotes:
 
-{<br/>
-"text1": ""<br/>
+```json
+{
+  "text1": ""
 }
+```
 
 ---
 
