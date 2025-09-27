@@ -3,12 +3,10 @@
 This repository contains the source code and content for the Capucine et Tournesol bakery website.  
 **All rights reserved. Unauthorized use, copying, or modification is prohibited.**
 
-
 This project is built using **Astro** and **GitHub Pages**.  
-It will serve as a **lightweight CMS**, where JSON files in the repository will be used to manage content.
+It serves as a lightweight CMS where Markdown (`.md`) and JSON (`.json`) files manage the site content.
 
 ---
-
 
 ## Project Structure
 
@@ -27,17 +25,16 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## Commands
+## Development (for maintainers)
 
-All commands are run from the root of the project, from a terminal:
+- `npm run dev` → start local dev server
+- `npm run build` → build the production site
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Content Editing
 
+To update site content, use the CONTENT_EDIT_GUIDE.md. This guide explains how to safely edit `.json` and `.md` files through the Content Panel.
+
+## Deployment
+
+Changes pushed to the `main` branch automatically redeploy the live site via GitHub Pages. This is handled through a GitHub Actions workflow (`.github/workflows/deploy.yml`).  
 
