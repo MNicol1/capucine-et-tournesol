@@ -9,180 +9,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CT Panel</title>
     <style>
-   
-      body {
-          font-family: system-ui, sans-serif;
-          font-size: 17px;     
-          line-height: 1.5;   
-          color: #333;
-          background: #f5f7f9;
-          max-width: 950px;
-          margin: 0 auto;
-          padding: 0;
-      }
-
-
-      main {
-        padding: 0 1rem 4rem;
-      }
-
-      header {
-        text-align: center;
-        padding: 1.5rem;
-
-      }
-      header h1 {
-        margin: 0;
-        font-size: 1.8rem;
-    
-      }
-
-
-       /* Toggle button */
-      #theme-toggle {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        padding: 0.25rem 0.75rem;
-        font-size: 0.9rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background: #fff;
-        cursor: pointer;
-        color: #333; /* default dark text */
-      }
-      #theme-toggle:hover {
-        background: #f0f0f0;
-      }
-
-
-body.dark #theme-toggle {
-  color: #E2DFD0; /* light text in dark mode */
-  background: #2f2f2f;
-  border: 1px solid #555;
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 17px;     
+  line-height: 1.5;   
+  color: #333;
+  background: #f5f7f9;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0;
 }
 
+main {
+  padding: 0 1rem 4rem;
+}
 
+header {
+  text-align: center;
+  padding: 1.5rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
 
-      
-      .intro {
-        background: #fcfcfc;
-        border: 1px solid #e5e5e5;
-        border-radius: 6px;
-        padding: 1rem 1.25rem;
-        margin: 1.5rem 0 2rem;
-        line-height: 1.5;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      }
-      .intro a {
-        color: #0366d6;
-        text-decoration: none;
-      }
-      .intro a:hover {
-        text-decoration: underline;
-      }
+/* Toggle button */
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  color: #333; /* fix iOS Safari default blue */
+}
+#theme-toggle:hover {
+  background: #f0f0f0;
+}
 
-      .quick-tips li {
-        margin-bottom: 0.25rem;
-      }
-     
-      .page-card {
-        max-width: 700px;
-        margin: 0 auto 1rem;
-        background: #fff;
-        border: 1px solid #e5e5e5;
-        border-radius: 6px;
-        padding: 0.75rem 1rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      }
+.intro {
+  background: #fcfcfc;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0 2rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.intro a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.intro a:hover {
+  text-decoration: underline;
+}
 
-      .page-card:hover {
+.quick-tips li {
+  margin-bottom: 0.25rem;
+}
+
+.page-card {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.page-card:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.18);
   transition: box-shadow 0.2s ease;
 }
-      .page-card h2 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 0 0 0.5rem;
-      }
+.page-card h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
 
-     
-      .links {
-        margin-left: 1rem;
-      }
-      .links a {
-        margin: 0 0.25rem;
-        color: #0366d6;
-        text-decoration: none;
-      }
-      .links a:hover {
-        text-decoration: underline;
-      }
+.links {
+  margin-left: 1rem;
+}
+.links a {
+  margin: 0 0.25rem;
+  color: #0366d6;
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
+}
 
-      .meta-links {
-  margin-left: 1rem; /* spacing on desktop */
+.meta-links {
+  margin-left: 1rem;
 }
 
 @media (max-width: 600px) {
   .meta-links {
-    display: block;      /* forces line break on mobile */
-    margin-left: 0.25rem;      /* remove indentation for clean stacking */
-    margin-top: 0.25rem; /* small space between rows */
+    display: block;
+    margin-left: 0.25rem;
+    margin-top: 0.25rem;
   }
-
-   header h1 {
+  header h1 {
     margin-top: 2rem;
-   }
-
-   .intro {
-    margin-top: 0;
-   }
-
-    #theme-toggle {
-  
-    padding: 0.35rem 0.75rem;
   }
-
-  
+  .intro {
+    margin-top: 0;
+  }
+  #theme-toggle {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+  }
 }
 
-  /* Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: #E2DFD0;
-      background: #181818;
-    }
-    .intro,
-    .page-card {
-      background: #2f2f2f;
-      border: 1px solid #444;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-    .links a {
-      color: #4da3ff;
-    }
-    .intro a {
-      color: #4da3ff;
-    }
+/* Dark Mode (system preference) */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #E2DFD0;
+    background: #181818;
   }
+  .intro,
+  .page-card {
+    background: #2f2f2f;
+    border: 1px solid #444;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  }
+  .links a,
+  .intro a {
+    color: #4da3ff;
+  }
+  #theme-toggle {
+    background: #2f2f2f;
+    border: 1px solid #555;
+    color: #E2DFD0;
+  }
+  #theme-toggle:hover {
+    background: #3a3a3a;
+  }
+}
 
-  /* Dark Mode (manual toggle override) */
-   /* Manual override always takes priority */
+/* 🔥 Dark Mode (manual toggle override — must come last) */
 body.dark {
-  color: #E2DFD0 !important;
-  background: #181818 !important;
+  color: #E2DFD0;
+  background: #181818;
 }
 body.dark .intro,
 body.dark .page-card {
-  background: #2f2f2f !important;
-  border: 1px solid #444 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.6) !important;
+  background: #2f2f2f;
+  border: 1px solid #444;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 body.dark .links a,
 body.dark .intro a {
-  color: #4da3ff !important;
+  color: #4da3ff;
 }
-
+body.dark #theme-toggle {
+  background: #2f2f2f;
+  border: 1px solid #555;
+  color: #E2DFD0;
+}
+body.dark #theme-toggle:hover {
+  background: #3a3a3a;
+}
 
 
     </style>
