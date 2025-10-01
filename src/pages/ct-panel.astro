@@ -11,10 +11,8 @@
     <style>
 body {
   font-family: system-ui, sans-serif;
-  font-size: 17px;     
-  line-height: 1.5;   
-  color: #333;
-  background: #f5f7f9;
+  font-size: 17px;
+  line-height: 1.5;
   max-width: 950px;
   margin: 0 auto;
   padding: 0;
@@ -114,6 +112,11 @@ header h1 {
   }
   header h1 {
     margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding: 1rem;
   }
   .intro {
     margin-top: 0;
@@ -124,36 +127,35 @@ header h1 {
   }
 }
 
-/* Dark Mode (system preference) */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #E2DFD0;
-    background: #181818;
-  }
-  .intro,
-  .page-card {
-    background: #2f2f2f;
-    border: 1px solid #444;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  }
-  .links a,
-  .intro a {
-    color: #4da3ff;
-  }
-  #theme-toggle {
-    background: #2f2f2f;
-    border: 1px solid #555;
-    color: #E2DFD0;
-  }
-  #theme-toggle:hover {
-    background: #3a3a3a;
-  }
+/* Light theme (default) */
+body.light {
+  color: #333;
+  background: #f5f7f9;
+}
+body.light #theme-toggle {
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+body.light .intro,
+body.light .page-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+body.light a {
+  color: #0366d6;
 }
 
-/* 🔥 Dark Mode (manual toggle override — must come last) */
+/* Dark theme */
 body.dark {
   color: #E2DFD0;
   background: #181818;
+}
+body.dark #theme-toggle {
+  color: #E2DFD0;
+  background: #2f2f2f;
+  border: 1px solid #555;
 }
 body.dark .intro,
 body.dark .page-card {
@@ -161,19 +163,9 @@ body.dark .page-card {
   border: 1px solid #444;
   box-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
-body.dark .links a,
-body.dark .intro a {
+body.dark a {
   color: #4da3ff;
 }
-body.dark #theme-toggle {
-  background: #2f2f2f;
-  border: 1px solid #555;
-  color: #E2DFD0;
-}
-body.dark #theme-toggle:hover {
-  background: #3a3a3a;
-}
-
 
     </style>
   </head>
@@ -294,22 +286,29 @@ body.dark #theme-toggle:hover {
     </main>
 
 <script>
-  const toggle = document.getElementById("theme-toggle")!; // non-null assertion
+const toggle = document.getElementById("theme-toggle")!;
 
-  // Detect system preference at load
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (prefersDark) {
-    document.body.classList.add("dark");
-    toggle.textContent = "Light mode";
-  } else {
+// Detect system preference at load
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (prefersDark) {
+  document.body.classList.add("dark");
+  toggle.textContent = "Light mode";
+} else {
+  document.body.classList.add("light");
+  toggle.textContent = "Dark mode";
+}
+
+// Toggle on click
+toggle.addEventListener("click", () => {
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.replace("dark", "light");
     toggle.textContent = "Dark mode";
+  } else {
+    document.body.classList.replace("light", "dark");
+    toggle.textContent = "Light mode";
   }
+});
 
-  // Toggle on click
-  toggle.addEventListener("click", () => {
-    const isDark = document.body.classList.toggle("dark");
-    toggle.textContent = isDark ? "Light mode" : "Dark mode";
-  });
 </script>
 
   </body>
