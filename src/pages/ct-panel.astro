@@ -49,10 +49,18 @@
         border-radius: 4px;
         background: #fff;
         cursor: pointer;
+        color: #333; /* default dark text */
       }
       #theme-toggle:hover {
         background: #f0f0f0;
       }
+
+
+body.dark #theme-toggle {
+  color: #E2DFD0; /* light text in dark mode */
+  background: #2f2f2f;
+  border: 1px solid #555;
+}
 
 
 
@@ -159,20 +167,22 @@
   }
 
   /* Dark Mode (manual toggle override) */
-      body.dark {
-        color: #E2DFD0;
-        background: #181818;
-      }
-      body.dark .intro,
-      body.dark .page-card {
-        background: #2f2f2f;
-        border: 1px solid #444;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-      }
-      body.dark .links a,
-      body.dark .intro a {
-        color: #4da3ff;
-      }
+   /* Manual override always takes priority */
+body.dark {
+  color: #E2DFD0 !important;
+  background: #181818 !important;
+}
+body.dark .intro,
+body.dark .page-card {
+  background: #2f2f2f !important;
+  border: 1px solid #444 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6) !important;
+}
+body.dark .links a,
+body.dark .intro a {
+  color: #4da3ff !important;
+}
+
 
 
     </style>
