@@ -1,6 +1,9 @@
 # Guide to Editing Content in Github
 
-To easily locate and edit content, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel), which provides direct links to the French and English files.
+To easily locate and edit content, use the
+<a href="https://capucine-et-tournesol.com/ct-panel" target="_blank" rel="noopener noreferrer">
+Content Panel
+</a>, which provides direct links to the French and English files.
 
 This guide is a reference for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
 
@@ -28,7 +31,8 @@ If it’s long and formatted → it's in Markdown files.
 
 ## How to Edit Content (via Content Panel)
 
-1. Open the [Content Panel](https://capucine-et-tournesol.com/ct-panel).
+1. Open the <a href="https://capucine-et-tournesol.com/ct-panel" target="_blank" rel="noopener noreferrer">Content Panel</a>.
+
 2. Click the link for the page file you want to edit (English or French).
    - GitHub will open the file directly in edit view.
    - If not logged in, you’ll be prompted to log in first.
