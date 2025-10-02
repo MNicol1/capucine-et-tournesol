@@ -1,6 +1,6 @@
 # Guide to Editing Content in Github
 
-To easily locate and edit content, use the [Content Panel](LINK-TO-CT-PANEL), which provides direct links to the French and English files.
+To easily locate and edit content, use the [Content Panel](https://capucine-et-tournesol.com/ct-panel), which provides direct links to the French and English files.
 
 This guide is a reference for editing, formatting, and avoiding mistakes when working with `.md` and `.json` files.
 
