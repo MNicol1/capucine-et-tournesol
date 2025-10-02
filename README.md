@@ -36,5 +36,7 @@ To update site content, use the CONTENT_EDIT_GUIDE.md. This guide explains how t
 
 ## Deployment
 
-Changes pushed to the `main` branch automatically redeploy the live site via GitHub Pages. This is handled through a GitHub Actions workflow (`.github/workflows/deploy.yml`).  
+Changes pushed to the `main` branch automatically redeploy the live site via GitHub Pages. This is handled through a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+
+Test commit
 
