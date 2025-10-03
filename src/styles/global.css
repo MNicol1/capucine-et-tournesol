@@ -55,10 +55,9 @@ body {
 }
 
 .cta-button:focus {
-  outline: 3px solid #e5e23a;   /* white outline for contrast on black background */
+  outline: 3px solid #e5e23a; /* white outline for contrast on black background */
   outline-offset: 3px;
 }
-
 
 /* =========================
    TYPOGRAPHY: HEADINGS
@@ -169,7 +168,6 @@ p {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
 
 /* Homepage layout: full-bleed, no constraints */
 .main--home {
@@ -914,13 +912,25 @@ a:focus-visible,
 }
 
 .page-content ul {
-  list-style: square;
-  padding-left: 1.5rem; /* space for markers */
+  list-style: none;
+  padding-left: 0;
 }
 
-.page-content li::marker {
-  /* color: #726a64;  */
-  font-size: 1.4em; /* make marker slightly larger */
+.page-content li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-content li::before {
+  content: url("/wheat.svg");
+  position: absolute;
+  left: 0;
+  top: 0.4em; /* adjust until vertically centered */
+}
+
+.page-content li[style*="list-style: none"]::before {
+  content: none;
 }
 
 .page-content section {
@@ -988,8 +998,8 @@ article {
     padding: 2rem 0rem;
   }
 
-  .page-content ul {
-    padding-left: 20px;
+  .page-content li {
+    margin-bottom: 1rem;
   }
 
   .content-centered {
