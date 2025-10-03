@@ -1,7 +1,7 @@
 <section class="mission-hero">
 <img
     src="/images/image4.webp"
-    alt="Image of baked bread"
+    alt="Baker holding fresh bread from the oven"
     class="mission-image"
     width="1200"
     height="800"/>

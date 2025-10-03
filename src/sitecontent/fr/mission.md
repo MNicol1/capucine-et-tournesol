@@ -1,7 +1,7 @@
 <section class="mission-hero"> 
   <img
     src="/images/image4.webp"
-    alt="Image de pains cuits"
+    alt="Boulanger tenant un pain frais sorti du four"
     class="mission-image"
     width="1200"
     height="800"

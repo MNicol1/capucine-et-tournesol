@@ -54,6 +54,12 @@ body {
   }
 }
 
+.cta-button:focus {
+  outline: 3px solid #e5e23a;   /* white outline for contrast on black background */
+  outline-offset: 3px;
+}
+
+
 /* =========================
    TYPOGRAPHY: HEADINGS
    ========================= */
@@ -152,6 +158,18 @@ p {
 }
 
 /* Layout */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 
 /* Homepage layout: full-bleed, no constraints */
 .main--home {
