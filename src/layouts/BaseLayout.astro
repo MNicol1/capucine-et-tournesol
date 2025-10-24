@@ -3,6 +3,7 @@
 const {
   lang = "fr",
   title = "Capucine et Tournesol — Boulangerie Meunerie",
+  description
 } = Astro.props;
 
 
@@ -39,7 +40,16 @@ const ORIGIN = "https://capucine-et-tournesol.com";
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="description" content={lang === "fr" ? "Boulangerie à Montréal — pain intégral, gâteries sucrées et plats mijotés à base de grains moulus, cuits chaque jour. Au service du quartier depuis 30 ans." : "Bakery in Montréal — wholegrain breads, baked goods, and slow-cooked meals from freshly milled grains, baked daily. Serving the neighbourhood for 30 years."}>
+  <meta
+    name="description"
+    content={
+      description
+        ? description
+        : lang === "fr"
+        ? "Boulangerie à Montréal — pain intégral, gâteries sucrées et plats mijotés à base de grains moulus, cuits chaque jour. Au service du quartier depuis 30 ans."
+        : "Bakery in Montréal — wholegrain breads, baked goods, and slow-cooked meals from freshly milled grains, baked daily. Serving the neighbourhood for 30 years."
+    }
+  />
 
 
 

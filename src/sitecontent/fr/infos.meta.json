@@ -1,9 +1,9 @@
 {
+  "InfosTitle": "Informations utiles | Capucine et Tournesol",
+  "description": "Informations utiles sur nos farines, nos grains et nos méthodes de fabrication du pain — pourquoi nous moulons sur place, utilisons des grains entiers et n’offrons pas de produits sans gluten.",
 
-    "InfosTitle": "Informations utiles | Capucine et Tournesol", 
-
-    "SectionNavOne": "Pourquoi moudre le grain",
-    "SectionNavTwo": "Le pain intégral",
-    "SectionNavThree": "Les céréales",
-    "SectionNavFour": "Pourquoi nous n'avons pas de produits sans gluten?"
+  "SectionNavOne": "Pourquoi moudre le grain",
+  "SectionNavTwo": "Le pain intégral",
+  "SectionNavThree": "Les céréales",
+  "SectionNavFour": "Pourquoi nous n'avons pas de produits sans gluten?"
 }
