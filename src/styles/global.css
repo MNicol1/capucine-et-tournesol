@@ -96,12 +96,12 @@ h4 {
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   word-spacing: 0.1em; /* increase space between words */
 }
 
 .cta-text h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .cta-text h3,
