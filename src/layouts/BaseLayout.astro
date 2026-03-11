@@ -73,11 +73,11 @@ const ORIGIN = "https://capucine-et-tournesol.com";
       hreflang="en" 
       href={`${ORIGIN}/en/${lang === "en" ? currentSlug : (langMap as any).fr[currentSlug] ?? ""}`.replace(/\/?$/, "/")} 
     />
-    <link 
-      rel="alternate" 
-      hreflang="x-default" 
-      href={`${ORIGIN}/`} 
-    />
+ <link 
+  rel="alternate" 
+  hreflang="x-default" 
+  href={`${ORIGIN}/fr/`} 
+/>
 
     <!-- Structured Data (LocalBusiness) TO BE ADDED AFTER SITE INDEXED -->
 <script type="application/ld+json" set:html={JSON.stringify({
