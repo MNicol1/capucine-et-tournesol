@@ -3,7 +3,8 @@
 /* Font face */
 @font-face {
   font-family: "Technical";
-  src: url("/Technical.woff2") format("woff2"),
+  src:
+    url("/Technical.woff2") format("woff2"),
     url("/Technical.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -35,8 +36,18 @@ body {
 
 /* Global */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   line-height: 1.6;
   color: #333;
   font-size: 18px;
@@ -72,6 +83,12 @@ h4,
 .content-centered {
   font-family: "Technical", system-ui, sans-serif;
   font-weight: 600;
+}
+
+.gluten-note {
+  font-family: "Technical", system-ui, sans-serif;
+  font-weight: 600;
+  margin-top: 0.4rem;
 }
 
 /* Baseline scale – applies site-wide */
@@ -119,7 +136,7 @@ p {
   }
 
   body {
-    font-size: 17px; 
+    font-size: 17px;
     line-height: 1.55;
   }
 
@@ -251,7 +268,9 @@ footer {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: underline;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footer-item a:hover {
@@ -354,7 +373,9 @@ header {
   font-weight: 500;
   font-size: 17px;
   padding: 0.4rem; /* better desktop hit target */
-  transition: color 0.3s ease, 0.3s ease;
+  transition:
+    color 0.3s ease,
+    0.3s ease;
 }
 
 .primary-nav a:hover {
@@ -378,7 +399,9 @@ a:focus-visible,
   padding: 0.25rem 0.5rem;
 
   font-size: inherit;
-  transition: color 0.3s ease, 0.3s ease;
+  transition:
+    color 0.3s ease,
+    0.3s ease;
 }
 
 .lang-toggle a:hover {
@@ -534,7 +557,9 @@ a:focus-visible,
 
   text-decoration: none;
   color: hsl(0 0% 20%);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
   white-space: nowrap;
   background: hsl(228, 17%, 94%);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -549,7 +574,9 @@ a:focus-visible,
 .section-nav a[aria-current="true"] {
   background: #e1d8cd;
   color: black;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.25),
+    0 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 /* Anchor offset for in-page sections: header + section nav space */
@@ -1277,7 +1304,9 @@ article {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    box-shadow 0.3s ease;
 
   position: relative; /* needed for overlay */
 }
