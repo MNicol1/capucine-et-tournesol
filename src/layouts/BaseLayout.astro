@@ -52,6 +52,28 @@ const ORIGIN = "https://capucine-et-tournesol.com";
   />
 
 
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+
+<meta
+  property="og:description"
+  content={
+    description
+      ? description
+      : lang === "fr"
+      ? "Boulangerie à Montréal — pain intégral, gâteries sucrées et plats mijotés à base de grains moulus, cuits chaque jour."
+      : "Bakery in Montréal — wholegrain breads, baked goods, and slow-cooked meals from freshly milled grains."
+  }
+/>
+
+<meta property="og:url" content={ORIGIN + Astro.url.pathname} />
+<meta property="og:site_name" content="Capucine et Tournesol" />
+
+<meta property="og:image" content={ORIGIN + "/preview.jpg"} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
 
     <link rel="preload" as="font" href={import.meta.env.BASE_URL + "Technical.woff2"} type="font/woff2" crossorigin />
     <link rel="preload" as="image" type="image/webp" href={import.meta.env.BASE_URL + "logo.webp"} fetchpriority="high">
