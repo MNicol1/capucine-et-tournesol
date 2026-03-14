@@ -88,8 +88,7 @@ h4,
 .gluten-note {
   font-family: "Technical", system-ui, sans-serif;
   font-weight: 600;
-  
-
+  font-size: 1.2rem;
 }
 
 .gluten-note a {
@@ -98,7 +97,7 @@ h4,
 }
 
 .gluten-note a:hover {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 /* Baseline scale – applies site-wide */
@@ -171,11 +170,11 @@ p {
 
   /* Optionally tweak hero text size further */
   .cta-text h1 {
-    font-size: 2.1rem; /* Adjusted size for mobile */
+    font-size: 2rem; /* Adjusted size for mobile */
   }
 
   .cta-text h2 {
-    font-size: 1.7rem; /* Adjusted size for mobile */
+    font-size: 1.6rem; /* Adjusted size for mobile */
   }
 
   .cta-text h3,
@@ -744,7 +743,9 @@ a:focus-visible,
   .cta-text {
     padding: 4rem 1.5rem;
   }
-} /* ================================
+}
+
+/* ================================
    PRODUCTS PAGE - UNIFIED STYLES
    ================================ */
 
@@ -940,7 +941,7 @@ a:focus-visible,
   }
 }
 
-/* === LEARN PAGE  === */
+/* === INFO PAGE  === */
 
 .page-content {
   max-width: 45rem; /* 720px, nice reading width */
@@ -1236,20 +1237,6 @@ article {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-
-/* .legacy-image {
-  float: left;
-  width: 60%;
-  max-width: 30rem;
-  margin: 0 1.5rem 1rem 0;
-  border-radius: 0.25rem;
-} */
-
-/* .mission-legacy::after {
-  content: "";
-  display: block;
-  clear: both;
-} */
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
