@@ -88,7 +88,17 @@ h4,
 .gluten-note {
   font-family: "Technical", system-ui, sans-serif;
   font-weight: 600;
-  margin-top: 0.4rem;
+  
+
+}
+
+.gluten-note a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.gluten-note a:hover {
+   text-decoration: none;
 }
 
 /* Baseline scale – applies site-wide */
