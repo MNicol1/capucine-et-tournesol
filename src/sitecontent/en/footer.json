@@ -4,6 +4,7 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email",
-    "facebook": "Facebook"
+    "facebook": "Facebook", 
+    "instagram": "Instagram"
   }
 }
