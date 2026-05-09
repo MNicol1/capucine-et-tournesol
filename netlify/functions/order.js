@@ -43,6 +43,7 @@ export async function handler(event) {
     });
 
     const submissionDate = new Date().toLocaleString("en-CA", {
+      timeZone: "America/Toronto",
       year: "numeric",
       month: "short",
       day: "numeric",
