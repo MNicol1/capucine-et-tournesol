@@ -61,7 +61,6 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
         {labels.phone}
       </label>
 
-      
       <input
         autocomplete="tel"
         id="phone"
@@ -529,6 +528,9 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
               notSlicedItems: payload.notSlicedItems,
             }),
           });
+
+          const result = await response.text();
+          console.log(result);
 
           if (!res.ok) {
             msg.textContent =
