@@ -529,9 +529,6 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
             }),
           });
 
-          const result = await res.text();
-          console.log(result);
-
           if (!res.ok) {
             msg.textContent =
               lang === "fr"

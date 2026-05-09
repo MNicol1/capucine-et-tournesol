@@ -29,10 +29,6 @@ export async function handler(event) {
       "\n",
     ).replace(/\r/g, "");
 
-    console.log("CLIENT EMAIL EXISTS:", !!process.env.GOOGLE_CLIENT_EMAIL);
-    console.log("PRIVATE KEY EXISTS:", !!process.env.GOOGLE_PRIVATE_KEY);
-    console.log("PRIVATE KEY START:", privateKey?.slice(0, 30));
-
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -101,10 +97,7 @@ export async function handler(event) {
     console.error("ERROR:", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: err.message,
-        stack: err.stack,
-      }),
+      body: JSON.stringify({ error: err.message }),
     };
   }
 }
