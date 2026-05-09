@@ -483,6 +483,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
         }
 
         const itemsDisplay = items
+          .filter((item) => !item.notSliced)
           .map((item) => `${item.name_fr} (x${item.qty})`)
           .join(", ");
 
