@@ -16,10 +16,16 @@ export async function handler(event) {
       };
     }
 
-    if (!data.items || data.items.trim() === "") {
+    const hasItems =
+      (data.items && data.items.trim() !== "") ||
+      (data.notSlicedItems && data.notSlicedItems.trim() !== "");
+
+    if (!hasItems) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: "At least one item must be selected" }),
+        body: JSON.stringify({
+          error: "At least one item must be selected",
+        }),
       };
     }
 
