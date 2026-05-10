@@ -23,7 +23,7 @@ textarea:focus {
   padding: 1rem 1rem 10rem 1rem;
 }
 
-h1 {
+.order-title {
   text-align: center;
 
   margin-bottom: 2rem;
@@ -514,11 +514,152 @@ h1 {
   font-weight: 600;
 }
 
+
+
+
+/* MOBILE  */
+
 @media (max-width: 768px) {
-  #order-success {
-    padding: 24px;
+  #order-form {
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
   }
-  .success-title {
-    font-size: 1.4rem;
+
+  .bread-grid,
+  .muffin-grid,
+  .customer-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .bread-grid,
+  .muffin-grid {
+    gap: 1.5rem;
+  }
+
+  .bread-section {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+  }
+
+  .product-row {
+    gap: 0.55rem;
+  }
+
+  .product-main-row {
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .product-info {
+    min-width: 0;
+  }
+
+  .product-name {
+    font-size: 1.05rem;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+  }
+
+  .product-meta,
+  .product-grams {
+    line-height: 1.3;
+  }
+
+  /* APPLE TOUCH TARGETS */
+
+  .product-qty {
+    min-height: 44px;
+    padding: 0 0.35rem;
+  }
+
+  .qty-btn {
+    width: 44px;
+    height: 44px;
+
+    color: #000;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* SAFARI SVG COLOR FIX */
+
+  .qty-btn svg {
+    stroke: currentColor;
+    color: inherit;
+  }
+
+  .product-qty input {
+    width: 32px;
+    min-width: 32px;
+
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  .slice-options {
+    padding-top: 0.15rem;
+  }
+
+  .slice-options label span {
+    min-height: 44px;
+
+    padding: 0.35rem 0.85rem;
+
+    line-height: 1.1;
+  }
+
+  /* INPUTS */
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  .phone-field input {
+    max-width: 100%;
+  }
+
+  /* BUTTON */
+
+  #order-form button[type="submit"] {
+    width: 100%;
+    max-width: 500px;
+
+    min-height: 52px;
+
+    font-size: 16px;
+  }
+
+  /* TEXTAREA */
+
+  .checkout-section textarea {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* SUCCESS */
+
+  #order-success {
+    padding: 20px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width: 420px) {
+  #order-form {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-meta,
+  .product-grams {
+    font-size: 0.82rem;
+  }
+
+  .slice-options label span {
+    font-size: 0.74rem;
   }
 }
