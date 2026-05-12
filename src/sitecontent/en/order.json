@@ -10,5 +10,10 @@
   "products": "Products",
   "submit": "Submit",
   "muffinsNote": "Sold in sets of 6",
-  "successTitle": "Order received"
+  "successTitle": "Order received",
+  "orderSummaryLabel": "Your order",
+  "paymentEmail": "email@email.com",
+  "paymentLine1": "Please send payment by e-transfer to:",
+  "paymentLine2": "Include your name with the transfer.",
+  "paymentLine3": "Your order will be prepared once payment is received."
 }

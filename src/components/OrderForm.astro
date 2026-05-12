@@ -531,6 +531,9 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
           });
 
           if (!res.ok) {
+            msg.classList.remove("loading");
+            msg.classList.add("error");
+
             msg.textContent =
               lang === "fr"
                 ? "Erreur lors de l’envoi."

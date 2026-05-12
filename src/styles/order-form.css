@@ -11,6 +11,50 @@
   -moz-appearance: textfield;
 }
 
+/* MOBILE INTERACTION HARDENING */
+
+.qty-btn,
+.product-qty,
+.slice-options label span,
+button,
+input,
+textarea {
+  touch-action: manipulation;
+}
+
+/* REMOVE IOS TAP FLASH */
+
+.qty-btn,
+.slice-options label span,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* PREVENT IOS BUTTON STYLING */
+
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+/* IMPROVE TEXT RENDERING */
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+/* PREVENT LONG PRESS CALLOUTS ON TAP CONTROLS */
+
+.qty-btn,
+.slice-options label {
+  -webkit-touch-callout: none;
+}
+
 #order-form input:focus,
 #order-form textarea:focus {
   outline: none;
