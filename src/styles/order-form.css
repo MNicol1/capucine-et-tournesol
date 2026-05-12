@@ -11,10 +11,10 @@
   -moz-appearance: textfield;
 }
 
-input:focus,
-textarea:focus {
+#order-form input:focus,
+#order-form textarea:focus {
   outline: none;
-  border-color: #999;
+  border: 1.5px solid #666;
 }
 
 #order-form {
@@ -78,6 +78,19 @@ textarea:focus {
   grid-template-columns: 1fr 1fr;
 
   gap: 2.5rem;
+}
+
+.muffin-section {
+  margin-top: 3rem;
+}
+
+.section-title {
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.section-note {
+  margin-bottom: 1.5rem;
 }
 
 .customer-fields {
@@ -514,14 +527,15 @@ textarea:focus {
   font-weight: 600;
 }
 
-
-
-
 /* MOBILE  */
 
 @media (max-width: 768px) {
   #order-form {
     padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+  }
+
+  .order-title {
+    font-size: 1.8rem;
   }
 
   .bread-grid,
@@ -530,9 +544,12 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .bread-grid,
-  .muffin-grid {
+  .bread-grid {
     gap: 1.5rem;
+  }
+
+  .muffin-grid {
+    /* gap: 0.2rem; */
   }
 
   .bread-section {
@@ -554,7 +571,7 @@ textarea:focus {
   }
 
   .product-name {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.3;
 
     overflow-wrap: anywhere;
@@ -563,13 +580,14 @@ textarea:focus {
   .product-meta,
   .product-grams {
     line-height: 1.3;
+    font-size: 0.96rem;
   }
 
   /* APPLE TOUCH TARGETS */
 
   .product-qty {
     min-height: 44px;
-    padding: 0 0.35rem;
+    padding: 0 0.2rem;
   }
 
   .qty-btn {
@@ -633,8 +651,8 @@ textarea:focus {
   .checkout-section textarea {
     width: 100%;
     max-width: 500px;
+    font-size: 16px;
   }
-
   /* SUCCESS */
 
   #order-success {
@@ -644,7 +662,7 @@ textarea:focus {
 
 /* EXTRA SMALL DEVICES */
 
-@media (max-width: 420px) {
+@media (max-width: 390px) {
   #order-form {
     padding-left: 0.85rem;
     padding-right: 0.85rem;
