@@ -1,0 +1,14 @@
+{
+  "title": "Online Ordering",
+  "orderInfoLine1": "Orders are prepared weekly every Monday.",
+  "orderInfoLine2": "Pickup is available at [location] during [times].",
+  "orderInfoLine3": "Orders received after [cutoff] will be prepared the following week.",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
+  "comments": "Use this space for special requests or order notes:",
+  "products": "Products",
+  "submit": "Submit",
+  "muffinsNote": "Sold in sets of 6",
+  "successTitle": "Order received"
+}

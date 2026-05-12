@@ -514,8 +514,8 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
         msg.textContent =
           lang === "fr"
-            ? "Envoi de votre commande..."
-            : "Sending your order...";
+            ? "Envoi de votre commande... veuillez patienter."
+            : "Sending your order... please wait.";
 
         try {
           const res = await fetch("/.netlify/functions/order", {

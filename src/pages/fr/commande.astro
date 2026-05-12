@@ -1,37 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import OrderForm from "../../components/OrderForm.astro";
+import content from "../../sitecontent/fr/order.json";
 ---
 
-<BaseLayout lang="fr" title="Commande">
-  <OrderForm
-    lang="fr"
-    labels={{
-      title: "Commande en ligne",
-      orderInfoLine1: "Les commandes sont préparées chaque semaine le lundi.",
-      orderInfoLine2:
-        "La cueillette est disponible à [location] durant [times].",
-      orderInfoLine3:
-        "Les commandes reçues après [cutoff] seront préparées la semaine suivante.",
-      name: "Nom",
-      email: "Courriel",
-      phone: "Téléphone",
-      comments:
-        "Utilisez cet espace pour les demandes spéciales ou notes de commande :",
-      products: "Produits",
-      submit: "Envoyer",
-      muffinsNote: "Vendus par 6",
-
-      successTitle: "Commande reçue",
-
-      orderSummaryLabel: "Votre commande",
-
-      paymentTitle: "Paiement",
-      paymentEmail: "email@email.com",
-
-      paymentLine1: "Veuillez envoyer le paiement par virement Interac à :",
-      paymentLine2: "Inclure votre nom avec le virement.",
-      paymentLine3: "Votre commande sera préparée après réception du paiement.",
-    }}
-  />
+<BaseLayout lang="fr" title={content.title}>
+  <OrderForm lang="fr" labels={content} />
 </BaseLayout>
