@@ -2,9 +2,9 @@
   "nav": [
     { "label": "Our Mission", "href": "our-mission/" },
     { "label": "Products", "href": "products/" },
-    { "label": "Order", "href": "order/" },
     { "label": "Info & Insights", "href": "info-and-insights/" },
     { "label": "Bread-making", "href": "bread-making/" },
+    { "label": "Order", "href": "order/" },
     { "label": "Contact", "href": "contact/" }
   ]
 }
