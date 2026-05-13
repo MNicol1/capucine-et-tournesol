@@ -259,12 +259,16 @@ button {
   align-items: center;
 
   border: 1px solid #cfcfcf;
-  border-radius: 999px;
+  border-radius: 8px;
 
   padding: 0.25rem 0.55rem;
 
   flex-shrink: 0;
   background: #fff;
+}
+
+.product-qty:focus-within {
+  border-color: #999;
 }
 
 .qty-btn {
