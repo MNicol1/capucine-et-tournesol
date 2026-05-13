@@ -8,11 +8,41 @@ export async function handler(event) {
   try {
     const data = JSON.parse(event.body);
 
+    // HONEYPOT
+
+    if (data.website) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Spam detected" }),
+      };
+    }
+
+    // TIMING CHECK
+
+    const startedAt = Number(data.form_started_at || 0);
+    const elapsed = Date.now() - startedAt;
+
+    if (elapsed < 3000) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Submission too fast" }),
+      };
+    }
+
     // VALIDATION
     if (!data.name || !data.email) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: "Name and email are required" }),
+      };
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(data.email)) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Invalid email" }),
       };
     }
 

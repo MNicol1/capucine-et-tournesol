@@ -88,6 +88,23 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       />
     </div>
 
+    <!-- HONEYPOT -->
+
+    <div class="hidden-field" aria-hidden="true">
+      <label for="website">Website</label>
+      <input
+        type="text"
+        id="website"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- TIMING PROTECTION -->
+
+    <input type="hidden" name="form_started_at" value={Date.now()} />
+
     <div id="products">
       <section class="product-section bread-section">
         <h2 class="section-title">
@@ -518,6 +535,8 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
           name: data.name,
           email: data.email,
           phone: data.phone,
+          website: data.website,
+          form_started_at: data.form_started_at,
           items,
           itemsDisplay,
           notSlicedItems,
