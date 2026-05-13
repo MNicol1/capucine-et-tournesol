@@ -5,8 +5,10 @@ export async function handler(event) {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
+  let data;
+
   try {
-    const data = JSON.parse(event.body);
+    data = JSON.parse(event.body);
 
     // HONEYPOT
 
@@ -58,6 +60,12 @@ export async function handler(event) {
         }),
       };
     }
+
+    console.log("Incoming order", {
+      email: data.email,
+      total: data.total,
+      timestamp: new Date().toISOString(),
+    });
 
     // Convert private key to proper multiline format
     const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(
@@ -126,12 +134,23 @@ export async function handler(event) {
       },
     });
 
+    console.log("Order saved successfully", {
+      email: data.email,
+      pickupDate,
+      submissionDate,
+    });
+
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Saved to sheet" }),
     };
   } catch (err) {
-    console.error("ERROR:", err);
+    console.error("Google Sheets append failed", {
+      error: err.message,
+      email: data?.email,
+      timestamp: new Date().toISOString(),
+    });
+
     return {
       statusCode: 500,
       body: JSON.stringify({ error: err.message }),
