@@ -1,13 +1,13 @@
 ---
-const { key } = Astro.props;
+const { key, label, lang } = Astro.props;
 ---
 
 <div class="product-qty">
-
   <button
     type="button"
     class="qty-btn minus"
     data-key={key}
+    aria-label={`${lang === "fr" ? "Réduire la quantité de" : "Decrease quantity of"} ${label}`}
   >
     <svg
       width="14"
@@ -18,7 +18,7 @@ const { key } = Astro.props;
       stroke-width="1.5"
       stroke-linecap="round"
     >
-      <line x1="5" y1="12" x2="19" y2="12" />
+      <line x1="5" y1="12" x2="19" y2="12"></line>
     </svg>
   </button>
 
@@ -27,12 +27,14 @@ const { key } = Astro.props;
     name={`${key}_qty`}
     min="0"
     value="0"
+    aria-label={`${lang === "fr" ? "Quantité pour" : "Quantity for"} ${label}`}
   />
 
   <button
     type="button"
     class="qty-btn plus"
     data-key={key}
+    aria-label={`${lang === "fr" ? "Augmenter la quantité de" : "Increase quantity of"} ${label}`}
   >
     <svg
       width="14"
@@ -43,9 +45,8 @@ const { key } = Astro.props;
       stroke-width="1.5"
       stroke-linecap="round"
     >
-      <line x1="12" y1="5" x2="12" y2="19" />
-      <line x1="5" y1="12" x2="19" y2="12" />
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
     </svg>
   </button>
-
 </div>
