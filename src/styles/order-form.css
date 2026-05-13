@@ -111,6 +111,11 @@ button {
   flex-shrink: 0;
 }
 
+.optional {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 .hidden-field {
   position: absolute;
   left: -9999px;

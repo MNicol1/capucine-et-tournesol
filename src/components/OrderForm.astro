@@ -75,9 +75,13 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     </div>
 
     <div class="form-field phone-field">
-      <label for="phone">
-        {labels.phone}
-      </label>
+    <label for="phone">
+  {labels.phone}
+
+  <span class="optional">
+    {lang === "fr" ? "(facultatif)" : "(optional)"}
+  </span>
+</label>
 
       <input
         autocomplete="tel"
