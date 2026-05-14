@@ -11,7 +11,8 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.16.5",
-    "googleapis": "^126.0.1"
+    "googleapis": "^126.0.1",
+    "resend": "^6.12.3"
   },
   "devDependencies": {
     "prettier": "^3.8.3",

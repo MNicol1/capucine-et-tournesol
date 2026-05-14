@@ -1,4 +1,7 @@
 import { google } from "googleapis";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function handler(event) {
   if (event.httpMethod !== "POST") {
@@ -139,6 +142,67 @@ export async function handler(event) {
       pickupDate,
       submissionDate,
     });
+
+    // EMAIL SUBMISSION FUNCTION
+
+    try {
+      const resendResponse = await resend.emails.send({
+        from: process.env.RESEND_FROM_EMAIL,
+        to: process.env.ORDER_ADMIN_EMAIL,
+        subject: `New bakery order — ${data.name}`,
+        text: `
+New bakery order received
+
+Customer
+--------
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || "N/A"}
+
+Order
+-----
+Sliced Items:
+${data.items || "None"}
+
+Not Sliced:
+${data.notSlicedItems || "None"}
+
+Total:
+${data.total || "N/A"}
+
+Comments:
+${data.comments || "None"}
+
+Pickup Date:
+${pickupDate}
+
+Submitted:
+${submissionDate}
+    `,
+      });
+
+      if (resendResponse.error) {
+        console.error("Order email failed", {
+          error: resendResponse.error,
+          email: data.email,
+          timestamp: new Date().toISOString(),
+        });
+      } else {
+        console.log("Order email sent", {
+          email: data.email,
+          resendId: resendResponse.data?.id,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    } catch (emailError) {
+      console.error("Order email exception", {
+        error: emailError.message,
+        email: data.email,
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    // END
 
     return {
       statusCode: 200,
