@@ -441,14 +441,6 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       });
     });
 
-    document.querySelectorAll(".product-qty input").forEach((input) => {
-      input.addEventListener("focus", () => {
-        if (input.value === "0") {
-          input.select();
-        }
-      });
-    });
-
     updateTotal();
     window.addEventListener("popstate", () => {
       const formEl = document.getElementById("order-form");
