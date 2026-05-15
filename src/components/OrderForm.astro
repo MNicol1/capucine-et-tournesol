@@ -75,13 +75,13 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     </div>
 
     <div class="form-field phone-field">
-    <label for="phone">
-  {labels.phone}
+      <label for="phone">
+        {labels.phone}
 
-  <span class="optional">
-    {lang === "fr" ? "(facultatif)" : "(optional)"}
-  </span>
-</label>
+        <span class="optional">
+          {lang === "fr" ? "(facultatif)" : "(optional)"}
+        </span>
+      </label>
 
       <input
         autocomplete="tel"
@@ -438,6 +438,14 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
         input.value = value;
         updateSliceVisibility(key, value);
         updateTotal();
+      });
+    });
+
+    document.querySelectorAll(".product-qty input").forEach((input) => {
+      input.addEventListener("focus", () => {
+        if (input.value === "0") {
+          input.select();
+        }
       });
     });
 
