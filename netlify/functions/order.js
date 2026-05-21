@@ -116,7 +116,7 @@ export async function handler(event) {
     const pickupDate = getNextPickupDate();
 
     await sheets.spreadsheets.values.append({
-      spreadsheetId: "1XQKiYR-1TwWMSml0jOCLqXBUKo7vIjdfHY7QkmmxPrU",
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: "Orders!A:J",
       valueInputOption: "RAW",
       requestBody: {
