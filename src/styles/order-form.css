@@ -56,7 +56,8 @@ button {
 }
 
 #order-form input:focus,
-#order-form textarea:focus {
+#order-form textarea:focus,
+#order-form select:focus {
   outline: none;
   border: 1.5px solid #666;
 }
@@ -203,6 +204,36 @@ button {
   border: 1px solid #ccc;
 
   font-size: 1rem;
+}
+
+.form-field select {
+  height: 48px;
+
+
+  padding: 0 0.7rem;
+
+  border: 1px solid #ccc;
+  background: #fff;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.field-note {
+  margin: 0.5rem 0 0 0;
+   font-size: 0.90rem;
+  font-weight: 500;
+}
+
+.pickup-field {
+  margin-top: 1rem;
+}
+
+.pickup-field select {
+  width: 100%;
+  max-width: 420px;
 }
 
 .phone-field input {

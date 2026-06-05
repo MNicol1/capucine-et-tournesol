@@ -92,6 +92,30 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       />
     </div>
 
+    <div class="form-field pickup-field">
+      <label for="pickupDate">
+        {lang === "fr" ? "Date de ramassage" : "Pickup date"}
+      </label>
+
+      <select id="pickupDate" name="pickupDate" required>
+        <option value="">
+          {
+            lang === "fr"
+              ? "Sélectionnez une date de ramassage"
+              : "Select a pickup date"
+          }
+        </option>
+      </select>
+
+      <p class="field-note">
+        {
+          lang === "fr"
+            ? "* Les ramassages sont disponibles du jeudi au samedi."
+            : "* Pickups are available Thursday to Saturday only."
+        }
+      </p>
+    </div>
+
     <!-- HONEYPOT -->
 
     <div class="hidden-field" aria-hidden="true">
@@ -292,6 +316,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       </p>
 
       <div id="success-items"></div>
+      <div id="success-pickup-date"></div>
     </div>
 
     <div id="success-total"></div>
@@ -310,6 +335,49 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
   <script define:vars={{ lang, PRODUCTS }}>
     // @ts-nocheck
+
+    function formatPickupDate(date) {
+      return new Intl.DateTimeFormat(lang === "fr" ? "fr-CA" : "en-CA", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      }).format(date);
+    }
+
+    function toDateValue(date) {
+      return date.toISOString().split("T")[0];
+    }
+
+    function populatePickupDates() {
+      const select = document.getElementById("pickupDate");
+
+      if (!select) return;
+
+      const minimumPickupDate = new Date();
+      minimumPickupDate.setHours(minimumPickupDate.getHours() + 48);
+
+      const maxDate = new Date(minimumPickupDate);
+      maxDate.setDate(maxDate.getDate() + 7);
+
+      const allowedDays = [4, 5, 6]; // Thursday, Friday, Saturday
+
+      const cursor = new Date(minimumPickupDate);
+
+      while (cursor <= maxDate) {
+        if (allowedDays.includes(cursor.getDay())) {
+          const option = document.createElement("option");
+
+          option.value = toDateValue(cursor);
+          option.textContent = formatPickupDate(cursor);
+
+          select.appendChild(option);
+        }
+
+        cursor.setDate(cursor.getDate() + 1);
+      }
+    }
+
+    populatePickupDates();
 
     function updateSliceVisibility(productKey, qty) {
       const el = document.querySelector(`[data-slice-for="${productKey}"]`);
@@ -355,13 +423,25 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     }
 
     // --- SUCCESS STATE ---
+
     function renderSuccess(payload) {
+      const pickupDateEl = document.getElementById("success-pickup-date");
       const itemsEl = document.getElementById("success-items");
       const totalEl = document.getElementById("success-total");
 
       if (!itemsEl || !totalEl) return;
 
       itemsEl.innerHTML = "";
+      if (pickupDateEl && payload.pickupDate) {
+        const [year, month, day] = payload.pickupDate.split("-").map(Number);
+
+        const formattedDate = formatPickupDate(new Date(year, month - 1, day));
+
+        pickupDateEl.textContent =
+          lang === "fr"
+            ? `Ramassage : ${formattedDate}`
+            : `Pickup Date: ${formattedDate}`;
+      }
 
       const selectedItems = payload.items.filter((item) => item.qty > 0);
 
@@ -541,6 +621,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
           phone: data.phone,
           website: data.website,
           form_started_at: data.form_started_at,
+          pickupDate: data.pickupDate,
           items,
           itemsDisplay,
           notSlicedItems,

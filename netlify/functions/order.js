@@ -113,7 +113,31 @@ export async function handler(event) {
       });
     }
 
-    const pickupDate = getNextPickupDate();
+    if (!data.pickupDate) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          error: "Pickup date is required",
+        }),
+      };
+    }
+
+    const [year, month, date] = data.pickupDate.split("-").map(Number);
+
+    const pickupDateObj = new Date(year, month - 1, date);
+
+    const day = pickupDateObj.getDay();
+
+    if (![4, 5, 6].includes(day)) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          error: "Invalid pickup date",
+        }),
+      };
+    }
+
+    const pickupDate = data.pickupDate;
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
