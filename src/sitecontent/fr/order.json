@@ -1,8 +1,8 @@
 {
   "title": "Commande en ligne",
-  "orderInfoLine1": "Les commandes sont préparées chaque semaine le lundi.",
-  "orderInfoLine2": "La cueillette est disponible à [location] durant [times].",
-  "orderInfoLine3": "Les commandes reçues après [cutoff] seront préparées la semaine suivante.",
+  "orderInfoLine1": "Veuillez prévoir un minimum de 48 heures pour la préparation de votre commande.",
+  "orderInfoLine2": "Les commandes doivent être récupérées à la boulangerie à la date de ramassage choisie.",
+  "orderInfoLine3": "Le paiement doit être effectué par virement Interac après l’envoi de votre commande.",
   "name": "Nom",
   "email": "Courriel",
   "phone": "Téléphone",

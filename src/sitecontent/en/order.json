@@ -1,8 +1,8 @@
 {
   "title": "Online Ordering",
-  "orderInfoLine1": "Orders are prepared weekly every Monday.",
-  "orderInfoLine2": "Pickup is available at [location] during [times].",
-  "orderInfoLine3": "Orders received after [cutoff] will be prepared the following week.",
+  "orderInfoLine1": "Please allow a minimum of 48 hours for order preparation.",
+  "orderInfoLine2": "Orders must be picked up at the bakery on the selected pickup date.",
+  "orderInfoLine3": "Payment is to be made by Interac e-Transfer after your order is submitted.",
   "name": "Name",
   "email": "Email",
   "phone": "Phone",
