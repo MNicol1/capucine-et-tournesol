@@ -7,6 +7,12 @@
 
   "buttonText": "Découvrir nos produits",
 
+  "orderText1": "Commander en ligne",
+  "orderText2": "Choisissez vos pains et muffins à l'avance pour un ramassage du jeudi au samedi",
+  "orderButtonText": "Commander",
+  "orderImage": "image4.webp",
+  "orderImageAlt": "baked bread",
+
   "text5": "Vous trouverez une mine",
   "link1": "d'informations",
   "text6": "sur les céréales, les farines, et des conseils pour",

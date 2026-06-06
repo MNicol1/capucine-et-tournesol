@@ -660,7 +660,7 @@ a:focus-visible,
 .cta-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -694,9 +694,23 @@ a:focus-visible,
   text-align: center;
 }
 
-/* .cta-text p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+/* Online ordering image grid */
+
+/* .ordering-section {
+  height: auto;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  align-content: start;
+}
+
+.order-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
 } */
 
 .cta-content {
@@ -1330,6 +1344,10 @@ article {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.contact-note {
+  font-weight: 600;
 }
 
 /* Hover effect only on devices that support hover */

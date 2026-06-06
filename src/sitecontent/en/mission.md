@@ -1,6 +1,6 @@
 <section class="mission-hero">
 <img
-    src="/images/image4.webp"
+    src="/images/mission.webp"
     alt="Baker holding fresh bread from the oven"
     class="mission-image"
     width="1200"

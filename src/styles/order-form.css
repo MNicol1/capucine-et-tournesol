@@ -85,7 +85,7 @@ button {
   border-bottom: 1px solid #d8d8d8;
 
   line-height: 1.7;
-  color: #555;
+  /* color: #2e2e2e; */
 }
 
 .order-info p {

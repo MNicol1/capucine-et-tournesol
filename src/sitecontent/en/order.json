@@ -3,6 +3,7 @@
   "orderInfoLine1": "Please allow a minimum of 48 hours for order preparation.",
   "orderInfoLine2": "Orders must be picked up at the bakery on the selected pickup date.",
   "orderInfoLine3": "Payment is to be made by Interac e-Transfer after your order is submitted.",
+  "pickupNote": "If your order includes sliced bread, please plan to pick up after 10:00 a.m.",
   "name": "Name",
   "email": "Email",
   "phone": "Phone",
@@ -12,7 +13,7 @@
   "muffinsNote": "Sold in sets of 6",
   "successTitle": "Order received",
   "orderSummaryLabel": "Your order",
-  "paymentEmail": "email@email.com",
+  "paymentEmail": "capucineettournesol@gmail.com",
   "paymentLine1": "Please send payment by e-transfer to:",
   "paymentLine2": "Include your name with the transfer.",
   "paymentLine3": "Your order will be prepared once payment is received."

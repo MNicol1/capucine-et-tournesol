@@ -114,6 +114,13 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
             : "* Pickups are available Thursday to Saturday only."
         }
       </p>
+      <p class="field-note">
+        {
+          lang === "fr"
+            ? "* Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h."
+            : "* If your order includes sliced bread, please plan to pick up after 10:00 a.m."
+        }
+      </p>
     </div>
 
     <!-- HONEYPOT -->
@@ -317,6 +324,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
       <div id="success-items"></div>
       <div id="success-pickup-date"></div>
+      <div>{labels.pickupNote}</div>
     </div>
 
     <div id="success-total"></div>

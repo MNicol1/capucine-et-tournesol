@@ -7,6 +7,12 @@
 
   "buttonText": "Explore our products",
 
+  "orderText1": "Online Ordering",
+  "orderText2": "Choose your breads and muffins for pickup Thursday through Saturday",
+  "orderButtonText": "Order",
+  "orderImage": "image4.webp",
+  "orderImageAlt": "baked bread",
+
   "text5": "Here you will find a wealth of",
   "link1": "information",
   "text6": "about grains, flours, and tips for",

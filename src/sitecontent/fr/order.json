@@ -3,6 +3,7 @@
   "orderInfoLine1": "Veuillez prévoir un minimum de 48 heures pour la préparation de votre commande.",
   "orderInfoLine2": "Les commandes doivent être récupérées à la boulangerie à la date de ramassage choisie.",
   "orderInfoLine3": "Le paiement doit être effectué par virement Interac après l’envoi de votre commande.",
+  "pickupNote": "Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h.",
   "name": "Nom",
   "email": "Courriel",
   "phone": "Téléphone",
@@ -12,7 +13,7 @@
   "muffinsNote": "Vendus par 6",
   "successTitle": "Commande reçue",
   "orderSummaryLabel": "Votre commande",
-  "paymentEmail": "email@email.com",
+  "paymentEmail": "capucineettournesol@gmail.com",
   "paymentLine1": "Veuillez envoyer le paiement par virement Interac à :",
   "paymentLine2": "Inclure votre nom avec le virement.",
   "paymentLine3": "Votre commande sera préparée après réception du paiement."
