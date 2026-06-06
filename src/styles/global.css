@@ -65,11 +65,10 @@ body {
   }
 }
 
-.cta-button:focus {
-  outline: 3px solid #e5e23a; /* white outline for contrast on black background */
+.cta-button:focus-visible {
+  outline: 3px solid #e5e23a;
   outline-offset: 3px;
 }
-
 /* =========================
    TYPOGRAPHY: HEADINGS
    ========================= */
