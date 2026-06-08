@@ -749,7 +749,13 @@ a:focus-visible,
     height: auto;
   }
 
-  .cta-image,
+  .cta-image {
+    aspect-ratio: 1200 / 969;
+    overflow: hidden;
+  }
+
+
+
   .cta-text {
     width: 100%;
     height: auto;
