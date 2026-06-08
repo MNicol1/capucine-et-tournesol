@@ -97,7 +97,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
         {lang === "fr" ? "Date de ramassage" : "Pickup date"}
       </label>
 
-      <select id="pickupDate" name="pickupDate" required>
+      <select id="pickupDate" name="pickupDate">
         <option value="">
           {
             lang === "fr"
@@ -578,6 +578,18 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
+
+        if (!data.pickupDate) {
+          msg.classList.remove("loading");
+          msg.classList.add("error");
+
+          msg.textContent =
+            lang === "fr"
+              ? "Veuillez sélectionner une date de ramassage."
+              : "Please select a pickup date.";
+
+          return;
+        }
 
         const items = [];
 

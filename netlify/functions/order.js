@@ -35,6 +35,8 @@ export async function handler(event) {
     }
 
     // VALIDATION
+
+    
     if (!data.name || !data.email) {
       return {
         statusCode: 400,
