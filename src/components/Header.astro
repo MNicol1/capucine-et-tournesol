@@ -8,7 +8,6 @@ import langMap from "../sitecontent/lang-map.json";
 
 const headerContent = lang === "fr" ? frHeader : enHeader;
 
-
 // Current path without base
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const parts = pathname.split("/").filter(Boolean); // ["fr","notre-mission"]
@@ -18,61 +17,63 @@ const currentSlug = parts[1] ?? ""; // empty string for homepage
 const otherLang = lang === "fr" ? "en" : "fr";
 const mappedSlug = (langMap as any)[lang][currentSlug] ?? "";
 
-
 // Build toggle URL
 // Build toggle URL (avoid double slashes on home)
 const toggleUrl = mappedSlug
   ? `${import.meta.env.BASE_URL}${otherLang}/${mappedSlug.replace(/\/?$/, "/")}`
   : `${import.meta.env.BASE_URL}${otherLang}/`;
-
-
-
 ---
 
 <header>
   <div class="header-container">
-<a
-  href={import.meta.env.BASE_URL + lang + "/"}
-  rel="prefetch"
-  class="brand"
-  aria-label="Capucine et Tournesol – boulangerie-meunerie"
->
-
-  <img
-    src={`${import.meta.env.BASE_URL}logo.webp`}
-    alt="brand logo"
-    class="logo"
-    width="240"
-    height="244"
-  />
-  <div class="brand-text">
-    <span translate="no" class="brand-title notranslate">Capucine et Tournesol</span>
-    <span translate="no" class="brand-tagline notranslate">boulangerie-meunerie</span>
-  </div>
-</a>
-
+    <a
+      href={import.meta.env.BASE_URL + lang + "/"}
+      rel="prefetch"
+      class="brand"
+      aria-label="Capucine et Tournesol – boulangerie-meunerie"
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}logo.webp`}
+        alt="brand logo"
+        class="logo"
+        width="240"
+        height="244"
+      />
+      <div class="brand-text">
+        <span translate="no" class="brand-title notranslate"
+          >Capucine et Tournesol</span
+        >
+        <span translate="no" class="brand-tagline notranslate"
+          >boulangerie-meunerie</span
+        >
+      </div>
+    </a>
 
     <!-- Mobile menu toggle (CSS-only) -->
-    <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Toggle menu" />
+    <input
+      id="nav-toggle"
+      class="nav-toggle"
+      type="checkbox"
+      aria-label="Toggle menu"
+    />
     <label for="nav-toggle" class="nav-toggle-button" aria-label="Menu">
       <span class="nav-toggle-icon" aria-hidden="true"></span>
     </label>
 
-   <nav id="primary-nav" class="primary-nav">
-      {headerContent.nav.map(item => (
-       <a href={`${import.meta.env.BASE_URL}${lang}/${item.href.replace(/\/?$/, "/")}`}>
-  {item.label}
-</a>
-
-      ))}
-         <!-- Language toggle -->
-    <div class="lang-toggle">
-      <a href={toggleUrl}>{otherLang.toUpperCase()}</a>
-    </div>
+    <nav id="primary-nav" class="primary-nav">
+      {
+        headerContent.nav.map((item) => (
+          <a
+            href={`${import.meta.env.BASE_URL}${lang}/${item.href.replace(/\/?$/, "/")}`}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <!-- Language toggle -->
+      <div class="lang-toggle">
+        <a href={toggleUrl}>{otherLang.toUpperCase()}</a>
+      </div>
     </nav>
-
-    
- 
   </div>
 </header>
-
