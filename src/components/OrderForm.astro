@@ -373,10 +373,12 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
       if (!select) return;
 
-      const minimumPickupDate = new Date();
+      const today = new Date();
+
+      const minimumPickupDate = new Date(today);
       minimumPickupDate.setHours(minimumPickupDate.getHours() + 48);
 
-      const maxDate = new Date(minimumPickupDate);
+      const maxDate = new Date(today);
       maxDate.setDate(maxDate.getDate() + 7);
 
       const allowedDays = [4, 5, 6]; // Thursday, Friday, Saturday
