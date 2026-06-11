@@ -5,7 +5,7 @@
     "informations-utiles": "info-and-insights",
     "faire-son-pain": "bread-making",
     "contact": "contact",
-    "commande": "order",
+    "commander": "order",
     "": ""
   },
   "en": {
@@ -14,7 +14,7 @@
     "info-and-insights": "informations-utiles",
     "bread-making": "faire-son-pain",
     "contact": "contact",
-    "order": "commande",
+    "order": "commander",
     "": ""
   }
 }

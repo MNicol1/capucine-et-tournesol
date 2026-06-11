@@ -298,6 +298,11 @@ button {
   opacity: 0.9;
 }
 
+.product-note {
+  font-size: 0.78rem;
+  padding-top: 0.2rem;
+}
+
 /* QUANTITY CONTROL */
 
 .product-qty {

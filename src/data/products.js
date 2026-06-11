@@ -120,7 +120,9 @@ export const PRODUCTS = [
     name_en: "Rye",
     grams: "700g",
     price: 6.75,
-    sliceable: true,
+    sliceable: false,
+    note_fr: "Ramassage vendredi et samedi seulement",
+    note_en: "Friday/Saturday pickup only",
   },
 
   {
@@ -189,5 +191,12 @@ export const PRODUCTS = [
     name_fr: "Pommes et cannelle",
     name_en: "Apple and Cinnamon",
     price: 8.5,
+  },
+  {
+    key: "bleuets",
+    category: "muffins",
+    name_fr: "Bleuets",
+    name_en: "Blueberry",
+    price: 9.75,
   },
 ];
