@@ -299,8 +299,10 @@ button {
 }
 
 .product-note {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   padding-top: 0.2rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
 }
 
 /* QUANTITY CONTROL */
