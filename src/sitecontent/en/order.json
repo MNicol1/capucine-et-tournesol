@@ -1,8 +1,8 @@
 {
   "title": "Online Ordering",
-  "orderInfoLine1": "Please allow a minimum of 48 hours for order preparation.",
-  "orderInfoLine2": "Orders must be picked up at the bakery on the selected pickup date.",
-  "orderInfoLine3": "Payment is to be made by Interac e-Transfer after your order is submitted.",
+  "orderInfoLine1": "A minimum 48-hour preparation time is required for all orders.",
+  "orderInfoLine2": "Orders must be picked up at the bakery on the selected date.",
+  "orderInfoLine3": "Orders are paid by Interac e-Transfer after submission.",
   "pickupNote": "If your order includes sliced bread, please plan to pick up after 10:00 a.m.",
   "name": "Name",
   "email": "Email",

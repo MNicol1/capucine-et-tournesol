@@ -1,8 +1,8 @@
 {
   "title": "Commande en ligne",
-  "orderInfoLine1": "Veuillez prévoir un minimum de 48 heures pour la préparation de votre commande.",
-  "orderInfoLine2": "Les commandes doivent être récupérées à la boulangerie à la date de ramassage choisie.",
-  "orderInfoLine3": "Le paiement doit être effectué par virement Interac après l’envoi de votre commande.",
+  "orderInfoLine1": "Un délai minimal de 48 heures est requis pour la préparation des commandes.",
+  "orderInfoLine2": "Les commandes doivent être ramassées à la boulangerie à la date sélectionnée.",
+  "orderInfoLine3": "Le paiement des commandes s’effectue par virement Interac après la soumission de la commande.",
   "pickupNote": "Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h.",
   "name": "Nom",
   "email": "Courriel",
