@@ -121,10 +121,20 @@ const ORIGIN = "https://capucine-et-tournesol.com";
 
   </head>
 
-  <body>
-    <Header lang={lang} />
-     <slot />
-    <Footer lang={lang} />
-    <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
-  </body>
+<body>
+  <Header lang={lang} />
+
+  <div class="site-notice">
+    {
+      lang === "fr"
+        ? "Pause d’été : nous serons FERMÉS du 21 juin au 2 juillet inclusivement. De retour le 3 juillet. Bon début d’été !"
+        : "Summer Break: we will be CLOSED June 21–July 2. Reopening on July 3. Have a great start to summer!"
+    }
+  </div>
+
+  <slot />
+
+  <Footer lang={lang} />
+  <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
+</body>
 </html>
