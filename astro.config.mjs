@@ -9,8 +9,11 @@ export default defineConfig({
 
   base: "/", // root domain, no subpath anymore
 
-  integrations: [sitemap()], // generates sitemap.xml at build
-
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes("/ct-panel/"),
+    }),
+  ],
   server: {
     host: true, // allow access from your local network
   },
