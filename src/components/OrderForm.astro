@@ -696,11 +696,18 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
             msg.classList.remove("loading");
             msg.classList.add("error");
 
-            msg.textContent =
-              errorData.error ||
-              (lang === "fr"
-                ? "Erreur lors de l’envoi."
-                : "Error submitting order.");
+            if (errorData.error === "Invalid email") {
+              msg.textContent =
+                lang === "fr"
+                  ? "Veuillez entrer une adresse courriel valide."
+                  : "Please enter a valid email address.";
+            } else {
+              msg.textContent =
+                errorData.error ||
+                (lang === "fr"
+                  ? "Erreur lors de l’envoi."
+                  : "Error submitting order.");
+            }
 
             submitBtn.disabled = false;
 
