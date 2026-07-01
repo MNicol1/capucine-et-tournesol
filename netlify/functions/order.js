@@ -36,7 +36,6 @@ export async function handler(event) {
 
     // VALIDATION
 
-    
     if (!data.name || !data.email) {
       return {
         statusCode: 400,
@@ -232,7 +231,10 @@ ${submissionDate}
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Saved to sheet" }),
+      body: JSON.stringify({
+        success: true,
+        message: "Order submitted successfully.",
+      }),
     };
   } catch (err) {
     console.error("Google Sheets append failed", {
