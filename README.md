@@ -3,7 +3,7 @@
 This repository contains the source code and content for the Capucine et Tournesol bakery website.  
 **All rights reserved. Unauthorized use, copying, or modification is prohibited.**
 
-This project is built using **Astro** and **GitHub Pages**.  
+This project is built with Astro and hosted on Netlify.
 It serves as a lightweight CMS where Markdown (`.md`) and JSON (`.json`) files manage the site content.
 
 ---
@@ -21,9 +21,11 @@ Inside of Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro uses the files in src/pages/ to generate site routes.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Static assets such as images are stored in the public/ directory.
+
+Serverless functions used by the ordering system are located in netlify/functions/.
 
 ## Development (for maintainers)
 
@@ -36,5 +38,15 @@ To update site content, use the CONTENT_EDIT_GUIDE.md. This guide explains how t
 
 ## Deployment
 
-Changes pushed to the `main` branch automatically redeploy the live site via GitHub Pages. This is handled through a GitHub Actions workflow (`.github/workflows/deploy.yml`).
+The production website is hosted on Netlify.
+
+Changes pushed to the main branch automatically trigger a new production deployment through Netlify.
+
+The production deployment includes:
+
+- Astro static site build
+- Netlify Functions deployment
+- Environment variable management
+- Google Sheets order integration
+- Resend email integration
 
