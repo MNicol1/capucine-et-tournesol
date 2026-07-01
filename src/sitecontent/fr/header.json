@@ -4,6 +4,7 @@
     { "label": "Produits", "href": "produits/" },
     { "label": "Infos utiles", "href": "informations-utiles/" },
     { "label": "Faire son pain", "href": "faire-son-pain/" },
+    { "label": "Commander", "href": "commander/" },
     { "label": "Contact", "href": "contact/" }
   ]
 }

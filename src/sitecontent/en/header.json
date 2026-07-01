@@ -4,6 +4,7 @@
     { "label": "Products", "href": "products/" },
     { "label": "Info & Insights", "href": "info-and-insights/" },
     { "label": "Bread-making", "href": "bread-making/" },
+    { "label": "Order", "href": "order/" },
     { "label": "Contact", "href": "contact/" }
   ]
 }

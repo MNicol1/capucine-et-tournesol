@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import OrderForm from "../../components/OrderForm.astro";
+import content from "../../sitecontent/en/order.json";
+---
+
+<BaseLayout lang="en" title={content.title}>
+  <main>
+    <OrderForm lang="en" labels={content} />
+  </main>
+</BaseLayout>

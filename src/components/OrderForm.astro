@@ -1,0 +1,758 @@
+---
+import "../styles/order-form.css";
+import { PRODUCTS } from "../data/products.js";
+
+const { labels, lang } = Astro.props;
+
+import QuantityControl from "./QuantityControl.astro";
+
+const sourdoughProducts = PRODUCTS.filter((p) => p.category === "sourdough");
+const yeastProducts = PRODUCTS.filter((p) => p.category === "yeast");
+const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
+---
+
+<div id="order-form-container">
+  <form id="order-form">
+    <h1 class="order-title">{labels.title}</h1>
+
+    <div class="order-info">
+      <p>
+        <img
+          src="/wheat.svg"
+          alt=""
+          class="inline-wheat"
+          width="14"
+          height="14"
+        />
+        {labels.orderInfoLine1}
+      </p>
+
+      <p>
+        <img
+          src="/wheat.svg"
+          alt=""
+          class="inline-wheat"
+          width="14"
+          height="14"
+        />
+        {labels.orderInfoLine2}
+      </p>
+
+      <p>
+        <img
+          src="/wheat.svg"
+          alt=""
+          class="inline-wheat"
+          width="14"
+          height="14"
+        />
+        {labels.orderInfoLine3}
+      </p>
+    </div>
+
+    <div class="customer-fields">
+      <div class="form-field">
+        <label for="name">
+          {labels.name}
+        </label>
+
+        <input id="name" name="name" required />
+      </div>
+
+      <div class="form-field">
+        <label for="email">
+          {labels.email}
+        </label>
+
+        <input
+          autocomplete="email"
+          id="email"
+          name="email"
+          type="email"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-field phone-field">
+      <label for="phone">
+        {labels.phone}
+
+        <span class="optional">
+          {
+            lang === "fr"
+              ? "(pour les rappels de ramassage)"
+              : "(for pickup reminders)"
+          }
+        </span>
+      </label>
+
+      <input
+        autocomplete="tel"
+        id="phone"
+        name="phone"
+        type="tel"
+        inputmode="tel"
+      />
+    </div>
+
+    <div class="form-field pickup-field">
+      <label for="pickupDate">
+        {lang === "fr" ? "Date de ramassage" : "Pickup date"}
+      </label>
+
+      <select id="pickupDate" name="pickupDate">
+        <option value="">
+          {
+            lang === "fr"
+              ? "Sélectionnez une date de ramassage"
+              : "Select a pickup date"
+          }
+        </option>
+      </select>
+
+      <p class="field-note">
+        {
+          lang === "fr"
+            ? "* Les ramassages sont disponibles du jeudi au samedi."
+            : "* Pickups are available Thursday to Saturday only."
+        }
+      </p>
+      <p class="field-note">
+        {
+          lang === "fr"
+            ? "* Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h."
+            : "* If your order includes sliced bread, please plan to pick up after 10:00 a.m."
+        }
+      </p>
+    </div>
+
+    <!-- HONEYPOT -->
+
+    <div class="hidden-field" aria-hidden="true">
+      <label for="website">Website</label>
+      <input
+        type="text"
+        id="website"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- TIMING PROTECTION -->
+
+    <input type="hidden" name="form_started_at" value={Date.now()} />
+
+    <div id="products">
+      <section class="product-section bread-section">
+        <h2 class="section-title">
+          {lang === "fr" ? "Pains" : "Breads"}
+        </h2>
+
+        <div class="bread-grid">
+          <div class="bread-column">
+            <h3 class="category-title">
+              {lang === "fr" ? "Pains à la levure" : "Yeast Breads"}
+            </h3>
+
+            {
+              yeastProducts.map((p) => {
+                const label = lang === "fr" ? p.name_fr : p.name_en;
+
+                return (
+                  <div class="product-row">
+                    <div class="product-main-row">
+                      <div class="product-info">
+                        <div class="product-name-row">
+                          <div class="product-name">{label}</div>
+
+                          {p.grams && (
+                            <div class="product-grams">| {p.grams}</div>
+                          )}
+                        </div>
+
+                        <div class="product-meta">${p.price.toFixed(2)}</div>
+                      </div>
+
+                      <QuantityControl key={p.key} label={label} lang={lang} />
+                    </div>
+
+                    {p.sliceable && (
+                      <div class="slice-options" data-slice-for={p.key}>
+                        <label>
+                          <input
+                            type="radio"
+                            name={`${p.key}_slice`}
+                            value="sliced"
+                            checked
+                          />
+                          <span>{lang === "fr" ? "Tranché" : "Sliced"}</span>
+                        </label>
+
+                        <label>
+                          <input
+                            type="radio"
+                            name={`${p.key}_slice`}
+                            value="not_sliced"
+                          />
+                          <span>
+                            {lang === "fr" ? "Non tranché" : "Not sliced"}
+                          </span>
+                        </label>
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            }
+          </div>
+
+          <div class="bread-column">
+            <h3 class="category-title">
+              {lang === "fr" ? "Pains au levain" : "Sourdough Breads"}
+            </h3>
+
+            {
+              sourdoughProducts.map((p) => {
+                const label = lang === "fr" ? p.name_fr : p.name_en;
+
+                return (
+                  <div class="product-row">
+                    <div class="product-main-row">
+                      <div class="product-info">
+                        <div class="product-name-row">
+                          <div class="product-name">{label}</div>
+
+                          {p.grams && (
+                            <div class="product-grams">| {p.grams}</div>
+                          )}
+                        </div>
+
+                        <div class="product-meta">${p.price.toFixed(2)}</div>
+                        {p.note_en && (
+                          <div class="product-note">
+                            {lang === "fr" ? p.note_fr : p.note_en}
+                          </div>
+                        )}
+                      </div>
+
+                      <QuantityControl key={p.key} label={label} lang={lang} />
+                    </div>
+
+                    {p.sliceable && (
+                      <div class="slice-options" data-slice-for={p.key}>
+                        <label>
+                          <input
+                            type="radio"
+                            name={`${p.key}_slice`}
+                            value="sliced"
+                            checked
+                          />
+                          <span>{lang === "fr" ? "Tranché" : "Sliced"}</span>
+                        </label>
+
+                        <label>
+                          <input
+                            type="radio"
+                            name={`${p.key}_slice`}
+                            value="not_sliced"
+                          />
+                          <span>
+                            {lang === "fr" ? "Non tranché" : "Not sliced"}
+                          </span>
+                        </label>
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section muffin-section">
+        <h2 class="section-title">Muffins</h2>
+
+        <div class="section-note">
+          <img
+            src="/wheat.svg"
+            alt=""
+            class="inline-wheat"
+            width="14"
+            height="14"
+          />
+          {labels.muffinsNote}
+        </div>
+
+        <div class="muffin-grid">
+          {
+            muffinProducts.map((p) => {
+              const label = lang === "fr" ? p.name_fr : p.name_en;
+
+              return (
+                <div class="product-row">
+                  <div class="product-main-row">
+                    <div class="product-info">
+                      <div class="product-name-row">
+                        <div class="product-name">{label}</div>
+
+                        {p.grams && (
+                          <div class="product-grams">| {p.grams}</div>
+                        )}
+                      </div>
+
+                      <div class="product-meta">${p.price.toFixed(2)}</div>
+                    </div>
+
+                    <QuantityControl key={p.key} label={label} lang={lang} />
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </section>
+    </div>
+
+    <div class="checkout-section">
+      <div id="total-wrapper">
+        <div id="total">Total: $0.00</div>
+      </div>
+
+      <textarea name="comments" placeholder={labels.comments}></textarea>
+      <div id="form-message"></div>
+
+      <button type="submit">{labels.submit}</button>
+    </div>
+  </form>
+
+  <div id="order-success" style="display: none;">
+    <h2 class="success-title">
+      {labels.successTitle}
+    </h2>
+
+    <div class="success-section">
+      <p class="success-label">
+        {labels.orderSummaryLabel}
+      </p>
+
+      <div id="success-items"></div>
+      <div id="success-pickup-date"></div>
+      <div>{labels.pickupNote}</div>
+    </div>
+
+    <div id="success-total"></div>
+
+    <div class="success-section" id="success-payment">
+      <p class="payment">
+        {labels.paymentLine1}
+        <span class="payment-email">{labels.paymentEmail}</span>
+      </p>
+
+      <p class="payment">{labels.paymentLine2}</p>
+
+      <p class="payment">{labels.paymentLine3}</p>
+    </div>
+  </div>
+
+  <script define:vars={{ lang, PRODUCTS }}>
+    // @ts-nocheck
+
+    function formatPickupDate(date) {
+      return new Intl.DateTimeFormat(lang === "fr" ? "fr-CA" : "en-CA", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      }).format(date);
+    }
+
+    function toDateValue(date) {
+      return date.toISOString().split("T")[0];
+    }
+
+    function populatePickupDates() {
+      const select = document.getElementById("pickupDate");
+
+      if (!select) return;
+
+      const today = new Date();
+
+      const minimumPickupDate = new Date(today);
+      minimumPickupDate.setHours(minimumPickupDate.getHours() + 48);
+
+      const maxDate = new Date(today);
+      maxDate.setDate(maxDate.getDate() + 7);
+
+      const allowedDays = [4, 5, 6]; // Thursday, Friday, Saturday
+
+      const cursor = new Date(minimumPickupDate);
+
+      while (cursor <= maxDate) {
+        if (allowedDays.includes(cursor.getDay())) {
+          const option = document.createElement("option");
+
+          option.value = toDateValue(cursor);
+          option.textContent = formatPickupDate(cursor);
+
+          select.appendChild(option);
+        }
+
+        cursor.setDate(cursor.getDate() + 1);
+      }
+    }
+
+    populatePickupDates();
+
+    function updateSliceVisibility(productKey, qty) {
+      const el = document.querySelector(`[data-slice-for="${productKey}"]`);
+
+      if (!el) return;
+
+      el.classList.toggle("visible", qty > 0);
+
+      if (qty === 0) {
+        const slicedRadio = el.querySelector('input[value="sliced"]');
+
+        if (slicedRadio) {
+          slicedRadio.checked = true;
+        }
+      }
+    }
+
+    // --- LIVE TOTAL ---
+    function updateTotal() {
+      let total = 0;
+
+      PRODUCTS.forEach((product) => {
+        const input = document.querySelector(
+          `input[name="${product.key}_qty"]`,
+        );
+
+        const qty = Number(input?.value || 0);
+        total += qty * product.price;
+      });
+
+      document.getElementById("total").textContent =
+        lang === "fr"
+          ? `Total : ${total.toFixed(2)} $`
+          : `Total: $${total.toFixed(2)}`;
+
+      // clear empty-order error once user adds products
+      const msg = document.getElementById("form-message");
+
+      if (total > 0 && msg?.classList.contains("error")) {
+        msg.textContent = "";
+        msg.classList.remove("error");
+      }
+    }
+
+    // --- SUCCESS STATE ---
+
+    function renderSuccess(payload) {
+      const pickupDateEl = document.getElementById("success-pickup-date");
+      const itemsEl = document.getElementById("success-items");
+      const totalEl = document.getElementById("success-total");
+
+      if (!itemsEl || !totalEl) return;
+
+      itemsEl.innerHTML = "";
+      if (pickupDateEl && payload.pickupDate) {
+        const [year, month, day] = payload.pickupDate.split("-").map(Number);
+
+        const formattedDate = formatPickupDate(new Date(year, month - 1, day));
+
+        pickupDateEl.textContent =
+          lang === "fr"
+            ? `Ramassage : ${formattedDate}`
+            : `Pickup Date: ${formattedDate}`;
+      }
+
+      const selectedItems = payload.items.filter((item) => item.qty > 0);
+
+      selectedItems.forEach((item) => {
+        const row = document.createElement("div");
+        const displayName = lang === "fr" ? item.name_fr : item.name_en;
+
+        row.textContent =
+          `${item.qty} × ${displayName}` +
+          (item.notSliced
+            ? lang === "fr"
+              ? " • non tranché"
+              : " • not sliced"
+            : "");
+        itemsEl.appendChild(row);
+      });
+
+      totalEl.textContent =
+        lang === "fr"
+          ? `Total : ${payload.total.toFixed(2)} $`
+          : `Total: $${payload.total.toFixed(2)}`;
+    }
+
+    function showSuccessState(payload) {
+      const formEl = document.getElementById("order-form");
+      const successEl = document.getElementById("order-success");
+
+      if (!formEl || !successEl) return;
+
+      renderSuccess(payload);
+
+      formEl.style.display = "none";
+      successEl.style.display = "block";
+    }
+
+    // --- QUANTITY INPUTS ---
+    document
+      .querySelectorAll('#products input[type="number"]')
+      .forEach((input) => {
+        input.addEventListener("input", () => {
+          let value = Number(input.value || 0);
+
+          if (value < 0) {
+            value = 0;
+          }
+
+          input.value = value;
+
+          const key = input.name.replace("_qty", "");
+
+          updateSliceVisibility(key, value);
+
+          updateTotal();
+        });
+      });
+
+    document.querySelectorAll(".qty-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.key;
+        const input = document.querySelector(`input[name="${key}_qty"]`);
+
+        if (!input) return;
+
+        let value = Number(input.value || 0);
+
+        if (btn.classList.contains("plus")) {
+          value++;
+        }
+
+        if (btn.classList.contains("minus")) {
+          value = Math.max(0, value - 1);
+        }
+
+        input.value = value;
+        updateSliceVisibility(key, value);
+        updateTotal();
+      });
+    });
+
+    updateTotal();
+    window.addEventListener("popstate", () => {
+      const formEl = document.getElementById("order-form");
+      const successEl = document.getElementById("order-success");
+      const msg = document.getElementById("form-message");
+
+      if (!formEl || !successEl) return;
+
+      // show form again
+      successEl.style.display = "none";
+      formEl.style.display = "block";
+
+      // clear form inputs
+      formEl.reset();
+
+      // reset quantities manually
+      document
+        .querySelectorAll('#products input[type="number"]')
+        .forEach((input) => {
+          input.value = 0;
+        });
+
+      // reset slice toggles
+      document.querySelectorAll(".slice-options").forEach((el) => {
+        el.classList.remove("visible");
+
+        const slicedRadio = el.querySelector('input[value="sliced"]');
+
+        if (slicedRadio) {
+          slicedRadio.checked = true;
+        }
+      });
+
+      // reset total
+      updateTotal();
+    });
+
+    // --- SUBMIT LOGIC ---
+    const form = document.getElementById("order-form");
+
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const msg = document.getElementById("form-message");
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        if (!data.pickupDate) {
+          msg.classList.remove("loading");
+          msg.classList.add("error");
+
+          msg.textContent =
+            lang === "fr"
+              ? "Veuillez sélectionner une date de ramassage."
+              : "Please select a pickup date.";
+
+          return;
+        }
+
+        const items = [];
+
+        PRODUCTS.forEach((product) => {
+          const qty = Number(data[`${product.key}_qty`] || 0);
+
+          if (qty > 0) {
+            items.push({
+              name_fr: product.name_fr,
+              name_en: product.name_en,
+              qty,
+              price: product.price,
+              notSliced:
+                product.sliceable &&
+                data[`${product.key}_slice`] === "not_sliced",
+            });
+          }
+        });
+
+        if (items.length === 0) {
+          msg.classList.remove("loading");
+          msg.classList.add("error");
+
+          msg.textContent =
+            lang === "fr"
+              ? "Veuillez sélectionner au moins un produit."
+              : "Please select at least one product.";
+
+          return;
+        }
+
+        const itemsDisplay = items
+          .filter((item) => !item.notSliced)
+          .map((item) => `${item.name_fr} (x${item.qty})`)
+          .join(", ");
+
+        const notSlicedItems = items
+          .filter((item) => item.notSliced)
+          .map((item) => `${item.name_fr} (x${item.qty})`)
+          .join(", ");
+
+        const total = items.reduce((sum, item) => {
+          return sum + item.qty * item.price;
+        }, 0);
+
+        const payload = {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          website: data.website,
+          form_started_at: data.form_started_at,
+          pickupDate: data.pickupDate,
+          items,
+          itemsDisplay,
+          notSlicedItems,
+          total,
+          comments: data.comments,
+        };
+
+        submitBtn.disabled = true;
+
+        msg.classList.remove("error");
+        msg.classList.add("loading");
+
+        msg.textContent =
+          lang === "fr"
+            ? "Envoi de votre commande... veuillez patienter."
+            : "Sending your order... please wait.";
+
+        try {
+          const res = await fetch("/.netlify/functions/order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              ...payload,
+              items: payload.itemsDisplay,
+              notSlicedItems: payload.notSlicedItems,
+            }),
+          });
+
+          if (!res.ok) {
+            const errorData = await res.json();
+
+            msg.classList.remove("loading");
+            msg.classList.add("error");
+
+            if (errorData.error === "Invalid email") {
+              msg.textContent =
+                lang === "fr"
+                  ? "Veuillez entrer une adresse courriel valide."
+                  : "Please enter a valid email address.";
+            } else {
+              msg.textContent =
+                errorData.error ||
+                (lang === "fr"
+                  ? "Erreur lors de l’envoi."
+                  : "Error submitting order.");
+            }
+
+            submitBtn.disabled = false;
+
+            return;
+          }
+
+          msg.classList.remove("error", "loading");
+          msg.textContent = "";
+
+          showSuccessState(payload);
+          window.scrollTo({ top: 0, behavior: "auto" });
+
+          history.pushState({ success: true }, "", window.location.href);
+
+          submitBtn.disabled = false;
+          submitBtn.textContent = lang === "fr" ? "Envoyer" : "Submit";
+        } catch (err) {
+          console.error(err);
+          msg.classList.remove("loading");
+          msg.classList.add("error");
+          msg.textContent = lang === "fr" ? "Erreur réseau." : "Network error.";
+
+          submitBtn.disabled = false;
+          submitBtn.textContent = lang === "fr" ? "Envoyer" : "Submit";
+        }
+      });
+    }
+
+    // TEMPORARY DEV HELPER TO KEEP SUCCESS MSG PERSISTED
+    // showSuccessState({
+    //   items: [
+    //     {
+    //       name_fr: "Protéine",
+    //       name_en: "Protein",
+    //       qty: 2,
+    //       price: 8.5,
+    //     },
+    //     {
+    //       name_fr: "Bleuet",
+    //       name_en: "Blueberry",
+    //       qty: 1,
+    //       price: 12,
+    //     },
+    //   ],
+    //   total: 29,
+    // });
+  </script>
+</div>
