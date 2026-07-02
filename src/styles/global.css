@@ -87,7 +87,7 @@ h4,
 .gluten-note {
   font-family: "Technical", system-ui, sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .gluten-note a {
@@ -121,17 +121,17 @@ h4 {
 
 /* Optional: fine-tune homepage hero (slightly larger) */
 .cta-text h1 {
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   word-spacing: 0.1em; /* increase space between words */
 }
 
 .cta-text h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .cta-text h3,
 .cta-text .styled-h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 p {
@@ -169,16 +169,16 @@ p {
 
   /* Optionally tweak hero text size further */
   .cta-text h1 {
-    font-size: 2rem; /* Adjusted size for mobile */
+    font-size: 2.1rem;
   }
 
   .cta-text h2 {
-    font-size: 1.6rem; /* Adjusted size for mobile */
+    font-size: 1.7rem;
   }
 
   .cta-text h3,
   .cta-text .styled-h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 
@@ -701,25 +701,6 @@ a:focus-visible,
   text-align: center;
 }
 
-/* Online ordering image grid */
-
-/* .ordering-section {
-  height: auto;
-}
-
-.order-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  align-content: start;
-}
-
-.order-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
-
 .cta-content {
   margin-bottom: 2rem;
 }
@@ -761,8 +742,6 @@ a:focus-visible,
     aspect-ratio: 1200 / 969;
     overflow: hidden;
   }
-
-
 
   .cta-text {
     width: 100%;
