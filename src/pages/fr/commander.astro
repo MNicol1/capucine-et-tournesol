@@ -4,7 +4,7 @@ import OrderForm from "../../components/OrderForm.astro";
 import content from "../../sitecontent/fr/order.json";
 ---
 
-<BaseLayout lang="fr" title={content.title}>
+<BaseLayout lang="fr" title={content.title} description={content.description}>
   <main >
     <OrderForm lang="fr" labels={content} />
   </main>
