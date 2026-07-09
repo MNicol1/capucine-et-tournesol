@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export const PRODUCTS = [
   // YEAST BREADS
 
@@ -143,6 +145,8 @@ export const PRODUCTS = [
     name_fr: "Reine élisabeth",
     name_en: "Queen Elizabeth",
     price: 9.75,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -151,6 +155,8 @@ export const PRODUCTS = [
     name_fr: "Noisettes et chocolat",
     name_en: "Hazelnut and Chocolate",
     price: 9.75,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -159,6 +165,8 @@ export const PRODUCTS = [
     name_fr: "Canneberges et citron",
     name_en: "Cranberry and Lemon",
     price: 9.25,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -167,6 +175,8 @@ export const PRODUCTS = [
     name_fr: "Ananas et gingembre",
     name_en: "Pineapple and Ginger",
     price: 9.25,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -175,6 +185,8 @@ export const PRODUCTS = [
     name_fr: "Carottes",
     name_en: "Carrot",
     price: 8.5,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -183,6 +195,8 @@ export const PRODUCTS = [
     name_fr: "Bananes et cacao",
     name_en: "Banana and Cocoa",
     price: 8.5,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 
   {
@@ -191,6 +205,8 @@ export const PRODUCTS = [
     name_fr: "Pommes et cannelle",
     name_en: "Apple and Cinnamon",
     price: 8.5,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
   {
     key: "bleuets",
@@ -198,5 +214,7 @@ export const PRODUCTS = [
     name_fr: "Bleuets",
     name_en: "Blueberry",
     price: 9.75,
+    unit_fr: "par 6",
+    unit_en: "per set of 6",
   },
 ];

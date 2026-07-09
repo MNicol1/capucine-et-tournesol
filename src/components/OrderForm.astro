@@ -303,7 +303,14 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
                         )}
                       </div>
 
-                      <div class="product-meta">${p.price.toFixed(2)}</div>
+                      <div class="product-meta">
+                        ${p.price.toFixed(2)}
+                        {p.unit_en && (
+                          <span class="product-unit">
+                            {lang === "fr" ? p.unit_fr : p.unit_en}
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     <QuantityControl key={p.key} label={label} lang={lang} />
