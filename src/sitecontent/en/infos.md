@@ -219,6 +219,8 @@ Unfortunately, we do not have any gluten-free bread.
 
 We have emphasized that we do not add any gluten to our breads to distinguish ourselves from the unfortunate practice of bakeries that claim to make whole bread while adding gluten flour to theirs.
 
+Naturally occurring gluten is an inherent part of breadmaking grains such as wheat, rye, and spelt—it is what gives bread its unique structure and makes traditional breadmaking possible. We do not add gluten flour to our doughs; the gluten in our breads comes only from the grains themselves and develops naturally through kneading and fermentation.
+
 Buckwheat or rice are not breadmaking grains. Thus, it is impossible to make bread (in the baker’s sense of the term) with these ingredients. In fact, what results are savory cakes shaped like bread. They require neither kneading nor fermentation.
 
 <p class="content-centered">Gluten-free products must not be prepared in a bakery that uses grains containing gluten.</p>

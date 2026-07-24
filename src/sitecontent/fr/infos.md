@@ -217,6 +217,8 @@ Malheureusement, nous n'avons aucun pain sans gluten.
 
 Nous avons précisé que nous n'ajoutons aucun gluten à nos pains pour nous démarquer de la fâcheuse habitude qu'ont les boulangeries qui prétendent faire du pain intégral d'ajouter de la farine de gluten aux leurs.
 
+Le gluten naturellement présent fait partie intégrante des céréales panifiables telles que le blé, le seigle et l’épeautre. C’est lui qui donne au pain sa structure caractéristique et qui rend possible la panification traditionnelle. Nous n’ajoutons jamais de gluten à nos pâtes : le gluten présent dans nos pains provient uniquement des céréales elles-mêmes et se développe naturellement au cours du pétrissage et de la fermentation.
+
 Le sarrasin ou le riz ne sont pas des céréales panifiables. Ainsi, il est impossible de faire du pain (au sens boulanger du terme) avec ces ingrédients. En fait, ce sont des gâteaux salés qui ont la forme de pains. Ils ne requièrent aucun pétrissage ni fermentation.
 
 <p class="content-centered">Les produits sans gluten ne doivent pas être préparés dans une boulangerie qui utilise des céréales qui en contiennent.</p>
