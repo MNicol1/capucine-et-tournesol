@@ -153,6 +153,8 @@ export async function handler(event) {
       (sheet) => sheet.properties?.title === "Orders",
     );
 
+    const phoneForSheet = String(data.phone || "").replace(/^\+/, "");
+
     const ordersSheetId = ordersSheet?.properties?.sheetId;
 
     if (ordersSheetId === undefined || ordersSheetId === null) {
@@ -192,13 +194,7 @@ export async function handler(event) {
                     },
                     {
                       userEnteredValue: {
-                        stringValue: String(data.phone || ""),
-                      },
-                      userEnteredFormat: {
-                        numberFormat: {
-                          type: "TEXT",
-                          pattern: "@",
-                        },
+                        stringValue: phoneForSheet,
                       },
                     },
                     {
