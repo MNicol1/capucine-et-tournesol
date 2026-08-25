@@ -192,7 +192,12 @@ export async function handler(event) {
                     },
                     {
                       userEnteredValue: {
-                        stringValue: String(data.phone || ""),
+                        stringValue: data.phone ? `'${String(data.phone)}` : "",
+                      },
+                      userEnteredFormat: {
+                        numberFormat: {
+                          type: "TEXT",
+                        },
                       },
                     },
                     {
