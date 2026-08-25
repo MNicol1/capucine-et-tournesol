@@ -161,15 +161,7 @@ export async function handler(event) {
       throw new Error("Orders sheet not found");
     }
 
-    console.log("ORDER WRITE VERSION: APPEND_CELLS_V2");
 
-    console.log("WRITE DEBUG", {
-      phone: data.phone,
-      phoneType: typeof data.phone,
-      pickupDate,
-      pickupDateSerial,
-      pickupDateSerialType: typeof pickupDateSerial,
-    });
 
     await sheets.spreadsheets.batchUpdate({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
