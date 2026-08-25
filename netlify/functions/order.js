@@ -138,103 +138,112 @@ export async function handler(event) {
       };
     }
 
-const pickupDate = data.pickupDate;
+    const pickupDate = data.pickupDate;
 
-// Google Sheets stores dates as serial numbers.
-const pickupDateSerial =
-  Date.UTC(year, month - 1, date) / 86400000 + 25569;
+    // Google Sheets stores dates as serial numbers.
+    const pickupDateSerial = Date.UTC(year, month - 1, date) / 86400000 + 25569;
 
-// Get the numeric sheet ID for the Orders tab.
-const spreadsheet = await sheets.spreadsheets.get({
-  spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  fields: "sheets.properties(sheetId,title)",
-});
+    // Get the numeric sheet ID for the Orders tab.
+    const spreadsheet = await sheets.spreadsheets.get({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      fields: "sheets.properties(sheetId,title)",
+    });
 
-const ordersSheet = spreadsheet.data.sheets?.find(
-  (sheet) => sheet.properties?.title === "Orders",
-);
+    const ordersSheet = spreadsheet.data.sheets?.find(
+      (sheet) => sheet.properties?.title === "Orders",
+    );
 
-const ordersSheetId = ordersSheet?.properties?.sheetId;
+    const ordersSheetId = ordersSheet?.properties?.sheetId;
 
-if (ordersSheetId === undefined || ordersSheetId === null) {
-  throw new Error("Orders sheet not found");
-}
+    if (ordersSheetId === undefined || ordersSheetId === null) {
+      throw new Error("Orders sheet not found");
+    }
 
-await sheets.spreadsheets.batchUpdate({
-  spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  requestBody: {
-    requests: [
-      {
-        appendCells: {
-          sheetId: ordersSheetId,
-          fields: "userEnteredValue,userEnteredFormat.numberFormat",
-          rows: [
-            {
-              values: [
+    console.log("ORDER WRITE VERSION: APPEND_CELLS_V2");
+
+    console.log("WRITE DEBUG", {
+      phone: data.phone,
+      phoneType: typeof data.phone,
+      pickupDate,
+      pickupDateSerial,
+      pickupDateSerialType: typeof pickupDateSerial,
+    });
+
+    await sheets.spreadsheets.batchUpdate({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      requestBody: {
+        requests: [
+          {
+            appendCells: {
+              sheetId: ordersSheetId,
+              fields: "userEnteredValue,userEnteredFormat.numberFormat",
+              rows: [
                 {
-                  userEnteredValue: {
-                    stringValue: String(data.name || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: String(data.email || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: String(data.phone || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: String(data.items || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: String(data.notSlicedItems || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    numberValue: Number(data.total || 0),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: String(data.comments || ""),
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: "Pending",
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    numberValue: pickupDateSerial,
-                  },
-                  userEnteredFormat: {
-                    numberFormat: {
-                      type: "DATE",
-                      pattern: "yyyy-mm-dd",
+                  values: [
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.name || ""),
+                      },
                     },
-                  },
-                },
-                {
-                  userEnteredValue: {
-                    stringValue: submissionDate,
-                  },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.email || ""),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.phone || ""),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.items || ""),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.notSlicedItems || ""),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        numberValue: Number(data.total || 0),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.comments || ""),
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: "Pending",
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        numberValue: pickupDateSerial,
+                      },
+                      userEnteredFormat: {
+                        numberFormat: {
+                          type: "DATE",
+                          pattern: "yyyy-mm-dd",
+                        },
+                      },
+                    },
+                    {
+                      userEnteredValue: {
+                        stringValue: submissionDate,
+                      },
+                    },
+                  ],
                 },
               ],
             },
-          ],
-        },
+          },
+        ],
       },
-    ],
-  },
-});
+    });
 
     console.log("Order saved successfully", {
       email: data.email,
