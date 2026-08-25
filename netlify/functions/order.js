@@ -140,32 +140,98 @@ export async function handler(event) {
 
 const pickupDate = data.pickupDate;
 
-function asSheetText(value) {
-  if (value === undefined || value === null || value === "") {
-    return "";
-  }
+// Google Sheets stores dates as serial numbers.
+const pickupDateSerial =
+  Date.UTC(year, month - 1, date) / 86400000 + 25569;
 
-  return `'${String(value)}`;
+// Get the numeric sheet ID for the Orders tab.
+const spreadsheet = await sheets.spreadsheets.get({
+  spreadsheetId: process.env.GOOGLE_SHEET_ID,
+  fields: "sheets.properties(sheetId,title)",
+});
+
+const ordersSheet = spreadsheet.data.sheets?.find(
+  (sheet) => sheet.properties?.title === "Orders",
+);
+
+const ordersSheetId = ordersSheet?.properties?.sheetId;
+
+if (ordersSheetId === undefined || ordersSheetId === null) {
+  throw new Error("Orders sheet not found");
 }
 
-await sheets.spreadsheets.values.append({
+await sheets.spreadsheets.batchUpdate({
   spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  range: "Orders!A:J",
-  valueInputOption: "USER_ENTERED",
   requestBody: {
-    values: [
-      [
-        asSheetText(data.name),
-        asSheetText(data.email),
-        asSheetText(data.phone),
-        asSheetText(data.items),
-        asSheetText(data.notSlicedItems),
-        data.total,
-        asSheetText(data.comments),
-        "Pending",
-        pickupDate,
-        submissionDate,
-      ],
+    requests: [
+      {
+        appendCells: {
+          sheetId: ordersSheetId,
+          fields: "userEnteredValue,userEnteredFormat.numberFormat",
+          rows: [
+            {
+              values: [
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.name || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.email || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.phone || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.items || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.notSlicedItems || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    numberValue: Number(data.total || 0),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: String(data.comments || ""),
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: "Pending",
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    numberValue: pickupDateSerial,
+                  },
+                  userEnteredFormat: {
+                    numberFormat: {
+                      type: "DATE",
+                      pattern: "yyyy-mm-dd",
+                    },
+                  },
+                },
+                {
+                  userEnteredValue: {
+                    stringValue: submissionDate,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
 });
