@@ -138,29 +138,33 @@ export async function handler(event) {
       };
     }
 
-    const pickupDate = data.pickupDate;
+  const pickupDate = data.pickupDate;
 
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Orders!A:J",
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [
-          [
-            data.name,
-            data.email,
-            data.phone,
-            data.items,
-            data.notSlicedItems || "",
-            data.total,
-            data.comments,
-            "Pending",
-            pickupDate,
-            submissionDate,
-          ],
-        ],
-      },
-    });
+// Convert YYYY-MM-DD to Google Sheets date serial
+const pickupDateSerial =
+  Date.UTC(year, month - 1, date) / 86400000 + 25569;
+
+await sheets.spreadsheets.values.append({
+  spreadsheetId: process.env.GOOGLE_SHEET_ID,
+  range: "Orders!A:J",
+  valueInputOption: "RAW",
+  requestBody: {
+    values: [
+      [
+        data.name,
+        data.email,
+        data.phone,
+        data.items,
+        data.notSlicedItems || "",
+        data.total,
+        data.comments,
+        "Pending",
+        pickupDateSerial,
+        submissionDate,
+      ],
+    ],
+  },
+});
 
     console.log("Order saved successfully", {
       email: data.email,
