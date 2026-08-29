@@ -137,6 +137,18 @@ export const PRODUCTS = [
     sliceable: true,
   },
 
+    {
+    key: "baguette_sesame",
+    category: "sourdough",
+    name_fr: "Baguette au levain sésame",
+    name_en: "Sesame Baguette",
+    grams: "400g",
+    price: 4.00,
+    sliceable: false,
+    note_fr: "Exclusivité en ligne",
+    note_en: "Available for online ordering only",
+  },
+
   // MUFFINS
 
   {

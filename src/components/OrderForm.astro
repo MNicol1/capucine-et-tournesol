@@ -591,6 +591,8 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       updateTotal();
     });
 
+
+
     // --- SUBMIT LOGIC ---
     const form = document.getElementById("order-form");
 
@@ -667,6 +669,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
           website: data.website,
           form_started_at: data.form_started_at,
           pickupDate: data.pickupDate,
+          language: lang,
           items,
           itemsDisplay,
           notSlicedItems,

@@ -161,8 +161,6 @@ export async function handler(event) {
       throw new Error("Orders sheet not found");
     }
 
-
-
     await sheets.spreadsheets.batchUpdate({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       requestBody: {
@@ -230,6 +228,11 @@ export async function handler(event) {
                         stringValue: submissionDate,
                       },
                     },
+                    {
+                      userEnteredValue: {
+                        stringValue: String(data.language || "").toUpperCase(),
+                      },
+                    },
                   ],
                 },
               ],
@@ -260,6 +263,7 @@ Customer
 Name: ${data.name}
 Email: ${data.email}
 Phone: ${data.phone || "N/A"}
+Language: ${String(data.language || "").toUpperCase() || "N/A"}
 
 Order
 -----
