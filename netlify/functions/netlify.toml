@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 301
+  force = true
