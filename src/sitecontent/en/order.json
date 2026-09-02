@@ -8,6 +8,8 @@
   "name": "Name",
   "email": "Email",
   "phone": "Phone",
+  "paymentLabel": "Payment:",
+  "paymentReminder": "After submitting your order, please send the total by Interac e-Transfer. Payment instructions will appear on the confirmation page.",
   "comments": "Use this space for special requests or comments about your order.",
   "products": "Products",
   "submit": "Submit",
@@ -17,5 +19,5 @@
   "paymentEmail": "capucineettournesol@gmail.com",
   "paymentLine1": "Please send payment by e-transfer to:",
   "paymentLine2": "Include your name with the transfer.",
-  "paymentLine3": "Your order will be prepared once payment is received."
+  "paymentLine3": "Please complete your payment by e-transfer before picking up your order."
 }

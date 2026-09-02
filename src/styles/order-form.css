@@ -37,7 +37,6 @@ input,
 textarea {
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0;
 }
 
 /* IMPROVE TEXT RENDERING */
@@ -59,13 +58,29 @@ button {
 #order-form textarea:focus,
 #order-form select:focus {
   outline: none;
-  border: 1.5px solid #666;
+  border-color: #777;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+  background-color: #fcfcf9;
 }
 
 #order-form {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem 1rem 10rem 1rem;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select,
+.checkout-section textarea {
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  background-color: 0.2s ease;
 }
 
 .order-title {
@@ -118,7 +133,7 @@ button {
 }
 
 .optional {
-   font-size: 0.85rem;
+  font-size: 0.85rem;
   /* opacity: 0.8; */
 }
 
@@ -194,10 +209,11 @@ button {
 }
 
 .form-field label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .form-field input,
@@ -224,10 +240,19 @@ button {
   font-family: inherit;
 
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px;
 }
 
 .field-note {
-  margin: 0.5rem 0 0 0;
+  margin: 0.45rem 0 0;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 .pickup-field {
@@ -498,6 +523,13 @@ button {
   font-weight: 600;
 }
 
+.payment-reminder {
+  margin: 1rem 0;
+  padding: 2rem 0;
+  max-width: 660px;
+  font-size: 1.1rem;
+}
+
 /* COMMENTS */
 
 .checkout-section textarea {
@@ -522,30 +554,30 @@ button {
 #order-form button[type="submit"] {
   display: block;
 
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 
-  padding: 0.9rem 2rem;
+  padding: 1rem 2.25rem;
 
   border: none;
+  border-radius: 6px;
 
   background: #000;
   color: #fff;
 
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.2;
 
   cursor: pointer;
 
-  transition: opacity 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.15s ease;
 }
 
 #form-message,
 #order-form button[type="submit"] {
   max-width: 500px;
-}
-
-#order-form button[type="submit"]:hover {
-  opacity: 0.85;
 }
 
 #order-form button[type="submit"]:disabled {
@@ -555,7 +587,10 @@ button {
 
 @media (hover: hover) and (pointer: fine) {
   #order-form button[type="submit"]:hover {
-    opacity: 0.6;
+    opacity: 0.8;
+  }
+  #order-form button[type="submit"]:active {
+    transform: translateY(1px);
   }
 }
 
@@ -679,6 +714,12 @@ button {
   .product-grams {
     line-height: 1.3;
     font-size: 0.96rem;
+  }
+
+  .payment-reminder {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.9rem 0;
   }
 
   /* APPLE TOUCH TARGETS */

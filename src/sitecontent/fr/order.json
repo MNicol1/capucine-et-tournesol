@@ -9,6 +9,8 @@
   "email": "Courriel",
   "phone": "Téléphone",
   "comments": "Utilisez cet espace pour toute demande spéciale ou commentaire concernant votre commande.",
+  "paymentLabel": "Paiement :",
+  "paymentReminder": "Après avoir soumis votre commande, veuillez envoyer le montant total par virement Interac. Les instructions de paiement apparaîtront sur la page de confirmation.",
   "products": "Produits",
   "submit": "Envoyer",
   "muffinsNote": "Vendus par 6. Sélectionnez 1 pour 6 muffins.",
@@ -17,5 +19,5 @@
   "paymentEmail": "capucineettournesol@gmail.com",
   "paymentLine1": "Veuillez envoyer le paiement par virement Interac à :",
   "paymentLine2": "Inclure votre nom avec le virement.",
-  "paymentLine3": "Votre commande sera préparée après réception du paiement."
+  "paymentLine3": "Veuillez effectuer votre paiement par virement Interac avant de venir chercher votre commande."
 }
