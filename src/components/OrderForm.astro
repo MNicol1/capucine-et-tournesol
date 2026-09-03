@@ -475,10 +475,21 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
         const formattedDate = formatPickupDate(new Date(year, month - 1, day));
 
-        pickupDateEl.textContent =
-          lang === "fr"
-            ? `Ramassage : ${formattedDate}`
-            : `Pickup Date: ${formattedDate}`;
+        pickupDateEl.textContent = "";
+
+        const label = document.createTextNode(
+          lang === "fr" ? "Ramassage : " : "Pickup Date: ",
+        );
+
+        const date = document.createElement("span");
+        date.className = "pickup-date-value";
+        date.textContent = formattedDate;
+
+        pickupDateEl.append(label, date);
+        pickupDateEl.innerHTML = `
+  ${lang === "fr" ? "Ramassage :" : "Pickup Date:"}
+  <span class="pickup-date-value">${formattedDate}</span>
+`;
       }
 
       const selectedItems = payload.items.filter((item) => item.qty > 0);
@@ -750,23 +761,23 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     }
 
     // TEMPORARY DEV HELPER TO KEEP SUCCESS MSG PERSISTED
-    showSuccessState({
-      items: [
-        {
-          name_fr: "Protéine",
-          name_en: "Protein",
-          qty: 2,
-          price: 8.5,
-        },
-        {
-          name_fr: "Bleuet",
-          name_en: "Blueberry",
-          qty: 1,
-          price: 12,
-        },
-      ],
-      total: 29,
-      pickupDate: "2026-09-05",
-    });
+    // showSuccessState({
+    //   items: [
+    //     {
+    //       name_fr: "Protéine",
+    //       name_en: "Protein",
+    //       qty: 2,
+    //       price: 8.5,
+    //     },
+    //     {
+    //       name_fr: "Bleuet",
+    //       name_en: "Blueberry",
+    //       qty: 1,
+    //       price: 12,
+    //     },
+    //   ],
+    //   total: 29,
+    //   pickupDate: "2026-09-05",
+    // });
   </script>
 </div>

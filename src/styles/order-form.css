@@ -643,6 +643,10 @@ button {
   gap: 0.15rem;
 }
 
+#success-pickup-date .pickup-date-value {
+  font-weight: 600;
+}
+
 #success-total {
   margin-top: 0.3rem;
   padding: 0.3rem 0;
