@@ -15,7 +15,7 @@
   "submit": "Envoyer",
   "muffinsNote": "Vendus par 6. Sélectionnez 1 pour 6 muffins.",
   "successTitle": "Commande reçue",
-  "orderSummaryLabel": "Votre commande",
+  "orderSummaryLabel": "Votre commande:",
   "paymentEmail": "capucineettournesol@gmail.com",
   "paymentLine1": "Veuillez envoyer le paiement par virement Interac à :",
   "paymentLine2": "Inclure votre nom avec le virement.",

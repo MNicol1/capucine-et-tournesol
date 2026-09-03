@@ -118,7 +118,6 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
             : "Pickups are available Thursday to Saturday only."
         }
       </p>
-    
     </div>
 
     <!-- HONEYPOT -->
@@ -143,13 +142,13 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
         <h2 class="section-title">
           {lang === "fr" ? "Pains" : "Breads"}
         </h2>
-          <p class="field-note">
-        {
-          lang === "fr"
-            ? "Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h."
-            : "If your order includes sliced bread, please plan to pick up after 10:00 a.m."
-        }
-      </p>
+        <p class="field-note">
+          {
+            lang === "fr"
+              ? "Si votre commande comprend du pain tranché, veuillez prévoir votre ramassage après 10 h."
+              : "If your order includes sliced bread, please plan to pick up after 10:00 a.m."
+          }
+        </p>
 
         <div class="bread-grid">
           <div class="bread-column">
@@ -347,19 +346,20 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     </h2>
 
     <div class="success-section">
-      <p class="success-label">
-        {labels.orderSummaryLabel}
-      </p>
+      <p class="success-label">{labels.orderSummaryLabel}</p>
 
       <div id="success-items"></div>
+      <div id="success-total"></div>
+    </div>
+
+    <div class="success-section success-pickup">
       <div id="success-pickup-date"></div>
       <div>{labels.pickupNote}</div>
     </div>
 
-    <div id="success-total"></div>
-
     <div class="success-section" id="success-payment">
-      <p style="font-weight: 500;" class="payment">{labels.paymentLine3}</p>
+      <p class="payment payment-important">{labels.paymentLine3}</p>
+
       <p class="payment">
         {labels.paymentLine1}
         <span class="payment-email">{labels.paymentEmail}</span>
@@ -512,7 +512,7 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       renderSuccess(payload);
 
       formEl.style.display = "none";
-      successEl.style.display = "block";
+      successEl.style.display = "flex";
     }
 
     // --- QUANTITY INPUTS ---
@@ -750,22 +750,23 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     }
 
     // TEMPORARY DEV HELPER TO KEEP SUCCESS MSG PERSISTED
-    // showSuccessState({
-    //   items: [
-    //     {
-    //       name_fr: "Protéine",
-    //       name_en: "Protein",
-    //       qty: 2,
-    //       price: 8.5,
-    //     },
-    //     {
-    //       name_fr: "Bleuet",
-    //       name_en: "Blueberry",
-    //       qty: 1,
-    //       price: 12,
-    //     },
-    //   ],
-    //   total: 29,
-    // });
+    showSuccessState({
+      items: [
+        {
+          name_fr: "Protéine",
+          name_en: "Protein",
+          qty: 2,
+          price: 8.5,
+        },
+        {
+          name_fr: "Bleuet",
+          name_en: "Blueberry",
+          qty: 1,
+          price: 12,
+        },
+      ],
+      total: 29,
+      pickupDate: "2026-09-05",
+    });
   </script>
 </div>

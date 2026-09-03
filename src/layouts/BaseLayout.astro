@@ -143,22 +143,49 @@ const ORIGIN = "https://capucine-et-tournesol.com";
         2,
       )}
     />
+    <script is:inline>
+      if (localStorage.getItem("online-order-notice-dismissed") === "true") {
+        document.documentElement.classList.add("site-notice-dismissed");
+      }
+    </script>
   </head>
 
   <body>
     <Header lang={lang} />
 
-    <div class="site-notice">
-      {
-        lang === "fr"
-          ? "Maintenant offert : Commandez vos pains et muffins en ligne pour les ramassages du jeudi au samedi !"
-          : "Now Available: Online bread and muffin ordering for Thursday–Saturday pickups!"
-      }
+    <div class="site-notice" id="site-notice">
+      <span>
+        {
+          lang === "fr"
+            ? "Maintenant offert : Commandez vos pains et muffins en ligne pour les ramassages du jeudi au samedi !"
+            : "Now Available: Online bread and muffin ordering for Thursday–Saturday pickups!"
+        }
+      </span>
+
+      <button
+        type="button"
+        class="site-notice-close"
+        aria-label={lang === "fr" ? "Fermer l’avis" : "Close notice"}
+      >
+        &times;
+      </button>
     </div>
 
     <slot />
 
     <Footer lang={lang} />
     <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
+
+    <script>
+      const notice = document.getElementById("site-notice");
+      const closeButton = document.querySelector(".site-notice-close");
+
+      closeButton?.addEventListener("click", () => {
+        if (notice) {
+          notice.style.display = "none";
+          localStorage.setItem("online-order-notice-dismissed", "true");
+        }
+      });
+    </script>
   </body>
 </html>

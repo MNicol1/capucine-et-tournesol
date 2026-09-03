@@ -594,73 +594,85 @@ button {
   }
 }
 
-/* SUCCESS MESSAGE */
 
 #order-success {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0.5rem;
 
-  max-width: 640px;
+  max-width: 600px;
   width: 100%;
 
-  margin: 2rem auto 4rem;
-
-  padding: 30px;
+  margin: 1.5rem auto 3rem;
+  padding: 1.5rem;
 
   border: 1px solid #e4e1da;
+  border-radius: 6px;
+
   background: #fcfcf9;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 
   box-sizing: border-box;
+
+  font-size: 0.95rem;
 }
 
 .success-title {
   margin: 0;
 
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  line-height: 1.3;
   text-align: center;
 }
 
 .success-section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.2rem;
 }
 
 .success-label {
-  margin: 0;
-
+  margin: 0 0 0.2rem;
   font-weight: 600;
 }
 
 #success-items {
   display: flex;
   flex-direction: column;
-  /* gap: 2px; */
+  gap: 0.15rem;
 }
 
 #success-total {
-  font-size: 1.05rem;
+  margin-top: 0.3rem;
+  padding: 0.3rem 0;
+
+  font-size: 1rem;
   font-weight: 600;
-  padding: 0.5rem 0;
+}
+
+.success-pickup {
+  gap: 0.2rem;
+  line-height: 1.4;
 }
 
 #success-payment {
-  padding-top: 16px;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
 
   border-top: 1px solid #ddd;
 }
 
 .payment {
-  margin-bottom: 0;
-  line-height: 1.5;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.payment-important {
+  font-weight: 600;
 }
 
 .payment-email {
-  margin: 0;
-
   font-weight: 600;
 }
 
