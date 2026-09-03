@@ -3,6 +3,7 @@ const {
   lang = "fr",
   title = "Boulangerie Capucine et Tournesol",
   description,
+  pageClass = "",
 } = Astro.props;
 
 import Header from "../components/Header.astro";
@@ -150,7 +151,7 @@ const ORIGIN = "https://capucine-et-tournesol.com";
     </script>
   </head>
 
-  <body>
+ <body class={pageClass}>
     <Header lang={lang} />
 
     <div class="site-notice" id="site-notice">

@@ -55,6 +55,8 @@ body {
   background-color: var(--background-base);
 }
 
+
+
 /* Accessible motion */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -306,6 +308,12 @@ footer div {
     margin-top: 1rem;
     padding: 0.5rem;
   }
+}
+
+
+/* Hide site notice on Info & Insights page */
+.info-page .site-notice {
+  display: none;
 }
 
 .site-notice {
