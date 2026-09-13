@@ -369,21 +369,16 @@ footer div {
   width: 25px;
   height: 25px;
 
-  /* border: 1px solid #333;
+  border: 1px solid transparent;
   border-radius: 50%;
-  background: transparent; */
+  background: transparent;
 
   padding: 0;
 
   font-size: 0;
-
   cursor: pointer;
-}
 
-.site-notice-close:hover {
-   border: 1px solid #333;
-  border-radius: 50%;
-  background: transparent;
+  transition: border-color 0.2s ease;
 }
 
 .site-notice-close::before,
@@ -407,8 +402,15 @@ footer div {
 .site-notice-close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
 .site-notice-dismissed .site-notice {
   display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-notice-close:hover {
+    border-color: #333;
+  }
 }
 
 @media (max-width: 768px) {
