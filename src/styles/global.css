@@ -369,15 +369,21 @@ footer div {
   width: 25px;
   height: 25px;
 
-  border: 1px solid #333;
+  /* border: 1px solid #333;
   border-radius: 50%;
-  background: transparent;
+  background: transparent; */
 
   padding: 0;
 
   font-size: 0;
 
   cursor: pointer;
+}
+
+.site-notice-close:hover {
+   border: 1px solid #333;
+  border-radius: 50%;
+  background: transparent;
 }
 
 .site-notice-close::before,
