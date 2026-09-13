@@ -369,6 +369,9 @@ footer div {
   width: 25px;
   height: 25px;
 
+  appearance: none;
+  -webkit-appearance: none;
+
   border: 1px solid transparent;
   border-radius: 50%;
   background: transparent;
@@ -377,6 +380,8 @@ footer div {
 
   font-size: 0;
   cursor: pointer;
+
+  box-shadow: none;
 
   transition: border-color 0.2s ease;
 }
@@ -410,6 +415,7 @@ footer div {
 @media (hover: hover) and (pointer: fine) {
   .site-notice-close:hover {
     border-color: #333;
+    background: transparent;
   }
 }
 
