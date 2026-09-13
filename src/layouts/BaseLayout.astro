@@ -145,22 +145,29 @@ const ORIGIN = "https://capucine-et-tournesol.com";
       )}
     />
     <script is:inline>
-      if (localStorage.getItem("online-order-notice-dismissed") === "true") {
+      if (localStorage.getItem("delivery-survey-notice-dismissed") === "true") {
         document.documentElement.classList.add("site-notice-dismissed");
       }
     </script>
   </head>
 
- <body class={pageClass}>
+  <body class={pageClass}>
     <Header lang={lang} />
-
     <div class="site-notice" id="site-notice">
       <span>
         {
           lang === "fr"
-            ? "Maintenant offert : Commandez vos pains et muffins en ligne pour les ramassages du jeudi au samedi !"
-            : "Now Available: Online bread and muffin ordering for Thursday–Saturday pickups!"
+            ? "La livraison à domicile vous intéresse? "
+            : "Would you be interested in home delivery? "
         }
+
+        <a href={lang === "fr" ? "/fr/sondage" : "/en/survey"}>
+          {
+            lang === "fr"
+              ? "Répondez à notre court sondage →"
+              : "Take our short survey →"
+          }
+        </a>
       </span>
 
       <button
@@ -175,6 +182,7 @@ const ORIGIN = "https://capucine-et-tournesol.com";
     <slot />
 
     <Footer lang={lang} />
+
     <script src={import.meta.env.BASE_URL + "scripts/script.js"} defer></script>
 
     <script>
@@ -184,7 +192,7 @@ const ORIGIN = "https://capucine-et-tournesol.com";
       closeButton?.addEventListener("click", () => {
         if (notice) {
           notice.style.display = "none";
-          localStorage.setItem("online-order-notice-dismissed", "true");
+          localStorage.setItem("delivery-survey-notice-dismissed", "true");
         }
       });
     </script>

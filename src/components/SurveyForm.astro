@@ -1,0 +1,184 @@
+---
+import "../styles/survey.css";
+
+const { lang = "en" } = Astro.props;
+
+const isFr = lang === "fr";
+---
+
+<section class="survey-page">
+  <h1>
+    {isFr ? "Sondage sur la livraison" : "Delivery Survey"}
+  </h1>
+
+  <p class="survey-intro">
+    {
+      isFr
+        ? "Nous envisageons la possibilité d'offrir un service de livraison à domicile. Ce court sondage nous aidera à évaluer l'intérêt des clients et les secteurs de livraison potentiels."
+        : "We are exploring the possibility of offering home delivery. This short survey will help us understand customer interest and potential delivery areas."
+    }
+  </p>
+
+  <form id="delivery-survey">
+    <fieldset>
+      <legend>
+        {
+          isFr
+            ? "Seriez-vous intéressé(e) par un service de livraison à domicile?"
+            : "Would you be interested in a home delivery service?"
+        }
+      </legend>
+
+      <label>
+        <input type="radio" name="deliveryInterest" value="yes" required />
+        {isFr ? "Oui" : "Yes"}
+      </label>
+
+      <label>
+        <input type="radio" name="deliveryInterest" value="maybe" />
+        {isFr ? "Peut-être" : "Maybe"}
+      </label>
+
+      <label>
+        <input type="radio" name="deliveryInterest" value="no" />
+        {isFr ? "Non" : "No"}
+      </label>
+    </fieldset>
+
+    <label for="postalCode">
+      {isFr ? "Code postal" : "Postal code"}
+    </label>
+
+    <input
+      id="postalCode"
+      name="postalCode"
+      type="text"
+      autocomplete="postal-code"
+      maxlength="7"
+      placeholder={isFr ? "p. ex. J0E 1X0" : "e.g. J0E 1X0"}
+      required
+    />
+
+    <fieldset>
+      <legend>
+        {
+          isFr
+            ? "À quelle fréquence pourriez-vous utiliser la livraison? (facultatif)"
+            : "How often might you use delivery? (optional)"
+        }
+      </legend>
+
+      <label>
+        <input type="radio" name="frequency" value="weekly" />
+        {isFr ? "Chaque semaine" : "Weekly"}
+      </label>
+
+      <label>
+        <input type="radio" name="frequency" value="occasionally" />
+        {isFr ? "À l'occasion" : "Occasionally"}
+      </label>
+
+      <label>
+        <input type="radio" name="frequency" value="rarely" />
+        {isFr ? "Rarement" : "Rarely"}
+      </label>
+    </fieldset>
+
+    <!-- Honeypot -->
+    <div hidden>
+      <label>
+        Website
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
+
+    <input type="hidden" name="form_started_at" id="form-started-at" />
+
+    <button type="submit">
+      {isFr ? "Envoyer" : "Submit"}
+    </button>
+
+    <p id="survey-message" aria-live="polite"></p>
+  </form>
+</section>
+
+<script define:vars={{ lang }}>
+  const form = document.getElementById("delivery-survey");
+  const message = document.getElementById("survey-message");
+  const startedAt = document.getElementById("form-started-at");
+
+  if (startedAt) {
+    startedAt.value = Date.now().toString();
+  }
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const data = {
+      deliveryInterest: formData.get("deliveryInterest"),
+      postalCode: formData.get("postalCode"),
+      frequency: formData.get("frequency"),
+      website: formData.get("website"),
+      form_started_at: formData.get("form_started_at"),
+      language: lang,
+    };
+
+    message.classList.remove("error");
+
+    message.textContent =
+      lang === "fr"
+        ? "Envoi... veuillez patienter."
+        : "Sending... please wait.";
+
+    try {
+      const response = await fetch("/.netlify/functions/survey", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (result.error === "Invalid postal code") {
+          message.classList.add("error");
+
+          message.textContent =
+            lang === "fr"
+              ? "Veuillez entrer un code postal valide."
+              : "Please enter a valid postal code.";
+
+          return;
+        }
+
+        throw new Error(result.error || "Submission failed");
+      }
+
+      message.classList.remove("error");
+
+      message.textContent =
+        lang === "fr"
+          ? "Merci d'avoir répondu à notre sondage."
+          : "Thank you for completing our survey.";
+
+      form.reset();
+
+      if (startedAt) {
+        startedAt.value = Date.now().toString();
+      }
+    } catch (error) {
+      console.error("Survey submission failed:", error);
+
+      message.classList.add("error");
+
+      message.textContent =
+        lang === "fr"
+          ? "Une erreur est survenue. Veuillez réessayer."
+          : "Something went wrong. Please try again.";
+    }
+  });
+</script>

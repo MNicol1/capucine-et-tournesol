@@ -1,0 +1,169 @@
+/* SURVEY PAGE */
+
+.survey-page {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
+  padding: 2rem 1rem 6rem;
+
+  box-sizing: border-box;
+}
+
+.survey-page h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.survey-intro {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* SURVEY FORM */
+
+#delivery-survey {
+  width: 100%;
+}
+
+#delivery-survey fieldset {
+  margin: 0 0 2rem;
+  padding: 0;
+
+  border: none;
+}
+
+#delivery-survey legend {
+  margin-bottom: 0.9rem;
+
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#delivery-survey fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+/* RADIO BUTTONS */
+
+#delivery-survey input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+
+  appearance: auto;
+  -webkit-appearance: radio;
+
+  accent-color: #000;
+  cursor: pointer;
+}
+/* POSTAL CODE */
+
+#delivery-survey label[for="postalCode"] {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#delivery-survey #postalCode {
+  width: 100%;
+  max-width: 260px;
+  height: 48px;
+
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  background: #fff;
+
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#delivery-survey #postalCode:focus {
+  outline: none;
+
+  border-color: #777;
+
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+
+  background-color: #fcfcf9;
+}
+
+/* FORM MESSAGE */
+
+#survey-message {
+  min-height: 1.25rem;
+
+  margin: 1rem 0 0.75rem;
+
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* SUBMIT BUTTON */
+
+#delivery-survey button[type="submit"] {
+  display: block;
+
+  margin-top: 2rem;
+  padding: 1rem 2.25rem;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #000;
+  color: #fff;
+
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #delivery-survey button[type="submit"]:hover {
+    opacity: 0.8;
+  }
+}
+
+#survey-message.error {
+  color: #a12622;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .survey-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #delivery-survey #postalCode {
+    max-width: 100%;
+
+    /* Prevents iOS input zoom */
+    font-size: 16px;
+  }
+
+  #delivery-survey button[type="submit"] {
+    width: 100%;
+    min-height: 52px;
+
+    font-size: 16px;
+  }
+}

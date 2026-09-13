@@ -55,8 +55,6 @@ body {
   background-color: var(--background-base);
 }
 
-
-
 /* Accessible motion */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -310,6 +308,7 @@ footer div {
   }
 }
 
+/* ========================= SITE NOTICE ========================= */
 
 /* Hide site notice on Info & Insights page */
 .info-page .site-notice {
@@ -320,13 +319,44 @@ footer div {
   position: relative;
 
   background: #c9d1e7;
+
   text-align: center;
+  padding: 0.9rem 3rem;
 
-  padding: 0.75rem 3rem;
-  font-size: 0.99rem;
+  font-size: 1.05rem;
   font-weight: 500;
+  line-height: 1.5;
 
-  border: 1px solid black;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.site-notice a {
+  display: inline-block;
+
+  margin-left: 0.6rem;
+  padding: 0.3rem 0.8rem;
+
+  border: 1px solid #333;
+  border-radius: 4px;
+
+  background: transparent;
+  color: #333;
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-notice a:hover {
+    background: #333;
+    color: #fff;
+  }
 }
 
 .site-notice-close {
@@ -336,20 +366,58 @@ footer div {
 
   transform: translateY(-50%);
 
-  border: 0;
+  width: 25px;
+  height: 25px;
+
+  border: 1px solid #333;
+  border-radius: 50%;
   background: transparent;
 
-  padding: 0.25rem;
+  padding: 0;
 
-  color: inherit;
-  font: inherit;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 0;
 
   cursor: pointer;
 }
+
+.site-notice-close::before,
+.site-notice-close::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 13px;
+  height: 1px;
+
+  background: #333;
+}
+
+.site-notice-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.site-notice-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 .site-notice-dismissed .site-notice {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .site-notice {
+    padding: 1rem 3rem;
+    line-height: 1.5;
+  }
+
+  .site-notice a {
+    display: block;
+    width: fit-content;
+
+    margin: 0.65rem auto 0;
+    padding: 0.4rem 0.9rem;
+  }
 }
 /* ========================= HEADER ========================= */
 header {

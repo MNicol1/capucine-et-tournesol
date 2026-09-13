@@ -596,6 +596,10 @@ button {
 }
 
 
+/* SUCCESS MESSAGE PAGE */
+
+
+
 #order-success {
   display: flex;
   flex-direction: column;
@@ -680,6 +684,51 @@ button {
 .payment-email {
   font-weight: 600;
 }
+
+
+/* SURVEY  */
+
+.success-survey {
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid #ddd;
+
+  text-align: center;
+}
+
+.success-survey p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.success-survey a {
+  display: inline-block;
+
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.9rem;
+
+  border: 1px solid #333;
+  border-radius: 4px;
+
+  background: #333;
+  color: #fff;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .success-survey a:hover {
+    background: transparent;
+    color: #333;
+  }
+}
+
 
 /* MOBILE  */
 

@@ -340,6 +340,8 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
     </div>
   </form>
 
+  <!-- SUCCESS MESSAGE  -->
+
   <div id="order-success" style="display: none;">
     <h2 class="success-title">
       {labels.successTitle}
@@ -366,6 +368,23 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
       </p>
 
       <p class="payment">{labels.paymentLine2}</p>
+    </div>
+    <div class="success-section success-survey">
+      <p>
+        {
+          lang === "fr"
+            ? "La livraison à domicile vous intéresse?"
+            : "Would you be interested in home delivery?"
+        }
+      </p>
+
+      <a href={lang === "fr" ? "/fr/sondage" : "/en/survey"}>
+        {
+          lang === "fr"
+            ? "Répondez à notre court sondage →"
+            : "Take our short survey →"
+        }
+      </a>
     </div>
   </div>
 
@@ -513,10 +532,10 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
           ? `Total : ${payload.total.toFixed(2)} $`
           : `Total: $${payload.total.toFixed(2)}`;
     }
-
     function showSuccessState(payload) {
       const formEl = document.getElementById("order-form");
       const successEl = document.getElementById("order-success");
+      const siteNotice = document.getElementById("site-notice");
 
       if (!formEl || !successEl) return;
 
@@ -524,6 +543,10 @@ const muffinProducts = PRODUCTS.filter((p) => p.category === "muffins");
 
       formEl.style.display = "none";
       successEl.style.display = "flex";
+
+      if (siteNotice) {
+        siteNotice.style.display = "none";
+      }
     }
 
     // --- QUANTITY INPUTS ---
