@@ -167,6 +167,14 @@ const isFr = lang === "fr";
 
       form.reset();
 
+      localStorage.setItem("delivery-survey-notice-dismissed", "true");
+
+      const siteNotice = document.getElementById("site-notice");
+
+      if (siteNotice) {
+        siteNotice.style.display = "none";
+      }
+
       if (startedAt) {
         startedAt.value = Date.now().toString();
       }

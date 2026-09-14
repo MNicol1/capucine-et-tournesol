@@ -323,41 +323,36 @@ footer div {
   text-align: center;
   padding: 0.9rem 3rem;
 
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
 
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
+
+
 .site-notice a {
   display: inline-block;
 
-  margin-left: 0.6rem;
-  padding: 0.3rem 0.8rem;
+  margin-left: 0.35rem;
 
-  border: 1px solid #333;
-  border-radius: 4px;
-
-  background: transparent;
   color: #333;
 
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4;
   text-decoration: none;
 
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .site-notice a:hover {
-    background: #333;
-    color: #fff;
+    opacity: 0.6;
   }
 }
+
 
 .site-notice-close {
   position: absolute;
@@ -425,13 +420,13 @@ footer div {
     line-height: 1.5;
   }
 
-  .site-notice a {
-    display: block;
-    width: fit-content;
+.site-notice a {
+  display: block;
+  width: fit-content;
 
-    margin: 0.65rem auto 0;
-    padding: 0.4rem 0.9rem;
-  }
+  margin: 0.5rem auto 0;
+  padding: 0;
+}
 }
 /* ========================= HEADER ========================= */
 header {
