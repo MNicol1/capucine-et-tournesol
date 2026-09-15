@@ -84,21 +84,6 @@ h4,
   font-weight: 600;
 }
 
-.gluten-note {
-  font-family: "Technical", system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.gluten-note a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.gluten-note a:hover {
-  text-decoration: none;
-}
-
 /* Baseline scale – applies site-wide */
 h1 {
   font-size: 2.5rem; /* hero / page titles */
@@ -117,21 +102,6 @@ h3 {
 h4 {
   font-size: 1.2rem; /* ~19px */
   margin-bottom: 0.75rem; /* ~14px */
-}
-
-/* Optional: fine-tune homepage hero (slightly larger) */
-.cta-text h1 {
-  font-size: 2.7rem;
-  word-spacing: 0.1em; /* increase space between words */
-}
-
-.cta-text h2 {
-  font-size: 1.9rem;
-}
-
-.cta-text h3,
-.cta-text .styled-h3 {
-  font-size: 1.4rem;
 }
 
 p {
@@ -165,20 +135,6 @@ p {
   h4 {
     font-size: 1.25rem;
     margin-bottom: 0.6rem;
-  }
-
-  /* Optionally tweak hero text size further */
-  .cta-text h1 {
-    font-size: 2.1rem;
-  }
-
-  .cta-text h2 {
-    font-size: 1.7rem;
-  }
-
-  .cta-text h3,
-  .cta-text .styled-h3 {
-    font-size: 1.35rem;
   }
 }
 
@@ -331,7 +287,6 @@ footer div {
   border-bottom: 1px solid #333;
 }
 
-
 .site-notice a {
   display: inline-block;
 
@@ -352,7 +307,6 @@ footer div {
     opacity: 0.6;
   }
 }
-
 
 .site-notice-close {
   position: absolute;
@@ -420,13 +374,13 @@ footer div {
     line-height: 1.5;
   }
 
-.site-notice a {
-  display: block;
-  width: fit-content;
+  .site-notice a {
+    display: block;
+    width: fit-content;
 
-  margin: 0.5rem auto 0;
-  padding: 0;
-}
+    margin: 0.5rem auto 0;
+    padding: 0;
+  }
 }
 /* ========================= HEADER ========================= */
 header {
@@ -762,30 +716,24 @@ a:focus-visible,
   }
 }
 
-.mile-end-link {
-  color: #333333;
-}
-
-.mile-end-link:hover {
-  text-decoration: none;
-}
-
 /* =========================
-       HOME PAGE
+   HOME PAGE
    ========================= */
 
 .home-cta-sections {
   display: flex;
   flex-direction: column;
-  padding: 0 0 12rem 0;
   margin: 0;
+  padding: 0 0 12rem;
 }
+
+/* CTA SECTIONS */
 
 .cta-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 85vh;
   width: 100%;
+  height: 85vh;
 }
 
 .cta-block.reverse {
@@ -796,6 +744,8 @@ a:focus-visible,
   direction: ltr;
 }
 
+/* IMAGES */
+
 .cta-image {
   width: 100%;
   height: 100%;
@@ -803,11 +753,13 @@ a:focus-visible,
 }
 
 .cta-image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
+
+/* TEXT */
 
 .cta-text {
   display: flex;
@@ -819,34 +771,100 @@ a:focus-visible,
 }
 
 .cta-content {
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 38rem;
+  margin-bottom: 2.25rem;
 }
 
+/* TYPOGRAPHY */
+
+/* Main homepage statement */
+.cta-content h1 {
+  margin: 0;
+  font-size: clamp(2.9rem, 3.75vw, 4.25rem);
+  line-height: 1.09;
+}
+
+.cta-content h2 {
+  margin: 0;
+  font-size: clamp(2.25rem, 2.85vw, 3.1rem);
+  line-height: 1.13;
+}
+
+
+
+/* Supporting statements */
+.cta-content h3,
+.cta-content .styled-h3 {
+  margin: 2rem 0.7rem 0rem 0.7rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.3;
+}
+
+/* MILE-END LINK */
+
+.mile-end-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.mile-end-link:hover {
+  opacity: 0.65;
+}
+
+.mile-end-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* PRIMARY CTA BUTTON */
 .cta-button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #000;
-  color: #fff;
+  padding: 0.6rem 1.3rem;
+
+  background: #e1d8cd;
+  color: #222;
+
+  border: 1px solid #c7bbad;
+  border-radius: 3px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.14);
+
+  font-weight: 600;
+  line-height: 1.3;
   text-decoration: none;
-  font-weight: 500;
-  border-radius: 4px;
-  transition: background 0.2s ease;
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #3b3b3b;
+  background-color: #d5c9bb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
 
+.cta-button:focus-visible {
+  outline: 3px solid #e5e23a;
+  outline-offset: 3px;
+}
+/* INLINE LINKS */
+
 .link-inherit {
-  color: inherit; /* Inherit the color from the parent element */
-  text-decoration: underline; /* Remove underline if necessary */
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 .link-inherit:hover {
   text-decoration: none;
 }
 
-/* Responsive stacking on mobile */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 1024px) {
   .cta-block {
@@ -855,18 +873,39 @@ a:focus-visible,
     height: auto;
   }
 
+  .cta-block.reverse {
+    direction: ltr;
+  }
+
   .cta-image {
+    height: auto;
     aspect-ratio: 1200 / 969;
-    overflow: hidden;
   }
 
   .cta-text {
     width: 100%;
-    height: auto;
+    padding: 4rem 1.5rem;
   }
 
-  .cta-text {
-    padding: 4rem 1.5rem;
+  .cta-content {
+    max-width: 36rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-content h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+  }
+
+  .cta-content h3,
+  .cta-content .styled-h3 {
+    font-size: clamp(1.4rem, 4vw, 1.75rem);
+  }
+  .home-cta-sections {
+    padding: 0 0 6rem 0;
   }
 }
 
@@ -878,6 +917,28 @@ a:focus-visible,
 
 .products-page section {
   scroll-margin-top: 130px; /* Adjust based on your fixed header height */
+}
+
+.gluten-note {
+  max-width: 60rem;
+  margin: -1rem auto 3.5rem;
+  padding: 0 1rem;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.gluten-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.gluten-note a:hover {
+  text-decoration: none;
 }
 
 .section-breads,
@@ -908,7 +969,7 @@ a:focus-visible,
 }
 
 .section-headings a:hover {
-  color: rgb(97, 97, 97);
+  color: rgb(143, 143, 143);
 }
 
 /* === Image grids (Breads only) === */
@@ -1039,10 +1100,6 @@ a:focus-visible,
   .products-column h3 {
     max-width: 62%;
     font-size: 1.5rem;
-  }
-
-  .home-cta-sections {
-    padding: 0 0 6rem 0;
   }
 
   .products-columns {
