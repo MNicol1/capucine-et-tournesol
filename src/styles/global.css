@@ -892,18 +892,21 @@ a:focus-visible,
     margin-bottom: 2rem;
   }
 
-  .cta-content h1 {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-  }
+.cta-content h1 {
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+}
 
-  .cta-content h2 {
-    font-size: clamp(2rem, 6vw, 2.75rem);
-  }
+.cta-content h2 {
+  font-size: clamp(2.1rem, 6.5vw, 2.8rem);
+}
 
-  .cta-content h3,
-  .cta-content .styled-h3 {
-    font-size: clamp(1.4rem, 4vw, 1.75rem);
-  }
+.cta-content h3,
+.cta-content .styled-h3 {
+  margin: 2rem 0 0;
+  font-size: clamp(1.45rem, 4.5vw, 1.8rem);
+}
+
+
   .home-cta-sections {
     padding: 0 0 6rem 0;
   }
