@@ -791,8 +791,6 @@ a:focus-visible,
   line-height: 1.13;
 }
 
-
-
 /* Supporting statements */
 .cta-content h3,
 .cta-content .styled-h3 {
@@ -892,20 +890,19 @@ a:focus-visible,
     margin-bottom: 2rem;
   }
 
-.cta-content h1 {
-  font-size: clamp(2.5rem, 8vw, 3.5rem);
-}
+  .cta-content h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
 
-.cta-content h2 {
-  font-size: clamp(2.1rem, 6.5vw, 2.8rem);
-}
+  .cta-content h2 {
+    font-size: clamp(2.1rem, 6.5vw, 2.8rem);
+  }
 
-.cta-content h3,
-.cta-content .styled-h3 {
-  margin: 2rem 0 0;
-  font-size: clamp(1.45rem, 4.5vw, 1.8rem);
-}
-
+  .cta-content h3,
+  .cta-content .styled-h3 {
+    margin: 2rem 0 0;
+    font-size: clamp(1.45rem, 4.5vw, 1.8rem);
+  }
 
   .home-cta-sections {
     padding: 0 0 6rem 0;
@@ -1103,6 +1100,12 @@ a:focus-visible,
   .products-column h3 {
     max-width: 62%;
     font-size: 1.5rem;
+  }
+
+  .gluten-note a {
+    display: block;
+    width: fit-content;
+    margin: 0.35rem auto 0;
   }
 
   .products-columns {
