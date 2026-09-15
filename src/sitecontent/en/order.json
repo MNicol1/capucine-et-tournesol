@@ -1,6 +1,7 @@
 {
   "title": "Online Ordering",
   "description": "Order fresh breads and muffins online for pickup Thursday through Saturday in Mile End, Montreal.",
+  "intro": "Order breads and muffins online for pickup at the bakery Thursday through Saturday.",
   "orderInfoLine1": "A minimum 48-hour preparation time is required for all orders.",
   "orderInfoLine2": "Orders must be picked up at the bakery on the selected date.",
   "orderInfoLine3": "Orders are paid by Interac e-Transfer after submission.",

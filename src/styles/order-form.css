@@ -80,8 +80,9 @@ button {
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
-  background-color: 0.2s ease;
 }
+
+/* PAGE TITLE */
 
 .order-title {
   text-align: center;
@@ -92,6 +93,8 @@ button {
   font-weight: 600;
 }
 
+/* ORDER INFORMATION */
+
 .order-info {
   margin: 1.5rem 0 2rem;
 
@@ -99,8 +102,8 @@ button {
 
   border-bottom: 1px solid #d8d8d8;
 
+  font-size: 1rem;
   line-height: 1.7;
-  /* color: #2e2e2e; */
 }
 
 .order-info p {
@@ -126,15 +129,13 @@ button {
   flex-shrink: 0;
 }
 
-.order-info,
 .field-note,
 .section-note {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .optional {
-  font-size: 0.85rem;
-  /* opacity: 0.8; */
+  font-size: 0.9rem;
 }
 
 .hidden-field {
@@ -144,12 +145,15 @@ button {
   pointer-events: none;
 }
 
+/* PRODUCT SECTIONS */
+
 .bread-section {
   margin-top: 3rem;
   padding-top: 2rem;
 
   border-top: 1px solid #d8d8d8;
 }
+
 .bread-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,11 +168,15 @@ button {
 .section-title {
   margin: 0 0 0.75rem;
   padding: 0;
+
+  font-size: 1.5rem;
 }
 
 .section-note {
   margin-bottom: 1.5rem;
 }
+
+/* CUSTOMER FIELDS */
 
 .customer-fields {
   display: grid;
@@ -185,13 +193,15 @@ button {
   }
 }
 
+/* FORM MESSAGE */
+
 #form-message {
   min-height: 1.25rem;
 
   margin-top: 1rem;
- margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -204,6 +214,8 @@ button {
   color: #b00020;
 }
 
+/* FORM FIELDS */
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -212,7 +224,7 @@ button {
 .form-field label {
   margin-bottom: 0.4rem;
 
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -232,6 +244,7 @@ button {
   height: 48px;
 
   padding: 0 0.7rem;
+
   color: #000;
 
   border: 1px solid #ccc;
@@ -241,6 +254,7 @@ button {
   font-family: inherit;
 
   cursor: pointer;
+
   appearance: none;
   -webkit-appearance: none;
 
@@ -252,6 +266,7 @@ button {
 
 .field-note {
   margin: 0.45rem 0 0;
+
   line-height: 1.4;
   opacity: 0.9;
 }
@@ -307,12 +322,11 @@ button {
 }
 
 .product-name {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .product-grams {
   font-size: 0.9rem;
-
   opacity: 0.9;
 }
 
@@ -320,14 +334,13 @@ button {
   margin-top: 0.2rem;
 
   font-size: 0.9rem;
-
   opacity: 0.9;
 }
 
 .product-note {
-  font-size: 0.85rem;
   padding-top: 0.2rem;
-  font-size: 0.85rem;
+
+  font-size: 0.9rem;
   opacity: 0.9;
 }
 
@@ -343,6 +356,7 @@ button {
   padding: 0.25rem 0.55rem;
 
   flex-shrink: 0;
+
   background: #fff;
 }
 
@@ -388,7 +402,7 @@ button {
 
   text-align: center;
 
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* REMOVE NUMBER SPINNERS */
@@ -443,7 +457,7 @@ button {
 
   border-bottom: 1.5px solid #000;
 
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 /* SLICE OPTIONS */
@@ -481,7 +495,7 @@ button {
 
   padding: 0.28rem 0.75rem;
 
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   line-height: 1;
 
   background: #fff;
@@ -524,18 +538,10 @@ button {
   font-weight: 600;
 }
 
-.payment-reminder {
-  margin: 1rem 0;
-  padding: 2rem 0;
-  max-width: 660px;
-  font-size: 1.1rem;
-}
-
 /* COMMENTS */
 
 .checkout-section textarea {
   display: block;
-  font-size: 0.9rem;
 
   width: 100%;
   max-width: 500px;
@@ -547,7 +553,21 @@ button {
 
   border: 1px solid #ddd;
 
+  font-size: 1rem;
+
   resize: vertical;
+}
+
+/* PAYMENT */
+
+.payment-reminder {
+  margin: 1rem 0;
+  padding: 2rem 0;
+
+  max-width: 660px;
+
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* SUBMIT BUTTON */
@@ -590,15 +610,13 @@ button {
   #order-form button[type="submit"]:hover {
     opacity: 0.8;
   }
+
   #order-form button[type="submit"]:active {
     transform: translateY(1px);
   }
 }
 
-
 /* SUCCESS MESSAGE PAGE */
-
-
 
 #order-success {
   display: flex;
@@ -619,13 +637,13 @@ button {
 
   box-sizing: border-box;
 
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .success-title {
   margin: 0;
 
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
@@ -639,12 +657,14 @@ button {
 
 .success-label {
   margin: 0 0 0.2rem;
+
   font-weight: 600;
 }
 
 #success-items {
   display: flex;
   flex-direction: column;
+
   gap: 0.15rem;
 }
 
@@ -662,6 +682,7 @@ button {
 
 .success-pickup {
   gap: 0.2rem;
+
   line-height: 1.4;
 }
 
@@ -674,6 +695,7 @@ button {
 
 .payment {
   margin: 0;
+
   line-height: 1.4;
 }
 
@@ -685,8 +707,7 @@ button {
   font-weight: 600;
 }
 
-
-/* SURVEY  */
+/* SURVEY */
 
 .success-survey {
   margin-top: 0.75rem;
@@ -699,6 +720,7 @@ button {
 
 .success-survey p {
   margin: 0;
+
   font-weight: 600;
 }
 
@@ -729,16 +751,11 @@ button {
   }
 }
 
-
-/* MOBILE  */
+/* MOBILE */
 
 @media (max-width: 768px) {
   #order-form {
     padding-bottom: calc(7rem + env(safe-area-inset-bottom));
-  }
-
-  .order-title {
-    font-size: 1.8rem;
   }
 
   .bread-grid,
@@ -762,6 +779,7 @@ button {
 
   .product-main-row {
     align-items: flex-start;
+
     gap: 0.85rem;
   }
 
@@ -770,7 +788,6 @@ button {
   }
 
   .product-name {
-    font-size: 1.16rem;
     line-height: 1.3;
 
     overflow-wrap: anywhere;
@@ -779,19 +796,13 @@ button {
   .product-meta,
   .product-grams {
     line-height: 1.3;
-    font-size: 0.96rem;
-  }
-
-  .payment-reminder {
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0.9rem 0;
   }
 
   /* APPLE TOUCH TARGETS */
 
   .product-qty {
     min-height: 44px;
+
     padding: 0 0.2rem;
   }
 
@@ -800,6 +811,7 @@ button {
     height: 44px;
 
     color: #000;
+
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -856,8 +868,10 @@ button {
   .checkout-section textarea {
     width: 100%;
     max-width: 500px;
+
     font-size: 16px;
   }
+
   /* SUCCESS */
 
   #order-success {
@@ -871,18 +885,5 @@ button {
   #order-form {
     padding-left: 0.85rem;
     padding-right: 0.85rem;
-  }
-
-  .product-name {
-    font-size: 1.05rem;
-  }
-
-  .product-meta,
-  .product-grams {
-    font-size: 0.9rem;
-  }
-
-  .slice-options label span {
-    font-size: 0.8rem;
   }
 }
